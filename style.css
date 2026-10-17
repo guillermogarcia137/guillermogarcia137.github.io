@@ -13,7 +13,7 @@ body{
 }
 .titulo{
     position:absolute;
-    top: 8%;
+    top: 5%;
     left:50%;
     text-align: center;
     transform: translateX(-50%) scale(2);
@@ -30,7 +30,7 @@ a {
     border-radius: 10px;
     width: fit-content;
     text-align:center;
-    top: 50%;
+    top: 32%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.5);
     position:absolute;
