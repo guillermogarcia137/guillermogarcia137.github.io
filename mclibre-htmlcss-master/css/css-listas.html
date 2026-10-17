@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Listas (1). CSS. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>CSS: Listas (1)</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>CSS: Listas (1)</h2>
+
+      <ul>
+        <li><a href="#list-style"><span class="css-prop">list-style</span></a></li>
+        <li><a href="#list-style-type"><span class="css-prop">list-style-type</span></a></li>
+        <li><a href="#list-style-image"><span class="css-prop">list-style-image</span></a></li>
+        <li><a href="#list-style-position"><span class="css-prop">list-style-position</span></a></li>
+        <li><a href="#icono-summary-details">Icono <span class="html-eti">&lt;summary&gt;</span> <span class="html-eti">&lt;details&gt;</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>En esta lección se comentan propiedades CSS definidas en la recomendación <a href="https://www.w3.org/TR/CSS2/">CSS 2.1</a>, publicada en junio de 2011. En la lección <a href="css-listas-3.html">CSS Listas (2)</a> se comentan propiedades CSS definidas en la futura recomendación <a href="https://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a>. Aunque actualmente (marzo de 2026) esta recomendación no está formalmente aprobada, se considera parte de la <a href="https://www.w3.org/TR/css-2026/#css-official">definición oficial de CSS en CSS Snapshot 2026</a>.</p>
+
+  <p>Estas propiedades se aplican a las listas (<span class="html-eti">&lt;ul&gt;</span>, <span class="html-eti">&lt;ol&gt;</span>), pero también a cualquier elemento que tenga la propiedad <span class="css-prop">display</span> con el valor <span class="css-valor">list-item</span>, como por ejemplo el elemento <span class="html-eti">&lt;summary&gt;</span>.</p>
+
+  <section id="list-style">
+    <h2 class="con-aside">La propiedad compuesta <span class="css-prop">list-style</span></h2>
+
+    <aside class="enlace-norma">
+      <p>
+        <span class="css-prop">list-style</span><br>
+        <a href="https://www.w3.org/TR/CSS2/generate.html#propdef-list-style"><img src="../varios/iconos/icono-css2.svg" alt="Recomendación CSS2" title="Recomendación CSS2" width="28" height="32"></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+      </p>
+    </aside>
+
+    <p>La propiedad compuesta <span class="css-prop">list-style</span> permite establecer en una sola propiedad los valores de las propiedades <span class="css-prop">list-style-type</span>, <span class="css-prop">list-style-image</span> y <span class="css-prop">list-style-position</span>.</p>
+  </section>
+
+  <section id="list-style-type">
+    <h2 class="con-aside">Tipo predefinidos de marcador: <span class="css-prop">list-style-type</span></h2>
+
+    <aside class="enlace-norma">
+      <p>
+        <span class="css-prop">list-style-type</span><br>
+        <a href="https://www.w3.org/TR/CSS2/generate.html#propdef-list-style-type"><img src="../varios/iconos/icono-css2.svg" alt="Recomendación CSS2" title="Recomendación CSS2" width="28" height="32"></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+      </p>
+    </aside>
+
+    <p>El marcador de las listas ordenadas (<span class="html-eti">&lt;ol&gt;</span>) o no ordenadas (<span class="html-eti">&lt;ul&gt;</span>) se modifica con la propiedad <span class="css-prop">list-style-type</span>.</p>
+
+    <p>En esta lección se muestran los tipos de marcador "clásicos", incluidos en la <a href="https://www.w3.org/TR/2011/REC-CSS2-20110607/">recomendación CSS 2.1</a>. En la lección <a href="css-listas-3.html#list-style-type">CSS Listas (2)</a> se muestran los tipos de marcador añadidos en la futura recomendación <a href="https://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a>, correspondientes en su mayoría a lenguas orientales.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: none;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-01.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-01.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: disc;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-02.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-02.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: circle;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-03.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-03.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: square;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-04.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-04.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: decimal;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-05.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-05.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: decimal-leading-zero;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-06.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-06.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: lower-roman;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-07.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-07.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: upper-roman;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-08.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-08.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: lower-greek;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-09.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-09.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: lower-alpha;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-10.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-10.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: lower-latin;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-11.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-11.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: upper-alpha;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-12.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-12.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: upper-latin;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-13.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-13.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <hr class="corta">
+
+    <p>Las listas ordenadas y no ordenadas son equivalentes. Los navegadores muestran números en las listas ordenadas y símbolos en las listas no ordenadas, pero desde la hoja de estilo se puede invertir la presentación:</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-html">&lt;ul&gt;
+  &lt;li&gt;Esto es un punto de una lista no ordenada&lt;/li&gt;
+  &lt;li&gt;Esto es otro punto de la misma lista no ordenada
+    &lt;ol&gt;
+      &lt;li&gt;Esto es un punto de una sublista ordenada&lt;/li&gt;
+      &lt;li&gt;Esto es otro punto de la misma sublista ordenada&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-31.html" style="height: 14em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-31.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-type: decimal;
+}
+
+ol {
+   list-style-type: disc;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-type-32.html" style="height: 11em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-type-32.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <hr class="corta">
+
+    <p>Los estilos <span class="css-valor">lower-latin</span> y <span class="css-valor">lower-alpha</span> son los mismos, así como los estilos <span class="css-valor">upper-latin</span> y <span class="css-valor">upper-alpha</span>.</p>
+
+    <p>La recomendación CSS 2 no especifica qué debe hacerse cuando se utiliza un estilo alfabético y la lista tiene más elementos que el alfabeto correspondiente. los navegadores hacen como en las antiguas matrículas de los coches, es decir, después de Z ponen AA (y después de ZZ ponen AAA), como puede comprobarse en esta <a href="ejemplos/listas/lista-larga-upper-alpha.html">página de ejemplo de lista larga con <span class="css-valor">upper-alpha</span></a>.</p>
+
+    <p>En el estilo <span class="css-valor">decimal-leading-zero</span>, los navegadores sólo ponen un cero delante de los primeros nueve elementos (los que llevan los números del 1 al 9), aunque la lista tenga más de 100 elementos, como puede comprobarse en esta <a href="ejemplos/listas/lista-larga-decimal-leading-zero.html">página de ejemplo de lista larga con <span class="css-valor">decimal-leading-zero</span></a>.</p>
+  </section>
+
+  <section id="list-style-image">
+    <h2 class="con-aside">Imágenes como marcador: <span class="css-prop">list-style-image</span></h2>
+
+    <aside class="enlace-norma">
+      <p>
+        <span class="css-prop">list-style-image</span><br>
+        <a href="https://www.w3.org/TR/CSS2/generate.html#propdef-list-style-image"><img src="../varios/iconos/icono-css2.svg" alt="Recomendación CSS2" title="Recomendación CSS2" width="28" height="32"></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+      </p>
+    </aside>
+
+    <p>La propiedad <span class="css-prop">list-style-image</span> permite utilizar la imagen que se quiera como marcador de una lista. El único inconveniente es que el tamaño del marcador no cambia al cambiar desde el navegador el tamaño de la fuente.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-image: url("cruz7x7.png");
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-image-1.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-image-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-image: url("smiley.png");
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-image-2.html" style="height: 6em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-image-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="list-style-position">
+    <h2 class="con-aside">Posición del marcador: <span class="css-prop">list-style-position</span></h2>
+
+    <aside class="enlace-norma">
+      <p>
+        <span class="css-prop">list-style-position</span><br>
+        <a href="https://www.w3.org/TR/CSS2/generate.html#propdef-list-style-position"><img src="../varios/iconos/icono-css2.svg" alt="Recomendación CSS2" title="Recomendación CSS2" width="28" height="32"></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+      </p>
+    </aside>
+
+    <p>La propiedad <span class="css-prop">list-style-position</span> establece la posición del marcador con respecto al resto del elemento de la lista: dentro (<span class="css-valor">inside</span>) o fuera (<span class="css-valor">outside</span>). los navegadores aplican por omisión el valor <span class="css-valor">outside</span>.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+}
+
+li {
+  background-color: lightblue;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-position-1.html" style="height: 10em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-position-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-position: inside;
+}
+
+li {
+  background-color: lightblue;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-position-2.html" style="height: 11em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-position-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">ul {
+  list-style-position: outside;
+}
+
+li {
+  background-color: lightblue;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/listas/list-style-position-3.html" style="height: 11em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/listas/list-style-position-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="icono-summary-details">
+    <h2>Icono del elemento <span class="html-eti">&lt;summary&gt;</span> de <span class="html-eti">&lt;details&gt;</span></h2>
+
+    <p>El icono que muestra el elemento interactivo <span class="html-eti">&lt;summary&gt;</span> de <span class="html-eti">&lt;details&gt;</span> se puede establecer con las propiedades de lista.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">summary {
+  list-style-type: circle;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interactivos/details-1.html" style="height: 8em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interactivos/details-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">summary {
+  list-style-image: url("../smiley.png");
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interactivos/details-2.html" style="height: 9em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interactivos/details-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 26 de marzo de 2026</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

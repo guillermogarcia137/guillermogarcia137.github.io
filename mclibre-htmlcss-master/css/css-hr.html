@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Líneas horizontales. CSS. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>CSS: Líneas horizontales</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>CSS: Líneas horizontales</h2>
+
+      <ul>
+        <li><a href="#tamano">Tamaño: <span class="css-prop">width</span> y <span class="css-prop">height</span></a></li>
+        <li><a href="#color">Color: <span class="css-prop">color</span>, <span class="css-prop">background-color</span> y <span class="css-prop">border-color</span></a></li>
+        <li><a href="#alineacion">Alineación: <span class="css-prop">margin-left</span>, <span class="css-prop">margin-right</span> y <span class="css-prop">width</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>En esta página se comentan las propiedades que se pueden aplicar a una línea horizontal <span class="html-eti">&lt;hr&gt;</span> de una página web. Estas propiedades no son específicas de las líneas horizontales, pero en algunos casos sí que tienen efectos específicos.</p>
+
+  <section id="tamano">
+    <h2>Tamaño: <span class="css-prop">width</span> y <span class="css-prop">height</span></h2>
+
+    <p>La propiedad <span class="css-prop">height</span> establece la altura de la línea.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 10px;
+  background-color: black;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/width-height-1.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/width-height-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <p>La propiedad <span class="css-prop">width</span> establece la anchura de la línea. Se suele expresar como porcentaje.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 10px;
+  width: 50%;
+  background-color: black;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/width-height-2.html" style="height: 8em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/width-height-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="color">
+    <h2>Color: <span class="css-prop">color</span>, <span class="css-prop">background-color</span> y <span class="css-prop">border-color</span></h2>
+
+    <p>La propiedad <span class="css-prop">background-color</span> establece el color de la línea, aunque en Firefox la línea debe tener más de 2px de altura para ser visible y en Chrome basta con tener establecida la propiedad <span class="css-prop">height</span>.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  background-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-01.html" style="height: 5em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-01.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 1px;
+  background-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-02.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-02.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 2px;
+  background-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-03.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-03.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 3px;
+  background-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-04.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-04.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 10px;
+  background-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-05.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-05.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <hr class="corta">
+
+    <p>En Firefox la propiedad <span class="css-prop">color</span> establece el color del borde de la línea, pero en Chrome no lo hace, como se comenta en la <a href="../otros/diferencias-listado.html#css-hr-color">página de diferencias entre navegadores</a>.</p>
+
+    <div class="filaflex">
+      <div class="icono-navegadores">
+        <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">
+        <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-11.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-11.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        <a href="../otros/diferencias-listado.html#css-hr-color"><img src="../varios/iconos/icono-diferencias.svg" alt="Diferencias entre navegadores" title="Diferencias entre navegadores" width="32" height="32"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores">
+        <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">
+        <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 1px;
+  color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-12.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-12.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        <a href="../otros/diferencias-listado.html#css-hr-color"><img src="../varios/iconos/icono-diferencias.svg" alt="Diferencias entre navegadores" title="Diferencias entre navegadores" width="32" height="32"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores">
+        <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">
+        <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 10px;
+  color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-13.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-13.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        <a href="../otros/diferencias-listado.html#css-hr-color"><img src="../varios/iconos/icono-diferencias.svg" alt="Diferencias entre navegadores" title="Diferencias entre navegadores" width="32" height="32"></a>
+      </div>
+    </div>
+
+    <hr class="corta">
+
+    <p>La propiedad <span class="css-prop">border-color</span> establece el color del borde de la línea.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  border-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-21.html" style="height: 5em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-21.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 1px;
+  border-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-22.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-22.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 10px;
+  border-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/colores-23.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/colores-23.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="alineacion">
+    <h2>Alineación: <span class="css-prop">margin-left</span>, <span class="css-prop">margin-right</span> y <span class="css-prop">width</span></h2>
+
+    <p>Si no se indican los márgenes, las líneas se alinean al centro.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 10px;
+  width: 50%;
+  background-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/alineacion-01.html" style="height: 8em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/alineacion-01.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <hr class="corta">
+
+    <p>Para situar la línea en una posición determinada, se deben utilizar las propiedades <span class="css-prop">margin-left</span> y <span class="css-prop">margin-right</span>, sin utilizar la propiedad <span class="css-prop">width</span>. Los valores de estas propiedades se pueden expresar como distancias o como porcentajes.</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 10px;
+  margin-left: 0%;
+  margin-right: 50%;
+  background-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/alineacion-11.html" style="height: 9em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/alineacion-11.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 10px;
+  margin-left: 50%;
+  margin-right: 0%;
+  background-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/alineacion-12.html" style="height: 9em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/alineacion-12.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  height: 10px;
+  margin-left: 50%;
+  margin-right: 25%;
+  background-color: red;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/alineacion-13.html" style="height: 9em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/alineacion-13.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <hr class="corta">
+
+    <p>Cuando se aplican las propiedades <span class="css-prop">margin-left</span>, <span class="css-prop">margin-right</span> y <span class="css-prop">width</span> a una línea, la línea se dibuja a la izquierda del espacio definido por los márgenes si hay <span class="css-prop">margin-left</span> o a la derecha si sólo hay <span class="css-prop">margin-right</span>.</p>
+
+    <p>En el ejemplo siguiente, la línea se sitúa a la izquierda del todo:</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  background-color: red;
+  height: 10px;
+  margin-left: 0%;
+  width: 50%;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/alineacion-21.html" style="height: 9em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/alineacion-21.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <p>En el ejemplo siguiente, la línea se sitúa a la derecha del todo:</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  background-color: red;
+  height: 10px;
+  margin-right: 0%;
+  width: 50%;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/alineacion-22.html" style="height: 9em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/alineacion-22.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <p>En el ejemplo siguiente, la línea se sitúa a partir del centro:</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">hr {
+  background-color: red;
+  height: 10px;
+  margin-left: 50%;
+  width: 25%;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/hr/alineacion-23.html" style="height: 9em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/hr/alineacion-23.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 23 de octubre de 2021</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

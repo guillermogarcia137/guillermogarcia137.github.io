@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Fuentes web. CSS. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>CSS: Fuentes web</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>CSS: Fuentes web</h2>
+
+      <ul>
+        <li><a href="#woff">Fuentes WOFF</a></li>
+        <li><a href="#font-face">Regla arroba <span class="css-arroba">@font-face</span></a></li>
+        <li><a href="#google-fonts">Google Fonts</a>
+          <ul>
+            <li><a href="#google-fonts-enlazar">Enlazar <span class="css-arroba">@import</span> o <span class="html-eti">link</span></a></li>
+            <li><a href="#google-fonts-descargar-woff2">Descargar WOFF2 (1)</a></li>
+            <li><a href="#gwfh-descargar-woff2">Descargar WOFF2 (2)</a></li>
+          </ul>
+        </li>
+        <li><a href="#posicion-import">Posición <span class="css-arroba">@import</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>En esta lección y en las lecciones <a href="css-fuente.html">CSS Fuentes (1)</a> y <a href="css-fuente-2.html">CSS Fuentes (2)</a> se comentan las propiedades CSS definidas en la recomendación <a href="https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/">CSS Fonts Module Level 3</a>, publicada en septiembre de 2018.</p>
+
+  <p>Estas propiedades permiten elegir con todo detalle el tipo de letra que se mostrará en el navegador del usuario.</p>
+
+  <p>En esta lección se comentan las propiedades relacionadas con las fuentes web, es decir fuentes que pueden mostrarse en el navegador sin necesidad de estar instaladas en el ordenador ya que se descargan automáticamente.</p>
+
+  <section id="woff">
+    <h2 class="con-aside">Fuentes WOFF (Web Open Font Format)</h2>
+
+    <aside class="enlace-norma">
+      <p>
+        <strong>woff</strong><br>
+        <a href="https://www.w3.org/TR/2012/REC-WOFF-20121213/"><img src="../varios/iconos/icono-w3c.svg" alt="Recomendación W3C" title="Recomendación W3C" width="47" height="32"></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        <a href="https://caniuse.com/#feat=woff"><img src="../varios/iconos/icono-caniuse-oksi.svg" alt="Can I use" title="Can I use" width="32" height="32"></a>
+      </p>
+
+      <p>
+        <strong>woff2</strong><br>
+        <a href="https://www.w3.org/TR/2024/REC-WOFF2-20240808/"><img src="../varios/iconos/icono-w3c.svg" alt="Recomendación W3C" title="Recomendación W3C" width="47" height="32"></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        <a href="https://caniuse.com/#feat=woff2"><img src="../varios/iconos/icono-caniuse-oksi.svg" alt="Can I use" title="Can I use" width="32" height="32"></a>
+      </p>
+    </aside>
+
+    <p>En 2009 se desarrolló un formato de fuentes llamado WOFF (Web Open Font Format) pensado para la web. En realidad no se trata de un nuevo formato, puesto que una fuente WOFF no es más que una fuente TrueType, OpenType, Open Font o SVG comprimida y con metadatos para indicar detalles como el origen de la fuente o la licencia.</p>
+
+    <p>En abril de 2010, Mozilla, Microsoft y Opera presentaron este formato al W3C, que aprobó la recomendación <a href="https://www.w3.org/TR/2012/REC-WOFF-20121213/">WOFF File Format 1.0</a> en diciembre de 2012.</p>
+
+    <p>En marzo de 2018 se aprobó la recomendación <a href="https://www.w3.org/TR/WOFF2/">WOFF File Format 2.0</a>. Gracias al nuevo algoritmo de compresión <a href="https://es.wikipedia.org/wiki/Brotli">Brotli</a>, esta recomendación consigue reducir el tamaño de las fuentes a la cuarta parte, aumentar la velocidad de descompresión y reducir los requisitos de memoria, como se explica en el <a href="https://www.w3.org/TR/WOFF20ER/">WOFF 2.0 Evaluation Report</a> publicado por el W3C en marzo de 2016 o en este <a href="https://lwn.net/Articles/573348/">artículo en lwn.net sobre WOFF2 (13/11/2013)</a>.</p>
+
+    <p>El formato WOFF 2 es mucho mejor que el formato WOFF 1 y servicios como Google Fonts ya sólo ofrecen WOFF 2.</p>
+
+    <p>Para crear fuentes WOFF se puede utilizar webs como <a href="https://www.fontsquirrel.com/tools/webfont-generator">Font Squirrel</a> en la que subiendo una fuente TTF u OTF podemos descargar la misma fuente en los formatos WOFF2, WOFF, EOT y SVG.</p>
+  </section>
+
+  <section id="font-face">
+    <h2 class="con-aside">La regla arroba <span class="css-arroba">@font-face</span></h2>
+
+    <aside class="enlace-norma">
+      <p>
+        <span class="css-arroba">@font-face</span><br>
+        <a href="https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/#font-face-rule"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+      </p>
+    </aside>
+
+    <p>La recomendación <a href="https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/">CSS Fonts Module Level 3</a>, publicada en septiembre de 2018, permite la utilización de fuentes web mediante el uso de la regla-arroba <span class="css-arroba">@font-face</span>, como muestra el ejemplo siguiente:</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">@font-face {
+    font-family: "Mystery Quest";
+    src: url("mystery-quest.woff2");
+}
+
+p {
+    font-family: "Mystery Quest", cursive;
+    font-size: 150%;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/fuentes-web/fuentes-web-1.html" style="height: 14em"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/fuentes-web/fuentes-web-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <p>En la regla <span class="css-arroba">@font-face</span>:</p>
+    <ul>
+      <li>La propiedad <span class="css-prop">font-family</span> establece cómo tenemos que llamar a la fuente en la hoja de estilo. Si el nombre contiene espacios en blanco, es necesario escribir el nombre entre comillas.</li>
+      <li>La propiedad <span class="css-prop">src</span> indica el camino (absoluto o relativo) del fichero de la fuente. En el caso de indicar un camino relativo, el camino relativo es el camino relativo de la fuente con respecto a la hoja de estilo, no respecto a la página web.</li>
+    </ul>
+
+    <p>Una vez definido el nombre de la fuente, se puede hacer referencia a ella en las propiedades <span class="css-prop">font-family</span>.</p>
+
+    <hr class="corta">
+
+    <p>La recomendación no impone ningún formato específico para los tipos de letra, pero nombra algunos como posibilidad: woff (WOFF Web Open Font Format, .woff), truetype (TrueType, .ttf), opentype (OpenType, .ttf, .otf), embedded-opentype (Embedded OpenType, .eot), svg (SVG Font, .svg, .svgz).</p>
+
+    <p>Entre ellos, se recomienda utilizar el formato WOFF 2 (Web Open Font Format, .woff2), definido en la recomendación <a href="https://www.w3.org/TR/WOFF2/">WOFF File Format 2.0</a>, o en su defecto, el formato WOFF (.woff) definido en la recomendación <a href="https://www.w3.org/TR/2012/REC-WOFF-20121213/">WOFF File Format 1.0</a> de diciembre de 2012.</p>
+
+    <hr class="corta">
+
+    <p><strong>Nota</strong>: La regla-arroba <span class="css-arroba">@font-face</span> estaba incluida en la recomendación <a href="https://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#font-descriptions">CSS 2</a>, pero no se incluyó en la recomendación <a href="https://www.w3.org/TR/2011/REC-CSS2-20110607/">CSS 2.1</a>, por lo que en CSS 2 se consideraba obsoleta. Sin embargo, esta regla-arroba se recuperó en la recomendación <a href="https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/#font-face-rule">CSS Fonts Module Level 3</a>, publicado en septiembre de 2018.</p>
+  </section>
+
+  <section id="google-fonts">
+    <h2>Google Fonts / Google Fonts API</h2>
+
+    <p>Google ofrece un servicio de alojamiento de fuentes libres, <a href="https://fonts.google.com/">Google Fonts</a>.</p>
+
+    <p>Google Fonts permite descargar las fuentes en formato TTF a nuestro ordenador para utilizarlas por ejemplo en un procesador de textos. Para ello, hay añadir las fuentes deseadas a una colección y descargar la colección completa.</p>
+
+    <p>Lo más interesante de Google Fonts es que las fuentes pueden utilizarse en nuestras páginas web sin necesidad de alojarlas en nuestro propio servidor. Eso tiene la ventaja de que nos ahorramos el tráfico que genera la fuente, pero tiene el inconveniente de que en algún momento pueden no estar disponibles. Para reducir este problema conviene indicar varias fuentes, como mínimo poniendo en último lugar una de las familias genéricas.</p>
+
+    <p><img src="../varios/iconos/icono-warning.svg" alt="¡Atención!" title="¡Atención!" width="55" height="48"> En enero de 2022 un tribunal alemán sentenció que el servicio de Google Fonts no cumple el <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Reglamento UE 2016/679</a>, conocido como RGPD, Reglamento General de Protección de Datos, ya que el servicio permite a Google conocer la IP del cliente cuando este visita una página que enlaza a Google Fonts. Por tanto, las páginas alojadas en la Unión Europea no deben utilizar el servicio de Google Fonts. Una solución es utilizar servicios alternativos que sí cumplan la RGPD, que suelen ser de pago, por lo que la mejor solución es alojar las fuentes en nuestro propio servidor. [referencia: <a href="https://www.theregister.com/2022/01/31/website_fine_google_fonts_gdpr/">Noticia en TheRegister enero 2022</a>]</p>
+
+    <p>Si queremos alojar nosotros las fuentes, Google Fonts ofrece la posibilidad de descargarla en formato TTF. En ese caso deberíamos convertir la fuente TTF al formato woff mediante alguna de las páginas web citadas en el apartado <a href="#woff">Fuentes WOFF</a>. En el apartado <a href="#google-fonts-descargar-woff2">Descargar las fuentes de Google Fonts en formato WOFF2</a> se comenta un procedimiento un poco laborioso para descargar la fuente en formato WOFF2 de Google Fonts. En el apartado <a href="#gwfh-descargar-woff2">Descargar las fuentes de Google Fonts en formato WOFF2 desde google-webfonts-helper</a> se comenta un procedimiento más sencillo desde una web diseñada para ello.</p>
+
+    <p>Las fuentes incluidas en Google Fonts también se encuentran disponibles como repositorio de GitHub: <a href="https://github.com/google/fonts/">https://github.com/google/fonts/</a>.</p>
+
+    <section id="google-fonts-enlazar">
+      <h3>Enlazar las fuentes de Google Fonts</h3>
+
+      <p>Para utilizar las fuentes alojadas en Google Fonts, es necesario conocer primero el nombre de la fuente. Para ello:</p>
+      <ol>
+        <li>Abra la web de <a href="https://fonts.google.com/">Google Fonts</a>
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-01.png" alt="Google Fonts" width="1170" height="465">
+          </p>
+        </li>
+        <li>Para encontrar una fuente puede ordenarlas por orden alfabético. Una vez encontrada la fuente, seleccione la fuente haciendo clic en el cuadro de la fuente:
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-02.png" alt="Google Fonts" width="1170" height="510">
+          </p>
+        </li>
+        <li>Si conoce parte del nombre de la fuente, puede escribirlo en el cuadro de búsqueda. A continuación, haga clic en el cuadro de la fuente:
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-03.png" alt="Google Fonts" width="1170" height="510">
+          </p>
+        </li>
+        <li>Se abrirá la ficha de la fuente que lógicamente muestra su nombre. El nombre también puede leerse en la URL de la página:
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-04.png" alt="Google Fonts" width="1190" height="550">
+          </p>
+        </li>
+      </ol>
+
+      <p>Una vez se conoce el nombre de la fuente, la documentación oficial propone dos maneras equivalentes de utilizar la fuente de Google Fonts, aunque yo recomiendo la primera ya que toda la información se encuentra en la hoja de estilo. En ambos casos, la referencia a la fuente es su nombre, sustituyendo los espacios por el caracter + (suma). Por ejemplo, para utilizar la fuente Mystery Quest habría que escribir Mystery+Quest.</p>
+
+      <ol>
+        <li>Incluir al principio de la hoja de estilo una regla-arroba <span class="css-arroba">@import</span> y la fuente se puede utilizar en la hoja de estilo como una familia más, como muestra el ejemplo siguiente:
+
+          <div class="filaflex">
+            <div class="codigo">
+              <pre>
+<code class="language-css">@import url("https://fonts.googleapis.com/css?family=<span class="codigo-resaltado">Mystery+Quest</span>");
+
+p {
+    font-family: "Mystery Quest", cursive;
+    font-size: 150%;
+}</code>
+</pre>
+            </div>
+            <iframe src="ejemplos/fuentes-web/fuentes-web-2.html" style="height: 11em"></iframe>
+            <div class="icono-enlace">
+              <a href="ejemplos/fuentes-web/fuentes-web-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+            </div>
+          </div>
+
+          <p>Las reglas <span class="css-arroba">@import</span> deben escribirse obligatoriamente al principio de la hoja de estilo, como se comenta en el apartado <a href="#posicion-import">Posición de <span class="css-arroba">@import</span></a> de esta lección.</p>
+        </li>
+        <li>Incluir en el documento html un enlace como si fuera un enlace a una hoja de estilo. La fuente se puede utilizar en la hoja de estilo como una familia más, como muestra el ejemplo siguiente:
+
+          <div class="filaflex">
+            <div class="columnaflex">
+              <div class="codigo">
+                <pre>
+<code class="language-html">&lt;head&gt;
+ ...
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=<span class="codigo-resaltado">Mystery+Quest</span>"&gt;
+ ...
+&lt;/head&gt;</code>
+</pre>
+              </div>
+              <div class="codigo">
+                <pre>
+<code class="language-css">p {
+    font-family: "Mystery Quest", cursive;
+    font-size: 150%;
+}</code>
+</pre>
+              </div>
+            </div>
+            <iframe src="ejemplos/fuentes-web/fuentes-web-3.html" style="height: 17em"></iframe>
+            <div class="icono-enlace">
+              <a href="ejemplos/fuentes-web/fuentes-web-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+            </div>
+          </div>
+        </li>
+      </ol>
+
+      <p><strong>Nota:</strong></p>
+
+      <ul>
+        <li>Por motivos de seguridad, Google Chrome y Firefox (a partir de la versión 26), obligan a que el contenido mixto activo se obtenga mediante https en vez de por http (<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content">explicación en Mozilla Developer Network</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP) [MDN]</a>). Es decir, que si una página que se sirve por https (conexión segura) incluye elementos enlazados por http (conexión insegura), estos elementos no se descargarán.
+
+          <p>Se recomienda por tanto que el enlace a Google Fonts se haga mediante https en vez de http, por si en el futuro nuestra página, que enlaza a Google Fonts, se sirve mediante https.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="google-fonts-descargar-woff2">
+      <h3>Descargar las fuentes de Google Fonts en formato WOFF2</h3>
+
+      <p>Cuando se descarga una fuente de <a href="https://fonts.google.com/">Google Fonts</a>, tan sólo se incluye la fuente en formato TTF. Para obtenerla en formato WOFF2 puede seguir estos pasos:</p>
+
+      <ol>
+        <li>En la ficha de la fuente que quiera descargar, haga clic en el botón "Get font":
+
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-descargar-woff-1.png" alt="Google Fonts" width="1170" height="460">
+          </p>
+        </li>
+        <li>Una vez seleccionada, haga clic en el botón "Get embed code":
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-descargar-woff-2.png" alt="Google Fonts" width="1170" height="370">
+          </p>
+        </li>
+        <li>En la pestaña Web, opción &lt;<span class="html-eti">link</span>&gt; o <span class="css-arroba">@import</span>, seleccione y copie la dirección web <strong>https://fonts.googleapis.com/css2?family=...</strong>:
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-descargar-woff-3.png" alt="Google Fonts" width="1170" height="480">
+          </p>
+        </li>
+        <li>Pegue esa dirección en la barra de dirección del navegador y pulse <kbd>Intro</kbd>. Se mostrará un documento de texto en el que se puede encontrar la dirección web de un archivo woff2. Puede haber varias versiones de la misma fuente (en la captura el documento contiene dos enlaces a diferentes versiones de la fuente). Normalmente, la versión a descargar es la versión <strong>latin</strong>, pero si esa versión no contiene todos los caracteres necesarios (acentos, etc.), a veces es necesario descargar la versión <strong>latin-extended</strong> u otras. Copie la dirección web de la versión elegida.
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-descargar-woff-4.png" alt="Google Fonts" width="1116" height="410">
+          </p>
+        </li>
+        <li>Pegue esa dirección en la barra de dirección del navegador y pulse <kbd>Intro</kbd>. Automáticamente, el navegador guardará el fichero de la fuente o le dará la opción de guardarlo.
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-descargar-woff-5.png" alt="Google Fonts" width="1116" height="200">
+          </p>
+        </li>
+        <li>En la carpeta de descargas se mostrará el archivo woff2 descargado:
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-descargar-woff-6.png" alt="Google Fonts" width="1024" height="220">
+          </p>
+        </li>
+        <li>Puede cambiar el nombre del fichero al nombre de la fuente (manteniendo la extensión woff2) para facilitar su uso posterior:
+          <p class="mcl-captura">
+            <img src="../img/google-fonts/google-fonts-descargar-woff-7.png" alt="Google Fonts" width="1024" height="220">
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="gwfh-descargar-woff2">
+      <h3>Descargar las fuentes de Google Fonts en formato WOFF2 desde google-webfonts-helper</h3>
+
+      <p>Desde <a href="https://gwfh.mranftl.com/fonts">google-webfonts-helper</a> se pueden descargar las fuentes de Google Fonts en formato WOFF2:</p>
+
+          <ol>
+            <li>Abra la página <a href="https://gwfh.mranftl.com/fonts">google-webfonts-helper</a>:
+              <p class="mcl-captura">
+                <img src="../img/google-fonts/gwfh-descargar-1.png" alt="Google Fonts" width="1188" height="350">
+              </p>
+            </li>
+            <li>Las fuentes se muestran en orden alfabético. Una vez encontrada la fuente, seleccione la fuente haciendo clic en el botón correspondiente:
+              <p class="mcl-captura">
+                <img src="../img/google-fonts/gwfh-descargar-2.png" alt="Google Fonts" width="1188" height="340">
+              </p>
+            </li>
+            <li>Si conoce el nombre o parte de él, también puede utilizar el cuadro de búsqueda:
+              <p class="mcl-captura">
+                <img src="../img/google-fonts/gwfh-descargar-3.png" alt="Google Fonts" width="1188" height="230">
+              </p>
+            </li>
+            <li>Puede seleccionar el juego de caracteres o los estilos disponibles para esa fuente en concreto:
+              <p class="mcl-captura">
+                <img src="../img/google-fonts/gwfh-descargar-4.png" alt="Google Fonts" width="1188" height="485">
+              </p>
+            </li>
+            <li>En la parte inferior de la página se encuentra el enlace de descarga:
+              <p class="mcl-captura">
+                <img src="../img/google-fonts/gwfh-descargar-5.png" alt="Google Fonts" width="1188" height="361">
+              </p>
+            </li>
+            <li>El fichero zip descargado contiene la fuente en formato WOFF2.</li>
+          </ol>
+    </section>
+  </section>
+
+  <section id="posicion-import">
+    <h2>Posición de <span class="css-arroba">@import</span> en la hoja de estilo</h2>
+
+    <p>La regla <span class="css-arroba">@import</span> debe escribirse al principio de la hoja de estilo, sin otras reglas delante, ni siquiera reglas <span class="css-arroba">@font-face</span>, como muestran los siguientes ejemplos:</p>
+
+    <div class="filaflex">
+      <div class="icono-ok">
+        <img src="../varios/iconos/icono-oksi.svg" alt="Correcto" title="Correcto" width="40" height="40">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+
+@font-face {
+    font-family: "Mystery Quest";
+    src: url("mystery-quest.woff2");
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/fuentes-web/import-font-face-1.html" style="height: 16em"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/fuentes-web/import-font-face-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-ok">
+        <img src="../varios/iconos/icono-okno.svg" alt="Incorrecto" title="Incorrecto" width="40" height="40">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">@font-face {
+    font-family: "Mystery Quest";
+    src: url("mystery-quest.woff2");
+}
+
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/fuentes-web/import-font-face-2.html" style="height: 16em"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/fuentes-web/import-font-face-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 11 de noviembre de 2024</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Bordes (2). CSS. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>CSS: Bordes (2)</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>CSS: Bordes (2)</h2>
+
+      <ul>
+        <li><a href="#imagenes">Imágenes de bordes</a>
+          <ul>
+            <li><a href="#border-image"><span class="css-prop">border-image</span></a></li>
+            <li><a href="#border-image-source">Imagen: <span class="css-prop">border-image-source</span></a></li>
+            <li><a href="#border-image-slice">Troceado: <span class="css-prop">border-image-slice</span></a></li>
+            <li><a href="#border-image-width">Área: <span class="css-prop">border-image-width</span></a></li>
+            <li><a href="#border-image-outset">Extensión: <span class="css-prop">border-image-outset</span></a></li>
+            <li><a href="#border-image-repeat">Repetición: <span class="css-prop">border-image-repeat</span></a></li>
+          </ul>
+        </li>
+        <li><a href="#box-decoration-break">Bordes elementos cortados: <span class="css-prop">box-decoration-break</span></a></li>
+        <li><a href="#box-shadow">Sombras: <span class="css-prop">box-shadow</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>En esta lección y en la lección <a href="css-bordes.html">CSS Bordes (1)</a> se comentan las propiedades CSS definidas en la futura recomendación <a href="https://www.w3.org/TR/css-backgrounds-3/">CSS Backgrounds and Borders Module Level 3</a>. Aunque actualmente (marzo de 2026) esta recomendación no está formalmente aprobada, se considera parte de la <a href="https://www.w3.org/TR/css-2026/#css-official">definición oficial de CSS en CSS Snapshot 2026</a>.</p>
+
+  <p>Estas propiedades permiten añadir un borde a cualquier elemento elemento de una página web.</p>
+
+  <p>En esta lección se comentan principalmente las propiedades relacionadas con el uso de imágenes en bordes, que no estaban incluidas en CSS 2, publicada en mayo de 1998.</p>
+
+  <section id="imagenes">
+    <h2>Imágenes de bordes</h2>
+
+    <section id="border-image">
+      <h3 class="con-aside">La propiedad compuesta <span class="css-prop">border-image</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">border-image</span><br>
+          <a href="https://www.w3.org/TR/css-backgrounds-3/#border-image"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p class="incompleto">Por escribir</p>
+    </section>
+
+    <section id="border-image-source">
+      <h3 class="con-aside">Imagen de borde: <span class="css-prop">border-image-source</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">border-image-source</span><br>
+          <a href="https://www.w3.org/TR/css-backgrounds-3/#border-image-source"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-source"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p>La propiedad <span class="css-prop">border-image-source</span> establece la imagen a utilizar como imagen de borde.</p>
+
+      <p>El elemento tiene que tener definido un borde y la imagen se amplía o reduce para mostrarse completa.</p>
+
+      <p>Si sólo se utiliza esta propiedad, la imagen se muestra en las cuatro esquinas del elemento.</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: black 50px solid;
+  border-image-source: url("bola.png");
+  text-align: justify;
+}</code>
+</pre>
+          <p>Imagen utilizada en este ejemplo: <img src="../css/ejemplos/img/css3-bordes/bola-100.png" alt="Ejemplo de imagen de borde" width="100" height="105"></p>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-source.html" style="height: 16em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-source.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="border-image-slice">
+      <h3 class="con-aside">Troceado de la imagen de borde: <span class="css-prop">border-image-slice</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">border-image-slice</span><br>
+          <a href="https://www.w3.org/TR/css-backgrounds-3/#border-image-slice"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p>La propiedad <span class="css-prop">border-image-slice</span> permite trocear la imagen de borde de manera que cada trozo se emplee en un lado del borde.</p>
+
+      <p>Los posibles valores de la propiedad <span class="css-prop">border-image-slice</span> son:</p>
+
+      <ul>
+        <li>de uno a cuatro valores numéricos (porcentajes o números sin unidades): se interpretan como píxeles en imágenes de mapa de bits o como coordenadas en imágenes vectoriales.
+
+          <p>Los valores numéricos indican a qué distancia de los bordes se recorta la imagen, como muestra la imagen siguiente:</p>
+
+          <p class="centrado">
+            <img src="../img/css/border-image-slice.png" alt="Propiedad border-image-slice" width="343" height="277">
+          </p>
+
+          <p>Cada uno de lo ocho trozos (descartando el trozo central) se utiliza en cada una de las ocho zonas correspondientes del borde.</p>
+
+          <p>Como en otras propiedades en las que se pueden escribir de uno a cuatro valores:</p>
+
+          <ul>
+            <li>si sólo se escribe un valor, este se aplica a los cuatro lados</li>
+            <li>si se escriben dos valores, el primero se aplica arriba y abajo y el segundo a derecha e izquierda</li>
+            <li>si se escriben tres valores, el primero se aplica arriba, el segundo a derecha e izquierda y el tercero abajo</li>
+            <li>si se escriben cuatro valores, el primero se aplica arriba, el segundo a la derecha, el tercero abajo y el cuarto a la izquierda</li>
+          </ul>
+        </li>
+        <li><span class="css-valor">fill</span>:este valor hace que la parte central de la imagen se utilice para rellenar el elemento.</li>
+      </ul>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 27px solid;
+  border-image-source: url("pastilla.png");
+  border-image-slice: 27;
+
+  padding: 10px;
+  text-align: justify;
+}</code>
+</pre>
+          <p>Imagen utilizada en este ejemplo: <img src="ejemplos/img/css3-bordes/pastilla-60.png" alt="Ejemplo de imagen de borde" width="259" height="60"></p>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-slice-1.html" style="height: 17em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-slice-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 27px solid;
+  border-image-source: url("pastilla.png");
+  border-image-slice: 27 fill;
+
+  padding: 10px;
+  color: white;
+  text-align: justify;
+}</code>
+</pre>
+          <p>Imagen utilizada en este ejemplo: <img src="ejemplos/img/css3-bordes/pastilla-60.png" alt="Ejemplo de imagen de borde" width="259" height="60"></p>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-slice-2.html" style="height: 19em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-slice-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 75px solid;
+  border-image-source: url("marco.png");
+  border-image-slice: 75;
+
+  text-align: justify;
+}</code>
+</pre>
+          <p>Imagen utilizada en este ejemplo: <img src="ejemplos/img/css3-bordes/marco-200.png" alt="Ejemplo de imagen de borde" width="200" height="200"></p>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-slice-3.html" style="height: 25em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-slice-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 20px solid;
+  border-width: 50px 80px 20px 80px;
+  border-image-source: url("ventana.png");
+  border-image-slice: 50 80 20 80;
+
+  text-align: justify;
+}</code>
+</pre>
+          <p>Imagen utilizada en este ejemplo: <img src="ejemplos/img/css3-bordes/ventana.png" alt="Ejemplo de imagen de borde" width="170" height="90"></p>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-slice-4.html" style="height: 19em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-slice-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <p>La propiedad <span class="css-prop">border-image-slice</span> establece cómo se recorta la imagen, pero el tamaño de la imagen se escala al ancho del borde:</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 10px solid;
+  border-image-source: url("marco-dorado.png");
+  border-image-slice: 21;
+
+  padding: 10px;
+  text-align: justify;
+}</code>
+</pre>
+          <p>Imagen utilizada en este ejemplo: <img src="ejemplos/img/css3-bordes/marco-dorado-200.png" alt="Ejemplo de imagen de borde" width="200" height="200"></p>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-slice-5.html" style="height: 26em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-slice-5.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 40px solid;
+  border-image-source: url("marco-dorado.png");
+  border-image-slice: 21;
+
+  padding: 10px;
+  text-align: justify;
+}</code>
+</pre>
+          <p>Imagen utilizada en este ejemplo: <img src="ejemplos/img/css3-bordes/marco-dorado-200.png" alt="Ejemplo de imagen de borde" width="200" height="200"></p>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-slice-6.html" style="height: 26em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-slice-6.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="border-image-width">
+      <h3 class="con-aside">Área de la imagen de borde: <span class="css-prop">border-image-width</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">border-image-width</span><br>
+          <a href="https://www.w3.org/TR/css-backgrounds-3/#border-image-width"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-width"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p>La propiedad <span class="css-prop">border-image-width</span> permite definir el tamaño del espacio ocupado por la imagen de borde:</p>
+
+      <p>Los posibles valores de la propiedad <span class="css-prop">border-image-width</span> son:</p>
+
+      <ul>
+        <li>de uno a cuatro valores numéricos:
+          <ul>
+            <li><span class="css-valor">distancia</span>: se interpretan como tal</li>
+            <li><span class="css-valor">porcentajes</span>: se interpretan como porcentaje de todo el elemento con borde</li>
+            <li><span class="css-valor">números sin unidades</span>: se interpretan multiplicando el valor por el tamaño del borde del elemento.</li>
+          </ul>
+          <p>Como en otras propiedades en las que se pueden escribir de uno a cuatro valores:</p>
+          <ul>
+            <li>si sólo se escribe un valor, este se aplica a los cuatro lados</li>
+            <li>si se escriben dos valores, el primero se aplica arriba y abajo y el segundo a derecha e izquierda</li>
+            <li>si se escriben tres valores, el primero se aplica arriba, el segundo a derecha e izquierda y el tercero abajo</li>
+            <li>si se escriben cuatro valores, el primero se aplica arriba, el segundo a la derecha, el tercero abajo y el cuarto a la izquierda</li>
+          </ul>
+        </li>
+        <li><span class="css-valor">auto</span>:se toma el valor definido con <span class="css-prop">border-image-slice</span></li>
+      </ul>
+
+      <p>Imagen utilizada en estos ejemplos: <img src="ejemplos/img/css3-bordes/marco-dorado-200.png" alt="Ejemplo de imagen de borde" width="200" height="200"></p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 10px solid;
+  border-image-source: url("marco-dorado.png");
+  border-image-slice: 21;
+  <span class="codigo-resaltado">border-image-width: 20px 40px;</span>
+
+  padding: 10px;
+  text-align: justify;
+}
+
+/*
+ El tamaño de la imagen de borde es:
+ - 20 px arriba y abajo
+ - 40 px a derecha e izquierda
+*/</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-width-1.html" style="height: 22em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-width-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 10px solid;
+  border-image-source: url("marco-dorado.png");
+  border-image-slice: 21;
+  <span class="codigo-resaltado">border-image-width: 25%;</span>
+
+  padding: 10px;
+  text-align: justify;
+}
+
+/*
+ El tamaño de la imagen de borde es:
+ - 25% en los cuatro lados
+*/</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-width-2.html" style="height: 21em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-width-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 10px solid;
+  border-image-source: url("marco-dorado.png");
+  border-image-slice: 21;
+  <span class="codigo-resaltado">border-image-width: 1 3;</span>
+
+  padding: 10px;
+  text-align: justify;
+}
+
+/*
+ El tamaño de la imagen de borde es:
+ - 10 px (1 * 10 px) arriba y abajo
+ - 30 px (3 * 10 px) a derecha e izquierda
+*/</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-width-3.html" style="height: 22em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-width-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 10px solid;
+  border-image-source: url("marco-dorado.png");
+  border-image-slice: 21;
+  <span class="codigo-resaltado">border-image-width: auto;</span>
+
+  padding: 10px;
+  text-align: justify;
+}
+
+/*
+ El tamaño de la imagen de borde es:
+ - 21 px en los cuatro lados
+*/</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-width-4.html" style="height: 21em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-width-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="border-image-outset">
+      <h3 class="con-aside">Extensión del área de la imagen de borde: <span class="css-prop">border-image-outset</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">border-image-ouset</span><br>
+          <a href="https://www.w3.org/TR/css-backgrounds-3/#border-image-outset"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-outset"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p>La propiedad <span class="css-prop">border-image-outset</span> permite extender la imagen de borde más allá del elemento.</p>
+
+      <p>Los posibles valores de la propiedad <span class="css-prop">border-image-outset</span> son:</p>
+
+      <ul>
+        <li>de uno a cuatro valores numéricos:
+          <ul>
+            <li><span class="css-valor">distancia</span>: se interpretan como tal</li>
+            <li><span class="css-valor">números sin unidades</span>: se interpretan multiplicando el valor por el tamaño del borde del elemento.</li>
+          </ul>
+          <p>Como en otras propiedades en las que se pueden escribir de uno a cuatro valores:</p>
+          <ul>
+            <li>si sólo se escribe un valor, este se aplica a los cuatro lados</li>
+            <li>si se escriben dos valores, el primero se aplica arriba y abajo y el segundo a derecha e izquierda</li>
+            <li>si se escriben tres valores, el primero se aplica arriba, el segundo a derecha e izquierda y el tercero abajo</li>
+            <li>si se escriben cuatro valores, el primero se aplica arriba, el segundo a la derecha, el tercero abajo y el cuarto a la izquierda</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>Imagen utilizada en estos ejemplos: <img src="ejemplos/img/css3-bordes/marco-dorado-200.png" alt="Ejemplo de imagen de borde" width="200" height="200"></p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 10px solid;
+  padding: 10px;
+  text-align: justify;
+}
+
+p.borde-con-imagen {
+  border-image-source: url("marco-dorado.png");
+  border-image-slice: 21;
+  border-image-outset: 10px;
+}
+
+/*
+ La imagen de borde se encuentra:
+ - 10 px alrededor del elemento
+*/</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-outset-1.html" style="height: 23em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-outset-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 10px solid;
+  padding: 10px;
+  text-align: justify;
+}
+p.borde-con-imagen {
+  border-image-source: url("marco-dorado.png");
+  border-image-slice: 21;
+  border-image-outset: 3 1;
+}
+
+/*
+  La imagen de borde se encuentra:
+ - a 30 px (3 * 10 px) arriba y abajo
+ -  a10 px (1 * 10 px) a derecha e izquierda
+*/</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-outset-2.html" style="height: 23em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-outset-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="border-image-repeat">
+      <h3 class="con-aside">Repetición de la imagen de borde: <span class="css-prop">border-image-repeat</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">border-image-repeat</span><br>
+          <a href="https://www.w3.org/TR/css-backgrounds-3/#border-image-repeat"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-repeat"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p>La propiedad <span class="css-prop">border-image-repeat</span> establece la forma de repetición de la imagen de borde a lo largo del borde.</p>
+
+      <p>Los posibles valores de la propiedad <span class="css-prop">border-image-repeat</span> son:</p>
+
+      <ul>
+        <li><span class="css-valor">stretch</span>: la imagen se estira o encoge para ocupar todo el espacio necesario</li>
+        <li><span class="css-valor">repeat</span>: la imagen se repite para ocupar todo el espacio necesario</li>
+        <li><span class="css-valor">round</span>: la imagen se repite el máximo número entero de veces posible y se estira o encoge para ocupar todo el espacio necesario</li>
+        <li><span class="css-valor">space</span>: la imagen se repite el máximo número entero de veces posible y el espacio sobrante se distribuye entre las imágenes (las imágenes no se estiran o encogen)</li>
+      </ul>
+
+      <p>Imagen utilizada en estos ejemplos: <img src="../css/ejemplos/img/css3-bordes/hormigas-210.png" alt="Ejemplo de imagen de borde" width="100" height="105"></p>
+
+      <div class="filaflex">
+        <div class="icono-navegadores-vacio">
+          <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 40px solid;
+  border-image-source: url("hormigas.png");
+  border-image-slice: 70;
+  border-image-repeat: stretch;
+
+  padding: 10px;
+  text-align: justify;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-repeat-1.html" style="height: 14em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-repeat-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-navegadores-vacio">
+          <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 40px solid;
+  border-image-source: url("hormigas.png");
+  border-image-slice: 70;
+  border-image-repeat: repeat;
+
+  padding: 10px;
+  text-align: justify;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-repeat-2.html" style="height: 14em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-repeat-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-navegadores-vacio">
+          <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 40px solid;
+  border-image-source: url("hormigas.png");
+  border-image-slice: 70;
+  border-image-repeat: round;
+
+  padding: 10px;
+  text-align: justify;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-repeat-3.html" style="height: 14em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-repeat-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-navegadores">
+          <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+          <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  border: silver 40px solid;
+  border-image-source: url("hormigas.png");
+  border-image-slice: 70;
+  border-image-repeat: space;
+
+  padding: 10px;
+  text-align: justify;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/css3-bordes/border-image-repeat-4.html" style="height: 14em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/css3-bordes/border-image-repeat-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="box-decoration-break">
+      <h2 class="con-aside">Bordes de elementos cortados: <span class="css-prop">box-decoration-break</span></h2>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">box-decoration-break</span><br>
+          <img src="../varios/iconos/icono-css-en-construccion.svg" alt="En construcción" title="En construcción" width="36" height="32">
+          <a href="https://www.w3.org/TR/css-break-3/#break-decoration"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p class="incompleto">Por escribir</p>
+
+      <p>Esta propiedad se define en la recomendación <a href="https://www.w3.org/TR/css-break-3/">CSS Fragmentation Module Level 3</a>, actualmente (septiembre de 2025) en elaboración.</p>
+    </section>
+
+    <section id="box-shadow">
+      <h2 class="con-aside">Sombras: <span class="css-prop">box-shadow</span></h2>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">box-shadow</span><br>
+          <a href="https://www.w3.org/TR/css-backgrounds-3/#box-shadow"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p class="incompleto">Por escribir</p>
+    </section>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 26 de marzo de 2026</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

@@ -8,12 +8,17 @@ body{
     background-repeat: no-repeat;
     min-height: 100vh;
     margin: 0;
+    font-size: 120%;
 
 }
 .titulo{
-    
+    position:absolute;
+    top: 8%;
+    left:50%;
     text-align: center;
+    transform: translateX(-50%) scale(2);
     color: #4da6ff;
+    font-weight: bold;    
 }
 a { 
     color: white;
@@ -24,6 +29,13 @@ a {
     padding: 15px;
     border-radius: 10px;
     width: fit-content;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    position:absolute;
+    font-weight: bold;      
+
 }
 
 .enlaces a {
@@ -41,10 +53,12 @@ a {
     color: white;
     transform: translateX(5px);
 }
+
+
 .IconoGitHub {
     position:fixed;
     top: 2%;
-    right:2%;
+    left:2%;
     z-index: 1000; /* Asegura que se mantenga por encima de otros elementos */
 }
 
@@ -53,4 +67,26 @@ a {
     width: 20%;   /* Cambia este número si lo quieres más grande o más pequeño */
     /*height: 40px;*/
     display:block;
+    float: left;
+}  
+.formulario{
+    border: 2px solid #4da6ff;
+    background-color: #0b1f3a;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    position:absolute;
+    
+}
+.formulario p{
+    color: #4da6ff;
+    
+}
+#FormTitulo{
+    color:#4da6ff ;
+    
 }

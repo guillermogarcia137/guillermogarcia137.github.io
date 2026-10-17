@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Recomendaciones CSS estables. CSS. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>Recomendaciones CSS estables</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>CSS estables</h2>
+
+      <ul>
+        <li><a href="#que-es">Definición oficial CSS</a></li>
+        <li><a href="#css3-aprobadas">Aprobadas</a></li>
+        <li><a href="#css3-maduras">En elaboración, maduras</a></li>
+        <li><a href="#css3-confiables">En elaboración, confiables</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>La definición oficial de las hojas de estilo CSS se encuentra actualmente (julio de 2026) en el documento <a href="https://www.w3.org/TR/css-2026/">CSS Snapshot 2026</a>, publicado en febrero de 2026. Esta lección enlaza las últimas versiones de las recomendaciones o de sus borradores que forman parte de esa definición. En la lección <a href="css-rec-inestables.html">Recomendaciones CSS inestables</a> se enlazan las últimas versiones de los borradores que todavía no forman parte de la definición oficial de CSS.</p>
+
+  <section id="que-es">
+    <h2>Definición oficial actual de CSS</h2>
+
+    <p>Así como CSS 2.1 es una única recomendación, para la elaboración de CSS 3 el W3C eligió un enfoque modular: CSS 3 está dividida en numerosas recomendaciones que abordan cada una un aspecto distinto de las hojas de estilo. Cada módulo CSS 3 sigue por tanto su propio ritmo de desarrollo, al mismo tiempo que los navegadores también siguen su propio ritmo de implementación de las recomendaciones o de sus borradores. Si a esto añadimos que de algunas recomendaciones se han publicado borradores de versiones CSS 4 o CSS 5, y que el W3C en 2020 incorporó un modelo de recomendación continua en el que ya no es necesario publicar formalmente la recomendación, la situación puede ser bastante confusa.</p>
+
+    <p>Para clarificar un poco esta situación, el grupo de trabajo CSS del W3C publica desde 2015 las CSS Snapshot, que clasifican los borradores existentes en función de su grado de madurez e implementación. Se empezaron publicando cada dos años más o menos, pero la intención es hacerlo anualmente. Actualmente (julio de 2026), la última versión publicada es <a href="https://www.w3.org/TR/css-2026/">CSS Snapshot 2026</a>, publicada en febrero de 2026. En esta lección se listan las recomendaciones o borradores de recomendaciones CSS 3 que se consideran lo suficientemente maduras para sustituir los apartados correspondientes de la recomendación CSS 2.1.</p>
+
+    <hr class="corta">
+
+    <p>Además del CSS Snapshot, la web del W3C ofrece información adicional y actualizada sobre CSS 3:</p>
+    <ul>
+      <li><a href="https://www.w3.org/TR/?tag=css#w3c_all">listado cronológico</a> de las recomendaciones CSS vigentes y en elaboración</li>
+      <li><a href="https://www.w3.org/Style/CSS/current-work">listado por grado de madurez</a> de las recomendaciones CSS vigentes y en elaboración</li>
+      <li><a href="https://drafts.csswg.org/">listado completo</a> de los borradores de editor existentes</li>
+      <li>índice de todos los términos definidos por las recomendaciones CSS: <a href="https://www.w3.org/Style/CSS/all-properties.en.html">Propiedades</a> y <a href="https://www.w3.org/Style/CSS/all-descriptors">Descriptores</a></li>
+    </ul>
+
+    <p>Al margen del W3C, algunas páginas recogen el estado de implementación de las diferentes recomendaciones en los diferentes navegadores:</p>
+    <ul>
+      <li><a href="https://caniuse.com/#home">Can I use ... ?</a></li>
+      <li><a href="https://www.chromestatus.com/features">Chrome platform status</a></li>
+      <li>Firefox platform status: abandonado en 2021 <a href="https://web.archive.org/web/20210305072524/https://platform-status.mozilla.org/">copia en archive.org</a> - <a href="https://github.com/mozilla/platform-status">repositorio en GitHub</a></li>
+      <li><a href="https://mozilla.github.io/standards-positions/">Mozilla Specification Positions</a></li>
+      <li><a href="https://webkit.org/status/">Webkit (Safari) platform status</a></li>
+    </ul>
+  </section>
+
+  <section id="css3-aprobadas">
+    <h2>Recomendaciones CSS 3 aprobadas</h2>
+
+    <p>actualmente (julio de 2026), el W3C ha aprobado las siguientes recomendaciones CSS 3:</p>
+
+    <ul>
+      <li>noviembre de 2013: <a href="https://www.w3.org/TR/2013/REC-css-style-attr-20131107/">CSS Style Attributes</a>, editada por Tantek Çelik y Elika J. Etemad.</li>
+      <li>marzo de 2014: <a href="https://www.w3.org/TR/2014/REC-css-namespaces-3-20140320/">CSS Namespaces Module Level 3 (2º ed)</a>, editada por Elika J. Etemad.</li>
+      <li>septiembre de 2018: <a href="https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/">CSS Fonts Module Level 3</a>, editada por John Daggett y otros.</li>
+      <li>noviembre de 2018: <a href="https://www.w3.org/TR/2018/REC-selectors-3-20181106/">Selectors Level 3 (2ª ed)</a>, editada por Tantek Çelik y otros.</li>
+      <li>diciembre de 2019: <a href="https://www.w3.org/TR/2019/REC-css-writing-modes-3-20191210/">CSS Writing Modes Level 3</a>, editada por Elika J. Etemad y Koji Ishii.</li>
+      <li>febrero de 2021: <a href="https://www.w3.org/TR/2021/REC-css-cascade-3-20210211/">CSS Cascading and Inheritance Level 3</a>, editada por Elika J. Etemad y Tab Atkins. Aunque esta recomendación no ha sido retirada, no está incluida en la definición oficial de CSS de CSS Snapshot 2026, que incluye en su lugar la recomendación todavía en elaboración <a href="https://www.w3.org/TR/css-cascade-4/">CSS Cascading and Inheritance Level 4</a>.</li>
+      <li>enero de 2022: <a href="https://www.w3.org/TR/2022/REC-css-color-3-20220118/">CSS Color Module Level 3 (4ª ed)</a>, editada por Tantek Çelik y otros. Aunque esta recomendación no ha sido retirada, no está incluida en la definición oficial de CSS de CSS Snapshot 2026, que incluye en su lugar la recomendación todavía en elaboración <a href="https://www.w3.org/TR/css-color-4/">CSS Color Module Level 4</a>.</li>
+      <li>abril de 2024: <a href="https://www.w3.org/TR/2024/REC-css-box-3-20240411/">CSS Box Model Module Level 3</a>, editada por Elika J. Etemad.</li>
+      <li>mayo de 2024: <a href="https://www.w3.org/TR/2024/REC-mediaqueries-3-20240521/">Media Queries Level 3 (3ª ed)</a>, editada por Florian Rivoal.</li>
+      <li>junio de 2024: <a href="https://www.w3.org/TR/2024/REC-css-contain-1-20240625/">CSS Containment Module Level 1 (4ª ed)</a>, editada por Tab Atkins y Florian Rivoal.</li>
+      <li>abril de 2026:  <a href="https://www.w3.org/TR/2026/REC-css-ui-3-20260407/">CSS Basic User Interface Module Level 3 (CSS3 UI) (2ª ed.)</a>, editada por Tantek Çelik y Florian Rivoal.</li>
+    </ul>
+  </section>
+
+  <section id="css3-maduras">
+    <h2>Recomendaciones CSS 3 en elaboración, pero ya maduras</h2>
+
+    <p>Las siguientes recomendaciones se encuentran actualmente (julio de 2026) en elaboración, aunque en febrero de 2026 se consideraron lo suficientemente maduras como para formar parte de la definición oficial de CSS en CSS Snapshot 2026.</p>
+
+    <table class="tabla-con-borde">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Borrador</th>
+          <th>Borrador del editor</th>
+          <th>Can I Use ... / Lecciones</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>CSS Color Module Level 4
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Color Module Level 4</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="391" y2="0" stroke-width="1" stroke="black" />
+                <line x1="391" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="391" cy="0" r="5" fill="#025A9A" />
+              <text x="391" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">FPWD</text>
+              <circle cx="551" cy="0" r="5" fill="#025A9A" />
+              <text x="553" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="591" cy="0" r="5" fill="#025A9A" />
+              <text x="587" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="652" cy="0" r="5" fill="#025A9A" />
+              <text x="647" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="685" cy="0" r="5" fill="#025A9A" />
+              <text x="685" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="718" cy="0" r="5" fill="#025A9A" />
+              <text x="707" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="740" cy="0" r="5" fill="#025A9A" />
+              <text x="735" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="751" cy="0" r="5" fill="#025A9A" />
+              <text x="751" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="770" cy="0" r="5" fill="#025A9A" />
+              <text x="765" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="848" cy="0" r="5" fill="#025A9A" />
+              <text x="855" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="919" cy="0" r="5" fill="#025A9A" />
+              <text x="919" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="978" cy="0" r="5" fill="#025A9A" />
+              <text x="978" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="988" cy="0" r="5" fill="#025A9A" />
+              <text x="988" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-color-4/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRD - 2026-06-18</td>
+        <td><a href="https://drafts.csswg.org/css-color/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Flexible Box Layout Module Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Flexible Box Layout Level 1</title>
+              <g>
+                <line x1="-25" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="73" cy="0" r="5" fill="#025A9A" />
+              <text x="73" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="115" cy="0" r="5" fill="#025A9A" />
+              <text x="115" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="133" cy="0" r="5" fill="#025A9A" />
+              <text x="133" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="163" cy="0" r="5" fill="#025A9A" />
+              <text x="163" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="254" cy="0" r="5" fill="#025A9A" />
+              <text x="254" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="284" cy="0" r="5" fill="#025A9A" />
+              <text x="284" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="322" cy="0" r="5" fill="#025A9A" />
+              <text x="322" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="370" cy="0" r="5" fill="#025A9A" />
+              <text x="372" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="384" cy="0" r="5" fill="#025A9A" />
+              <text x="384" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="468" cy="0" r="5" fill="#025A9A" />
+              <text x="468" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="533" cy="0" r="5" fill="#025A9A" />
+              <text x="528" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="948" cy="0" r="5" fill="#025A9A" />
+              <text x="943" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-flexbox-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRD - 2025-10-14</td>
+        <td><a href="https://drafts.csswg.org/css-flexbox/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td><a href="https://caniuse.com/#feat=flexbox"><img src="../varios/iconos/icono-caniuse-oksi.svg" alt="Can I use" title="Can I use" width="32" height="32"></a></td>
+      </tr>
+      <tr>
+        <td>CSS Conditional Rules Module Level 3
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Conditional Rules Module Level 3</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="100" y2="0" stroke-width="1" stroke="black" />
+                <line x1="100" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="100" cy="0" r="5" fill="#025A9A" />
+              <text x="100" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="162" cy="0" r="5" fill="#025A9A" />
+              <text x="162" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="177" cy="0" r="5" fill="#025A9A" />
+              <text x="177" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="195" cy="0" r="5" fill="#025A9A" />
+              <text x="195" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+              <circle cx="657" cy="0" r="5" fill="#025A9A" />
+              <text x="644" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+              <circle cx="722" cy="0" r="5" fill="#025A9A" />
+              <text x="735" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+              <circle cx="878" cy="0" r="5" fill="#025A9A" />
+              <text x="878" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-conditional-3/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRS - 2024-08-15</td>
+        <td><a href="https://drafts.csswg.org/css-conditional-3/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Multi-column Layout Module Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Multi-column Layout Module Level 1</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="77" cy="0" r="5" fill="#025A9A" />
+              <text x="77" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="466" cy="0" r="5" fill="#025A9A" />
+              <text x="466" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="504" cy="0" r="5" fill="#025A9A" />
+              <text x="504" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="588" cy="0" r="5" fill="#025A9A" />
+              <text x="586" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="667" cy="0" r="5" fill="#025A9A" />
+              <text x="674" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="707" cy="0" r="5" fill="#025A9A" />
+              <text x="704" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+              <circle cx="863" cy="0" r="5" fill="#025A9A" />
+              <text x="863" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-multicol-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRS - 2024-05-16</td>
+        <td><a href="https://drafts.csswg.org/css-multicol/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td><a href="css-columnas.html">Columnas</a></td>
+      </tr>
+      <tr>
+        <td>CSS Values and Units Module Level 3
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Values and Units Level 3</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="101" cy="0" r="5" fill="#025A9A" />
+              <text x="101" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="131" cy="0" r="5" fill="#025A9A" />
+              <text x="131" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="159" cy="0" r="5" fill="#025A9A" />
+              <text x="159" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="195" cy="0" r="5" fill="#025A9A" />
+              <text x="195" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="215" cy="0" r="5" fill="#025A9A" />
+              <text x="215" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="327" cy="0" r="5" fill="#025A9A" />
+              <text x="327" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="405" cy="0" r="5" fill="#025A9A" />
+              <text x="405" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="517" cy="0" r="5" fill="#025A9A" />
+              <text x="517" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="545" cy="0" r="5" fill="#025A9A" />
+              <text x="552" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="566" cy="0" r="5" fill="#025A9A" />
+              <text x="566" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="775" cy="0" r="5" fill="#025A9A" />
+              <text x="768" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="854" cy="0" r="5" fill="#025A9A" />
+              <text x="855" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css3-values/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CR - 2024-03-22</td>
+        <td><a href="https://drafts.csswg.org/css-values-3/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Compositing and Blending Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>Compositing and Blending Level 1</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="157" y2="0" stroke-width="1" stroke="black" />
+                <line x1="157" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="157" cy="0" r="5" fill="#025A9A" />
+              <text x="157" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="209" cy="0" r="5" fill="#025A9A" />
+              <text x="209" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="227" cy="0" r="5" fill="#025A9A" />
+              <text x="217" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">LCWD</text>
+              <circle cx="248" cy="0" r="5" fill="#025A9A" />
+              <text x="252" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="302" cy="0" r="5" fill="#025A9A" />
+              <text x="311" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="854" cy="0" r="5" fill="#025A9A" />
+              <text x="855" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/compositing/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CR - 2024-03-21</td>
+        <td><a href="https://drafts.fxtf.org/compositing-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Backgrounds and Borders Module Level 3
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Backgrounds and Borders Module Level 3</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="27" cy="0" r="5" fill="#025A9A" />
+              <text x="27" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="67" cy="0" r="5" fill="#025A9A" />
+              <text x="67" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="127" cy="0" r="5" fill="#025A9A" />
+              <text x="127" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="138" cy="0" r="5" fill="#025A9A" />
+              <text x="138" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="154" cy="0" r="5" fill="#025A9A" />
+              <text x="154" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="246" cy="0" r="5" fill="#025A9A" />
+              <text x="262" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">LCWD</text>
+              <circle cx="281" cy="0" r="5" fill="#025A9A" />
+              <text x="281" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="468" cy="0" r="5" fill="#025A9A" />
+              <text x="468" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="659" cy="0" r="5" fill="#025A9A" />
+              <text x="649" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="694" cy="0" r="5" fill="#025A9A" />
+              <text x="694" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="788" cy="0" r="5" fill="#025A9A" />
+              <text x="795" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="838" cy="0" r="5" fill="#025A9A" />
+              <text x="823" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="852" cy="0" r="5" fill="#025A9A" />
+              <text x="855" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-backgrounds-3/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRD - 2024-03-11</td>
+        <td><a href="https://drafts.csswg.org/css-backgrounds-3/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td><a href="css-fondos.html">Fondos</a> - <a href="css-bordes-2.html">Bordes (2)</a></td>
+      </tr>
+      <tr>
+        <td>CSS Images Module Level 3
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Images Module Level 3</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="68" cy="0" r="5" fill="#025A9A" />
+              <text x="68" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="101" cy="0" r="5" fill="#025A9A" />
+              <text x="101" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="122" cy="0" r="5" fill="#025A9A" />
+              <text x="122" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="138" cy="0" r="5" fill="#025A9A" />
+              <text x="138" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="587" cy="0" r="5" fill="#025A9A" />
+              <text x="587" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="658" cy="0" r="5" fill="#025A9A" />
+              <text x="658" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="838" cy="0" r="5" fill="#025A9A" />
+              <text x="823" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-images-3/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>CRD - 2023-12-18</td>
+        <td><a href="https://drafts.csswg.org/css-images-3/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Easing Functions Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Easing Functions Level 1</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="429" y2="0" stroke-width="1" stroke="black" />
+                <line x1="429" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="429" cy="0" r="5" fill="#025A9A" />
+              <text x="429" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="524" cy="0" r="5" fill="#025A9A" />
+              <text x="524" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="560" cy="0" r="5" fill="#025A9A" />
+              <text x="560" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="675" cy="0" r="5" fill="#025A9A" />
+              <text x="675" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="788" cy="0" r="5" fill="#025A9A" />
+              <text x="795" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-easing-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>CRD - 2023-02-13</td>
+        <td><a href="https://drafts.csswg.org/css-easing/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Custom Properties for Cascading Variables Module Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Custom Properties for Cascading Variables Module Level 1</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="136" y2="0" stroke-width="1" stroke="black" />
+                <line x1="136" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="136" cy="0" r="5" fill="#025A9A" />
+              <text x="136" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="192" cy="0" r="5" fill="#025A9A" />
+              <text x="192" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="208" cy="0" r="5" fill="#025A9A" />
+              <text x="208" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="261" cy="0" r="5" fill="#025A9A" />
+              <text x="261" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="355" cy="0" r="5" fill="#025A9A" />
+              <text x="348" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="712" cy="0" r="5" fill="#025A9A" />
+              <text x="705" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="748" cy="0" r="5" fill="#025A9A" />
+              <text x="748" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-variables-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CR - 2022-06-16</td>
+        <td><a href="https://drafts.csswg.org/css-variables/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Cascading and Inheritance Level 4
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Cascading and Inheritance Level 4</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="362" y2="0" stroke-width="1" stroke="black" />
+                <line x1="362" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="318" cy="0" r="5" fill="#025A9A" />
+              <text x="318" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="341" cy="0" r="5" fill="#025A9A" />
+              <text x="341" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="362" cy="0" r="5" fill="#025A9A" />
+              <text x="371" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="520" cy="0" r="5" fill="#025A9A" />
+              <text x="520" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="638" cy="0" r="5" fill="#025A9A" />
+              <text x="638" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="673" cy="0" r="5" fill="#025A9A" />
+              <text x="673" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="700" cy="0" r="5" fill="#025A9A" />
+              <text x="700" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="716" cy="0" r="5" fill="#025A9A" />
+              <text x="708" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="722" cy="0" r="5" fill="#025A9A" />
+              <text x="732" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-cascade-4/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>CRS - 2022-01-13</td>
+        <td><a href="https://drafts.csswg.org/css-cascade/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Syntax Module Level 3
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Syntax Module Level 3</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="223" cy="0" r="5" fill="#025A9A" />
+              <text x="223" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="231" cy="0" r="5" fill="#025A9A" />
+              <text x="228" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="248" cy="0" r="5" fill="#025A9A" />
+              <text x="252" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="573" cy="0" r="5" fill="#025A9A" />
+              <text x="573" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="719" cy="0" r="5" fill="#025A9A" />
+              <text x="703" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-syntax-3/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRD - 2021-12-24</td>
+        <td><a href="https://drafts.csswg.org/css-syntax/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Counter Styles Level 3
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Counter Styles Level 3</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="166" y2="0" stroke-width="1" stroke="black" />
+                <line x1="166" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="166" cy="0" r="5" fill="#025A9A" />
+              <text x="166" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="189" cy="0" r="5" fill="#025A9A" />
+              <text x="189" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="213" cy="0" r="5" fill="#025A9A" />
+              <text x="213" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="279" cy="0" r="5" fill="#025A9A" />
+              <text x="279" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="306" cy="0" r="5" fill="#025A9A" />
+              <text x="311" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="327" cy="0" r="5" fill="#025A9A" />
+              <text x="327" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="477" cy="0" r="5" fill="#025A9A" />
+              <text x="468" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="695" cy="0" r="5" fill="#025A9A" />
+              <text x="695" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-counter-styles-3/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRS - 2021-07-27</td>
+        <td><a href="https://drafts.csswg.org/css-counter-styles/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Transforms Module Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Transforms Module Level 1</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="314" y2="0" stroke-width="1" stroke="black" />
+                <line x1="314" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="130" cy="0" r="5" fill="#025A9A" />
+              <text x="130" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">FPWD</text>
+              <circle cx="162" cy="0" r="5" fill="#025A9A" />
+              <text x="162" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="234" cy="0" r="5" fill="#025A9A" />
+              <text x="228" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="475" cy="0" r="5" fill="#025A9A" />
+              <text x="466" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="536" cy="0" r="5" fill="#025A9A" />
+              <text x="526" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="548" cy="0" r="5" fill="#025A9A" />
+              <text x="553" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-transforms-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CR - 2019-02-14</td>
+        <td><a href="https://drafts.csswg.org/css-transforms/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td>
+          <a href="https://caniuse.com/#feat=transforms2d"><img src="../varios/iconos/icono-caniuse-oksi.svg" alt="Can I use" title="Can I use" width="32" height="32"></a>
+          <a href="https://caniuse.com/#feat=transforms3d"><img src="../varios/iconos/icono-caniuse-oksi.svg" alt="Can I use" title="Can I use" width="32" height="32"></a>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="css3-confiables">
+    <h2>Recomendaciones CSS 3 en elaboración, pero confiables</h2>
+
+    <p>Las siguientes recomendaciones se encuentran actualmente (julio de 2026) en elaboración y aunque no forman parte de la definición oficial de CSS en CSS Snapshot 2026, en febrero de 2026 se consideró que tanto la especificación como las implementaciones eran estables y sólo quedan pendientes detalles o informes de implementación.</p>
+
+    <table class="tabla-con-borde">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Borrador</th>
+          <th>Borrador del editor</th>
+          <th>Can I Use ... / Lecciones</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Media Queries Level 4
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>Media Queries Level 4</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="266" y2="0" stroke-width="1" stroke="black" />
+                <line x1="266" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="266" cy="0" r="5" fill="#025A9A" />
+              <text x="266" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">FPWD</text>
+              <circle cx="364" cy="0" r="5" fill="#025A9A" />
+              <text x="373" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="391" cy="0" r="5" fill="#025A9A" />
+              <text x="391" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="443" cy="0" r="5" fill="#025A9A" />
+              <text x="443" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="461" cy="0" r="5" fill="#025A9A" />
+              <text x="461" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+              <circle cx="634" cy="0" r="5" fill="#025A9A" />
+              <text x="634" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+              <circle cx="719" cy="0" r="5" fill="#025A9A" />
+              <text x="704" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="969" cy="0" r="5" fill="#025A9A" />
+              <text x="975" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/mediaqueries-4/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRD - 2026-02-19</td>
+        <td><a href="https://drafts.csswg.org/mediaqueries-4/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Color Adjustment Module Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Color Adjustment Module Level 1</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="563" y2="0" stroke-width="1" stroke="black" />
+                <line x1="563" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="563" cy="0" r="5" fill="#025A9A" />
+              <text x="563" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">FPWD</text>
+              <circle cx="615" cy="0" r="5" fill="#025A9A" />
+              <text x="615" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="652" cy="0" r="5" fill="#025A9A" />
+              <text x="647" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="683" cy="0" r="5" fill="#025A9A" />
+              <text x="683" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="727" cy="0" r="5" fill="#025A9A" />
+              <text x="737" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+              <circle cx="747" cy="0" r="5" fill="#025A9A" />
+              <text x="747" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="937" cy="0" r="5" fill="#025A9A" />
+              <text x="937" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="958" cy="0" r="5" fill="#025A9A" />
+              <text x="944" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-color-adjust-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRS - 2025-12-16</td>
+        <td><a href="https://drafts.csswg.org/css-color-adjust-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Conditional Rules Module Level 4
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Conditional Rules Module Level 4</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="611" y2="0" stroke-width="1" stroke="black" />
+                <line x1="611" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="611" cy="0" r="5" fill="#025A9A" />
+              <text x="621" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">FPWD</text>
+              <circle cx="719" cy="0" r="5" fill="#025A9A" />
+              <text x="708" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="728" cy="0" r="5" fill="#025A9A" />
+              <text x="735" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+              <circle cx="941" cy="0" r="5" fill="#025A9A" />
+              <text x="941" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-conditional-4/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRD - 2025-09-04</td>
+        <td><a href="https://drafts.csswg.org/css-conditional-4/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Grid Layout Module Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Grid Layout Module Level 1</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="76" y2="0" stroke-width="1" stroke="black" />
+                <line x1="76" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="76" cy="0" r="5" fill="#025A9A" />
+              <text x="76" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="133" cy="0" r="5" fill="#025A9A" />
+              <text x="133" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="171" cy="0" r="5" fill="#025A9A" />
+              <text x="171" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="195" cy="0" r="5" fill="#025A9A" />
+              <text x="195" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="244" cy="0" r="5" fill="#025A9A" />
+              <text x="244" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="264" cy="0" r="5" fill="#025A9A" />
+              <text x="264" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="312" cy="0" r="5" fill="#025A9A" />
+              <text x="312" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="336" cy="0" r="5" fill="#025A9A" />
+              <text x="336" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="343" cy="0" r="5" fill="#025A9A" />
+              <text x="343" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="383" cy="0" r="5" fill="#025A9A" />
+              <text x="383" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="405" cy="0" r="5" fill="#025A9A" />
+              <text x="405" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="427" cy="0" r="5" fill="#025A9A" />
+              <text x="432" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="441" cy="0" r="5" fill="#025A9A" />
+              <text x="441" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="477" cy="0" r="5" fill="#025A9A" />
+              <text x="477" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="638" cy="0" r="5" fill="#025A9A" />
+              <text x="620" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="649" cy="0" r="5" fill="#025A9A" />
+              <text x="642" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="658" cy="0" r="5" fill="#025A9A" />
+              <text x="645" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="914" cy="0" r="5" fill="#025A9A" />
+              <text x="915" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-grid-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRD - 2025-03-26</td>
+        <td><a href="https://drafts.csswg.org/css-grid/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td><a href="https://caniuse.com/#feat=css-grid"><img src="../varios/iconos/icono-caniuse-oksi.svg" alt="Can I use" title="Can I use" width="32" height="32"></a></td>
+      </tr>
+      <tr>
+        <td>CSS Grid Layout Module Level 2
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Grid Layout Module Level 2</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="76" y2="0" stroke-width="1" stroke="black" />
+                <line x1="76" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="486" cy="0" r="5" fill="#025A9A" />
+              <text x="480" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">FPWD</text>
+              <circle cx="499" cy="0" r="5" fill="#025A9A" />
+              <text x="495" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="510" cy="0" r="5" fill="#025A9A" />
+              <text x="516" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="516" cy="0" r="5" fill="#025A9A" />
+              <text x="520" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="596" cy="0" r="5" fill="#025A9A" />
+              <text x="596" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="638" cy="0" r="5" fill="#025A9A" />
+              <text x="620" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="649" cy="0" r="5" fill="#025A9A" />
+              <text x="642" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="658" cy="0" r="5" fill="#025A9A" />
+              <text x="645" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+              <circle cx="914" cy="0" r="5" fill="#025A9A" />
+              <text x="915" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRD</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-grid-2/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRD - 2025-03-26</td>
+        <td><a href="https://drafts.csswg.org/css-grid-2/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td><a href="https://caniuse.com/css-subgrid"><img src="../varios/iconos/icono-caniuse-okno.svg" alt="Can I use" title="Can I use" width="32" height="32"></a></td>
+      </tr>
+      <tr>
+        <td>CSS Cascading and Inheritance Level 5
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Cascading and Inheritance Level 5</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="663" y2="0" stroke-width="1" stroke="black" />
+                <line x1="663" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="663" cy="0" r="5" fill="#025A9A" />
+              <text x="679" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">FPWD</text>
+              <circle cx="686" cy="0" r="5" fill="#025A9A" />
+              <text x="686" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="708" cy="0" r="5" fill="#025A9A" />
+              <text x="709" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="722" cy="0" r="5" fill="#025A9A" />
+              <text x="735" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-cascade-5/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRS - 2022-01-13</td>
+        <td><a href="https://drafts.csswg.org/css-cascade/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Scrollbars Styling Module Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Scrollbars Styling Module Level 1</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="524" y2="0" stroke-width="1" stroke="black" />
+                <line x1="524" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="524" cy="0" r="5" fill="#025A9A" />
+              <text x="518" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">FPWD</text>
+              <circle cx="696" cy="0" r="5" fill="#025A9A" />
+              <text x="696" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="717" cy="0" r="5" fill="#025A9A" />
+              <text x="704" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-scrollbars-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRS - 2021-12-09</td>
+        <td><a href="https://drafts.csswg.org/css-scrollbars/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>CSS Scroll Snap Module Level 1
+          <p class="mcl-svg-diagrama-temporal">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" viewBox="410 -60 640 100">
+              <title>CSS Scroll Snap Module Level 1</title>
+
+              <g>
+                <line x1="-25" y1="0" x2="314" y2="0" stroke-width="1" stroke="black" />
+                <line x1="314" y1="0" x2="1040" y2="0" stroke-width="3" stroke="#025A9A" />
+
+                <line x1="0" y1="-30" x2="0" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="30" y="-40" text-anchor="middle" style="font-size: 80%">2010</text>
+                <line x1="60" y1="-30" x2="60" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="90" y="-40" text-anchor="middle" style="font-size: 80%">2011</text>
+                <line x1="120" y1="-30" x2="120" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="150" y="-40" text-anchor="middle" style="font-size: 80%">2012</text>
+                <line x1="180" y1="-30" x2="180" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="210" y="-40" text-anchor="middle" style="font-size: 80%">2013</text>
+                <line x1="240" y1="-30" x2="240" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="270" y="-40" text-anchor="middle" style="font-size: 80%">2014</text>
+                <line x1="300" y1="-30" x2="300" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="330" y="-40" text-anchor="middle" style="font-size: 80%">2015</text>
+                <line x1="360" y1="-30" x2="360" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="390" y="-40" text-anchor="middle" style="font-size: 80%">2016</text>
+                <line x1="420" y1="-30" x2="420" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="450" y="-40" text-anchor="middle" style="font-size: 80%">2017</text>
+                <line x1="480" y1="-30" x2="480" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="510" y="-40" text-anchor="middle" style="font-size: 80%">2018</text>
+                <line x1="540" y1="-30" x2="540" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="570" y="-40" text-anchor="middle" style="font-size: 80%">2019</text>
+                <line x1="600" y1="-30" x2="600" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="630" y="-40" text-anchor="middle" style="font-size: 80%">2020</text>
+                <line x1="660" y1="-30" x2="660" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="690" y="-40" text-anchor="middle" style="font-size: 80%">2021</text>
+                <line x1="720" y1="-30" x2="720" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="750" y="-40" text-anchor="middle" style="font-size: 80%">2022</text>
+                <line x1="780" y1="-30" x2="780" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="810" y="-40" text-anchor="middle" style="font-size: 80%">2023</text>
+                <line x1="840" y1="-30" x2="840" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="870" y="-40" text-anchor="middle" style="font-size: 80%">2024</text>
+                <line x1="900" y1="-30" x2="900" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="930" y="-40" text-anchor="middle" style="font-size: 80%">2025</text>
+                <line x1="960" y1="-30" x2="960" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+                <text x="990" y="-40" text-anchor="middle" style="font-size: 80%">2026</text>
+                <line x1="1020" y1="-30" x2="1020" y2="30" stroke-width="1" stroke-dasharray="5,5" stroke="black" />
+              </g>
+
+              <circle cx="314" cy="0" r="5" fill="#025A9A" />
+              <text x="314" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="375" cy="0" r="5" fill="#025A9A" />
+              <text x="375" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="389" cy="0" r="5" fill="#025A9A" />
+              <text x="389" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">WD</text>
+              <circle cx="408" cy="0" r="5" fill="#025A9A" />
+              <text x="408" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="427" cy="0" r="5" fill="#025A9A" />
+              <text x="431" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="459" cy="0" r="5" fill="#025A9A" />
+              <text x="459" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="477" cy="0" r="5" fill="#025A9A" />
+              <text x="469" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="517" cy="0" r="5" fill="#025A9A" />
+              <text x="517" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="545" cy="0" r="5" fill="#025A9A" />
+              <text x="551" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="553" cy="0" r="5" fill="#025A9A" />
+              <text x="556" y="25" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CR</text>
+              <circle cx="672" cy="0" r="5" fill="#025A9A" />
+              <text x="675" y="-15" text-anchor="middle" fill="#025A9A" style="font-size: 80%; font-weight: bold">CRS</text>
+            </svg>
+          </p>
+        </td>
+        <td><a href="https://www.w3.org/TR/css-scroll-snap-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a> CRS - 2021-03-11</td>
+        <td><a href="https://drafts.csswg.org/css-scroll-snap-1/"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a></td>
+        <td><a href="https://caniuse.com/#feat=css-snappoints"><img src="../varios/iconos/icono-caniuse-oksi.svg" alt="Can I use" title="Can I use" width="32" height="32"></a></td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 8 de julio de 2026</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Elementos obsoletos. HTML. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>Elementos obsoletos</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>HTML obsoletos</h2>
+
+      <ul>
+        <li><a href="#conceptos">Conceptos</a></li>
+        <li><a href="#formatos">Formatos</a></li>
+        <li><a href="#inexistentes">Etiquetas no normalizadas</a></li>
+        <li><a href="#etiquetas">Etiquetas</a></li>
+        <li><a href="#atributos">Atributos</a></li>
+        <li><a href="#atributos-valores">Valores de atributos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>En esta lección se comentan algunas de los conceptos, etiquetas y atributos que se han ido declarando obsoletos en las sucesivas versiones de HTML o que, sin llegar a estar normalizados en ninguna versión de HTML fueron implementados por algún navegador.</p>
+
+  <section id="conceptos">
+    <h2>Conceptos obsoletos</h2>
+
+    <section id="esquema">
+      <h3>Esquema (<i>outline</i>)</h3>
+
+      <p>El concepto de esquema incluido en HTML 5 y que se eliminó de la norma HTML en julio de 2022 se comenta en la lección <a href="html-esquema.html">Esquema</a>.</p>
+    </section>
+  </section>
+
+  <section id="formatos">
+    <h2>Formatos obsoletos</h2>
+
+    <section id="img-formatos-mng">
+      <h3>Formato de imagen MNG</h3>
+
+      <p>El formato <a href="http://www.libpng.org/pub/mng/">MNG</a> (Multiple-image Network Graphics = Gráficos de Red con Múltiples imágenes) permite crear animaciones a partir de imágenes PNG. Fue creado por algunos de los autores de PNG a partir de 1996. La <a href="http://www.libpng.org/pub/mng/spec/">especificación MNG 1.0</a>, escrita por Glenn Randers-Pehrson, se aprobó en enero de 2001, aunque no fue apoyada por el W3C.</p>
+
+      <p>Por motivos que desconozco, el formato MNG tuvo muy poco éxito. Aunque existen algunos programas capaces de crear y reproducir MNG, su uso no ha dejado nunca de ser marginal. Por ejemplo, en junio de 2003, Mozilla Firefox eliminó el soporte de MNG que tenía hasta ese momento (posteriormente se intentó <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=18574">restaurar el soporte</a>, sin ningún éxito).</p>
+    </section>
+  </section>
+
+  <section id="inexistentes">
+    <h2>Etiquetas no incluidas en ninguna recomendación de HTML</h2>
+
+    <p>Las siguientes etiquetas no han sido normalizadas en ninguna versión de HTML, pero fueron implementadas por algún navegador en el pasado:
+      <span class="html-eti">&lt;bgsound&gt;</span>,
+      <span class="html-eti">&lt;blink&gt;</span>,
+      <span class="html-eti">&lt;nobr&gt;</span>,
+      <span class="html-eti">&lt;spacer&gt;</span>
+    </p>
+
+    <section id="blink">
+      <h3 class="con-aside"><span class="html-eti">&lt;blink&gt;</span></h3>
+
+      <div class="enlace-norma">
+        <p>
+          <span class="html-eti">&lt;blink&gt;</span><br>
+          <a href="https://html.spec.whatwg.org/multipage/obsolete.html#blink">
+            <img src="../varios/iconos/icono-whatwg.svg" alt="HTML Living Standard" title="HTML Living Standard" width="32" height="32">
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blink">
+            <img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32">
+          </a>
+        </p>
+      </div>
+
+      <p>La etiqueta <span class="html-eti">&lt;blink&gt;</span> no ha estado incluida en ninguna versión de HTML, pero el navegador Netscape (y Firefox hasta 2013) la admitía.</p>
+
+      <p>Desde Firefox 23 (agosto de 2013) Firefox no admite la etiqueta no oficial <span class="html-eti">&lt;blink&gt;</span> ni el valor <span class="css-valor">blink</span> de la propiedad <span class="css-prop">text-decoration</span>. Chrome no ha admitido nunca ni la etiqueta <span class="html-eti">&lt;blink&gt;</span> ni el valor <span class="css-valor">blink</span> de la propiedad <span class="css-prop">text-decoration</span>.</p>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="codigo">
+          <pre><code class="language-html">&lt;p&gt;&lt;blink&gt;La etiqueta &lt;blink&gt; no ha estado incluida en ninguna recomendación.&lt;/blink&gt;.&lt;/p&gt;</code></pre>
+        </div>
+        <iframe src="ejemplos/obsoletos/no-estandar-blink.html" style="height: 6em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/obsoletos/no-estandar-blink.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section id="etiquetas">
+    <h2>Etiquetas obsoletas</h2>
+
+    <p>Las siguientes etiquetas se consideran obsoletas, aunque estuvieron definidas en alguna recomendación de HTML:
+      <span class="html-eti">&lt;acronym&gt;</span>,
+      <span class="html-eti">&lt;applet&gt;</span>,
+      <span class="html-eti">&lt;basefont&gt;</span>,
+      <span class="html-eti">&lt;big&gt;</span>,
+      <span class="html-eti">&lt;center&gt;</span>,
+      <span class="html-eti">&lt;dir&gt;</span>,
+      <span class="html-eti">&lt;font&gt;</span>,
+      <span class="html-eti">&lt;frame&gt;</span>,
+      <span class="html-eti">&lt;frameset&gt;</span>,
+      <span class="html-eti">&lt;isindex&gt;</span>,
+      <span class="html-eti">&lt;keygen&gt;</span>,
+      <span class="html-eti">&lt;listing&gt;</span>,
+      <span class="html-eti">&lt;marquee&gt;</span>,
+      <span class="html-eti">&lt;menuitem&gt;</span>,
+      <span class="html-eti">&lt;multicol&gt;</span>,
+      <span class="html-eti">&lt;nextid&gt;</span>,
+      <span class="html-eti">&lt;noembed&gt;</span>,
+      <span class="html-eti">&lt;noframes&gt;</span>,
+      <span class="html-eti">&lt;plaintext&gt;</span>,
+      <span class="html-eti">&lt;rb&gt;</span>,
+      <span class="html-eti">&lt;rtc&gt;</span>,
+      <span class="html-eti">&lt;strike&gt;</span>,
+      <span class="html-eti">&lt;tt&gt;</span>,
+      <span class="html-eti">&lt;xmp&gt;</span>.
+    </p>
+
+    <section id="acronym">
+      <h3 class="con-aside"><span class="html-eti">&lt;acronym&gt;</span></h3>
+
+      <div class="enlace-norma">
+        <p>
+          <span class="html-eti">&lt;acronym&gt;</span><br>
+          <a href="https://html.spec.whatwg.org/multipage/obsolete.html#acronym">
+            <img src="../varios/iconos/icono-whatwg.svg" alt="HTML Living Standard" title="HTML Living Standard" width="32" height="32">
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym">
+            <img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32">
+          </a>
+        </p>
+      </div>
+
+      <p>En HTML 4 / XHTML 1 la etiqueta <span class="html-eti">&lt;acronym&gt;</span> estaba pensada para etiquetar acrónimos (siglas que se pronuncian como palabras). El significado del acrónimo debía escribirse mediante el atributo <span class="html-atri">title</span>.</p>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="codigo">
+          <pre><code class="language-html">&lt;p&gt;Sitúe el cursor del ratón sobre el acrónimo &lt;acronym title="Rogamos Empujen Nuestros Ferrocarriles Estropeados (es broma)"&gt;RENFE&lt;/acronym&gt; para ver su significado.&lt;/p&gt;</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/obsoletos/acronym.html" style="height: 8em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/obsoletos/acronym.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="big">
+      <h3 class="con-aside"><span class="html-eti">&lt;big&gt;</span></h3>
+
+      <div class="enlace-norma">
+        <p>
+          <span class="html-eti">&lt;big&gt;</span><br>
+          <a href="https://html.spec.whatwg.org/multipage/obsolete.html#big">
+            <img src="../varios/iconos/icono-whatwg.svg" alt="HTML Living Standard" title="HTML Living Standard" width="32" height="32">
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/big">
+            <img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32">
+          </a>
+        </p>
+      </div>
+
+      <p>En HTML 4 / XHTML 1 la etiqueta <span class="html-eti">&lt;big&gt;</span> estaba pensada para etiquetar texto de mayor tamaño. Los navegadores solían mostrar la etiqueta <span class="html-eti">&lt;big&gt;</span> con la propiedad <span class="css-prop">font-size</span>: <span class="css-valor">larger</span>. Esta etiqueta ya estaba desaconsejada en HTML 4 / XHTML 1 y en su lugar se recomendaba utilizar propiedades CSS.</p>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-html">&lt;p&gt;&lt;big&gt;Estas palabras están aumentadas&lt;/big&gt;.&lt;/p&gt;
+
+&lt;p&gt;Estas palabras no están aumentadas.&lt;/p&gt;
+</code></pre>
+        </div>
+        <iframe src="ejemplos/obsoletos/big.html" style="height: 7em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/obsoletos/big.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tt">
+      <h3 class="con-aside"><span class="html-eti">&lt;tt&gt;</span></h3>
+
+      <div class="enlace-norma">
+        <p>
+          <span class="html-eti">&lt;tt&gt;</span><br>
+          <a href="https://html.spec.whatwg.org/multipage/obsolete.html#tt">
+            <img src="../varios/iconos/icono-whatwg.svg" alt="HTML Living Standard" title="HTML Living Standard" width="32" height="32">
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tt">
+            <img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32">
+          </a>
+        </p>
+      </div>
+
+      <p>En HTML 4 / XHTML 1 la etiqueta <span class="html-eti">&lt;tt&gt;</span> estaba pensada pensada para etiquetar texto de fuente de espaciado fijo. Los navegadores suelen mostrar la etiqueta <span class="html-eti">&lt;tt&gt;</span> en tipo de letra <span class="css-valor">monospace</span> (en Windows, suele ser Consolas). Esta etiqueta ya estaba desaconsejada en HTML 4 / XHTML 1 y en su lugar se recomendaba utilizar la etiqueta <span class="html-eti">&lt;code&gt;</span> o propiedades CSS.</p>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="icono-navegadores">
+          <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+          <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-html">&lt;p&gt;&lt;tt&gt;Estas palabras tienen un espaciado fijo&lt;/tt&gt;.&lt;/p&gt;
+
+&lt;p&gt;Estas palabras no tienen un espaciado fijo&lt;/p&gt;</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/obsoletos/tt.html" style="height: 8em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/obsoletos/tt.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section id="atributos">
+    <h2>Atributos obsoletos</h2>
+
+    <p>Los siguientes atributos de etiquetas no existen desde HTML 5, aunque sí existían en versiones anteriores.</p>
+
+    <section id="a-name">
+      <h3 class="con-aside">Atributo <span class="html-atri">name</span> en enlace <span class="html-eti">&lt;a&gt;</span></h3>
+
+      <div class="enlace-norma">
+        <p>
+          <span class="html-atri">name</span> en <span class="html-eti">&lt;a&gt;</span><br>
+          <a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-a-name">
+            <img src="../varios/iconos/icono-whatwg.svg" alt="HTML Living Standard" title="HTML Living Standard" width="32" height="32">
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-name">
+            <img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32">
+          </a>
+        </p>
+      </div>
+
+      <p>La forma de identificar los destinos en las páginas web ha ido cambiando a lo largo del tiempo:</p>
+      <ul>
+        <li>En HTML 3.2 y anteriores, los destinos se identificaban mediante la etiqueta <span class="html-eti">&lt;a&gt;</span> y su atributo <span class="html-atri">name</span>.
+          <p>Ejemplo de enlace a elemento de una página web identificado mediante la etiqueta <span class="html-eti">&lt;a&gt;</span> y su atributo <span class="html-atri">name</span>.</p>
+
+          <div class="filaflex">
+            <div class="icono-ok">
+              <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+            </div>
+            <div class="codigo">
+              <pre><code class="language-html">&lt;p&gt;Este es el &lt;a href="#este-1"&gt;enlace al párrafo siguiente&lt;/a&gt;.&lt;/p&gt;
+
+...
+
+&lt;p&gt;&lt;a name="este-1"&gt;Este párrafo es el destino del enlace anterior.&lt;/a&gt;&lt;/p&gt;</code>
+</pre>
+            </div>
+            <iframe src="ejemplos/obsoletos/a-1.html" style="height: 9em;"></iframe>
+            <div class="icono-enlace">
+              <a href="ejemplos/obsoletos/a-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+            </div>
+          </div>
+
+          <p>El atributo <span class="html-atri">href</span> contiene la dirección de la página, el carácter almohadilla (#) y el atributo <span class="html-atri">name</span> del destino. En caso de ser un enlace dentro de la misma página sólo aparece el carácter almohadilla (#) y el atributo <span class="html-atri">name</span> del destino.</p>
+        </li>
+        <li>En HTML 4.X y XHTML 1.0, los destinos se podían seguir identificando mediante la etiqueta <span class="html-eti">&lt;a&gt;</span> y su atributo <span class="html-atri">name</span>, pero además se introdujo el atributo <span class="html-atri">id</span>. El atributo <span class="html-atri">id</span> se puede añadir a cualquier elemento, así que cualquier elemento de una página web con <span class="html-atri">id</span> puede ser el destino de un enlace aunque no tenga la etiqueta <span class="html-eti">&lt;a&gt;</span>. Otra diferencia entre ellos es que un atributo <span class="html-atri">name</span> puede contener entidades de carácter, mientras que el atributo <span class="html-atri">id</span> no.
+          <p>Ejemplo de enlace a elemento de una página web identificado mediante el atributo <span class="html-atri">id</span>.</p>
+
+          <div class="filaflex">
+            <div class="codigo">
+              <pre><code class="language-html">&lt;p&gt;Este es el &lt;a href="#este-2"&gt;enlace al párrafo siguiente&lt;/a&gt;.&lt;/p&gt;
+
+...
+
+&lt;p id="este-2"&gt;Este párrafo es el destino del enlace anterior.&lt;/p&gt;</code>
+</pre>
+            </div>
+            <iframe src="ejemplos/obsoletos/a-2.html" style="height: 9em;"></iframe>
+            <div class="icono-enlace">
+              <a href="ejemplos/obsoletos/a-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+            </div>
+          </div>
+
+          <div class="filaflex">
+            <div class="codigo">
+              <pre><code class="language-html">&lt;p&gt;Este es el &lt;a href="https://www.cdlibre.org/otros/faq.html#descargado"&gt;enlace a una pregunta de la FAQ de cdlibre&lt;/a&gt;.&lt;/p&gt;</code>
+</pre>
+            </div>
+            <iframe src="ejemplos/obsoletos/a-3.html" style="height: 8em;"></iframe>
+            <div class="icono-enlace">
+              <a href="ejemplos/obsoletos/a-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+            </div>
+          </div>
+
+          <p>El atributo <span class="html-atri">href</span> contiene la dirección de la página, el carácter almohadilla (#) y el atributo <span class="html-atri">id</span> del destino. En caso de ser un enlace dentro de la misma página sólo aparece el carácter almohadilla (#) y el atributo <span class="html-atri">id</span> del destino.</p>
+        </li>
+        <li>En XHTML 1.1 se eliminó el atributo <span class="html-atri">name</span> de la etiqueta <span class="html-eti">&lt;a&gt;</span> y sólo se podía utilizar el atributo <span class="html-atri">id</span> para identificar los destinos.</li>
+        <li>En HTML 5 también se eliminó el atributo <span class="html-atri">name</span> de la etiqueta <span class="html-eti">&lt;a&gt;</span> y sólo se puede utilizar el atributo <span class="html-atri">id</span> para identificar los destinos.</li>
+      </ul>
+    </section>
+
+    <section id="table">
+      <h3>Atributos obsoletos de <span class="html-eti">&lt;table&gt;</span></h3>
+
+      <section id="table-border-n">
+        <h4 class="con-aside">El atributo <span class="html-atri">border</span></h4>
+
+        <div class="enlace-norma">
+          <p>
+            <span class="html-atri">border</span> en <span class="html-eti">&lt;table&gt;</span><br>
+            <a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-table-border">
+              <img src="../varios/iconos/icono-whatwg.svg" alt="HTML Living Standard" title="HTML Living Standard" width="32" height="32">
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table#attr-border">
+              <img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32">
+            </a>
+          </p>
+        </div>
+
+        <p>En HTML el atributo <span class="html-atri">border</span> se considera obsoleto y en su lugar se deben asignar bordes mediante propiedades CSS de bordes, aunque los navegadores siguen admitiendo su uso.</p>
+
+        <p>En HTML 4 / XHTML 1 el atributo <span class="html-atri">border</span> se podía establecer con un valor mayor que uno para indicar el grosor del borde exterior de la tabla.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table border="10"&gt;
+  ...
+            </code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-border.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-border.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>En HTML 5 la presencia del atributo <span class="html-atri">border</span> indicaba que la tabla <strong>no</strong> se estaba utilizando para el posicionamiento de elementos en la página y entonces se dibujaban. El atributo podía ser vacío o tener el valor 1, sin unidades, y en ambos casos se dibujaban bordes.</p>
+
+        <p>En los años 90 y en la primera década del siglo XXI, antes de que se popularizaran las propiedades de posicionamiento, las tablas sin bordes se utilizaban como elemento de diseño (para distribuir elementos) y las tablas con borde se utilizaban para mostrar información en la que los elementos de la misma fila o de la misma columna están relacionados.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;table border="1"&gt;
+  ...</code>
+</pre>
+          </div>
+          <iframe src="ejemplos/tablas-atributos/border-1.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/tablas-atributos/border-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;table border=""&gt;
+  ...</code>
+</pre>
+          </div>
+          <iframe src="ejemplos/tablas-atributos/border-2.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/tablas-atributos/border-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;table&gt;
+  ...</code>
+</pre>
+          </div>
+          <iframe src="ejemplos/tablas-atributos/border-3.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/tablas-atributos/border-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="table-width">
+        <h4>El atributo <span class="html-atri">width</span></h4>
+
+        <p>En HTML 4 / XHTML 1 el atributo <span class="html-atri">width</span> establecía el ancho de la tabla, en porcentaje o en píxeles. En el siguiente ejemplo, al modificar el tamaño de la ventana del navegador, se puede observar cómo se modifica el tamaño de la primera tabla mientras que la segunda permanece fija.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table width="50%"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-width-1.html" style="height: 6em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-width-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table width="200px"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-width-2.html" style="height: 6em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-width-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="table-frame">
+        <h4>El atributo <span class="html-atri">frame</span></h4>
+
+        <p>En HTML 4 / XHTML 1 el atributo <span class="html-atri">frame</span> establecía qué lados del borde exterior de la tabla eran visibles. Los valores posibles eran <span class="html-atri-valor">void</span> (sin borde), <span class="html-atri-valor">above</span> (borde superior), <span class="html-atri-valor">below</span> (borde inferior), <span class="html-atri-valor">hside</span> (bordes horizontales), <span class="html-atri-valor">lhs</span> (borde izquierdo), <span class="html-atri-valor">rhs</span> (borde derecho), <span class="html-atri-valor">vsides</span> (bordes verticales), <span class="html-atri-valor">box</span> (los cuatro bordes) y <span class="html-atri-valor">border</span> (los cuatro bordes).</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores-vacio">
+            <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-01.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-01.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores-vacio">
+            <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table frame="void" border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-02.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-02.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table frame="above" border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-03.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-03.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table frame="below" border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-04.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-04.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table frame="hsides" border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-05.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-05.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table frame="lhs" border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-06.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-06.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table frame="rhs" border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-07.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-07.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table frame="vsides" border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-08.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-08.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table frame="box" border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-09.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-09.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table frame="border" border="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-frame-10.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-frame-10.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p><strong>Nota</strong>: Chrome muestra el borde definido por el atributo <span class="html-atri">frame</span>, pero no le da el grosor definido por el atributo <span class="html-atri">border</span>.</p>
+      </section>
+
+      <section id="table-rules">
+        <h4>El atributo <span class="html-atri">rules</span></h4>
+
+        <p>En HTML 4 / XHTML 1 el atributo <span class="html-atri">rules</span> establecía qué lados de los bordes interiores de la tabla eran visibles. Los valores posibles eran <span class="html-atri-valor">none</span> (ningún borde), <span class="html-atri-valor">all</span> (todos los bordes), <span class="html-atri-valor">rows</span> (los bordes de cada fila), <span class="html-atri-valor">cols</span> (los bordes de cada columna) y <span class="html-atri-valor">groups</span> (los bordes de los <span class="html-eti">&lt;tbody&gt;</span> y de los <span class="html-eti">&lt;colgroup&gt;</span>). Cuando se establecía el atributo <span class="html-atri">rules</span>, los navegadores mostraban la tabla en el modo de bordes colapsado.</p>
+
+        <p>El ejemplo siguiente contienen dos tablas, una con fondo blanco y otra con fondo gris.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table rules="none" border="1"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-rules-1.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-rules-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table rules="all" border="1"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-rules-2.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-rules-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table rules="rows" border="1"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-rules-3.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-rules-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table rules="cols" border="1"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-rules-4.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-rules-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table rules="groups" border="1"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-rules-5.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-rules-5.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table rules="groups" border="1"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-rules-6.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-rules-6.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table rules="groups" border="1"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-rules-7.html" style="height: 12em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-rules-7.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="table-cellspacing">
+        <h4>El atributo <span class="html-atri">cellspacing</span></h4>
+
+        <p>En HTML 4 / XHTML 1 el atributo <span class="html-atri">cellspacing</span> establecía la separación entre celdas y entre las celdas y el borde (como si fuera un <span class="css-prop">margin</span> de los <span class="html-eti">&lt;td&gt;</span>). El valor se interpretaba en píxeles, por lo que no debían escribirse unidades. También se podían escribir porcentajes, aunque los navegadores lo muestran como si fueran píxeles.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table cellspacing="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-cellspacing-1.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-cellspacing-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table cellspacing="10%"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-cellspacing-2.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-cellspacing-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="table-cellpadding">
+        <h4>El atributo <span class="html-atri">cellpadding</span></h4>
+
+        <p>En HTML 4 / XHTML 1 el atributo <span class="html-atri">cellpadding</span> establecía la separación entre el borde las celdas y el contenido (como si fuera un <span class="css-prop">padding</span> de los <span class="html-eti">&lt;td&gt;</span>). El valor se interpretaba en píxeles, por lo que no debían escribirse unidades. También se podían escribir porcentajes, aunque los navegadores lo muestran como si fueran píxeles.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table cellpadding="10"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-cellpadding-1.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-cellpadding-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;table cellpadding="10%"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-cellpadding-2.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-cellpadding-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="tbody">
+      <h3>Atributos obsoletos de <span class="html-eti">&lt;tbody&gt;</span>, <span class="html-eti">&lt;thead&gt;</span> y <span class="html-eti">&lt;tfoot&gt;</span></h3>
+
+      <section id="tbody-valign">
+        <h4>El atributo <span class="html-atri">valign</span></h4>
+
+        <p>En HTML 4 / XHTML 1 el atributo <span class="html-atri">valign</span> establecía la alineación vertical en todas las celdas del <span class="html-eti">&lt;tbody&gt;</span>. Los valores posibles eran <span class="html-atri-valor">top</span> (arriba), <span class="html-atri-valor">middle</span> (centrado), <span class="html-atri-valor">bottom</span> (abajo) y <span class="html-atri-valor">baseline</span> (línea base).</p>
+
+        <p>Si el atributo <span class="html-atri">valign</span> no está definido, los navegadores centran verticalmente el contenido.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-valign-1.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-valign-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody valign="top"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-valign-2.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-valign-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody valign="middle"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-valign-3.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-valign-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody valign="bottom"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-valign-4.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-valign-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody valign="baseline"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-valign-5.html" style="height: 8em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-valign-5.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>La diferencia entre <span class="html-atri-valor">top</span> y <span class="html-atri-valor">baseline</span> es que <span class="html-atri-valor">top</span> alinea la parte superior de la primera línea de texto y <span class="html-atri-valor">baseline</span> alinea la línea base de la primera línea de texto.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody valign="top"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-valign-6.html" style="height: 11em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-valign-6.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody valign="baseline"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-valign-7.html" style="height: 11em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-valign-7.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="tbody-align-char">
+        <h4>Los atributos <span class="html-atri">align</span> y <span class="html-atri">char</span></h4>
+
+        <p>En HTML 4 / XHTML 1 el atributo <span class="html-atri">align</span> establecía la alineación horizontal en todas las celdas del <span class="html-eti">&lt;tbody&gt;</span>. Los valores posibles eran <span class="html-atri-valor">left</span> (izquierda), <span class="html-atri-valor">center</span> (centrado), <span class="html-atri-valor">right</span> (derecha), <span class="html-atri-valor">justify</span> (justificado) y <span class="html-atri-valor">char</span> (alineación en carácter).</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody align="left"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-align-1.html" style="height: 11em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-align-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody align="center"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-align-2.html" style="height: 11em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-align-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody align="right"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-align-3.html" style="height: 11em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-align-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody align="justify"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-align-4.html" style="height: 11em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-align-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <hr class="corta">
+
+        <p>En HTML 4 / XHTML 1 los atributos <span class="html-atri">char</span> y <span class="html-atri">align</span> de <span class="html-eti">&lt;tbody&gt;</span> deberían permitir alinear los valores de una columna a un carácter. El atributo <span class="html-atri">align</span> con el valor <span class="html-atri-valor">char</span> establecen que la alineación es en un carácter determinado y el valor del atributo <span class="html-atri">char</span> establece el carácter por el cual se alinean las celdas.</p>
+
+        <p>En el primer ejemplo siguiente, las comas deberían estar en la misma vertical. En el segundo ejemplo, las "a" deberían estar en la misma vertical. Pero los navegadores no lo hacen.</p>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody align="char" char="a"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-align-char-1.html" style="height: 11em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-align-char-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-ok">
+            <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+          </div>
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;tbody align="char" char=","&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/obsoletos/table-align-char-2.html" style="height: 11em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/obsoletos/table-align-char-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>El <a href="../otros/bugs-mozilla.html#bug-2212">bug 2.212</a> de Firefox está dedicado a este problema, como se comenta en la <a href="../otros/bugs-mozilla.html#bug-2212">página de bugs de Firefox</a>.</p>
+      </section>
+    </section>
+
+    <section id="tr">
+      <h3>Atributos obsoletos de <span class="html-eti">&lt;tr&gt;</span></h3>
+
+      <section id="tr-align-char">
+        <h4>Los atributos <span class="html-atri">align</span>, <span class="html-atri">char</span> y <span class="html-atri">valign</span></h4>
+
+        <p>En HTML 4 / XHTML 1 los atributos <span class="html-atri">align</span>, <span class="html-atri">char</span> y <span class="html-atri">valign</span> se comportaban como con las demás etiquetas (por ejemplo, <span class="html-eti">&lt;table&gt;</span> o <span class="html-eti">&lt;tbody&gt;</span>), ya comentadas en esta misma página.</p>
+      </section>
+    </section>
+
+    <section id="td">
+      <h3>Atributos obsoletos de <span class="html-eti">&lt;td&gt;</span> y <span class="html-eti">&lt;th&gt;</span></h3>
+
+      <section id="td-align-char">
+        <h4>Los atributos <span class="html-atri">align</span>, <span class="html-atri">char</span> y <span class="html-atri">valign</span></h4>
+
+        <p>En HTML 4 / XHTML 1 los atributos <span class="html-atri">align</span>, <span class="html-atri">char</span> y <span class="html-atri">valign</span> se comportaban como con las demás etiquetas (por ejemplo, <span class="html-eti">&lt;table&gt;</span> o <span class="html-eti">&lt;tbody&gt;</span>), ya comentadas en esta misma página.</p>
+      </section>
+
+      <section id="td-axis">
+        <h4>Los atributos <span class="html-atri">axis</span> y <span class="html-atri">scope</span></h4>
+
+        <p class="incompleto">Por escribir</p>
+      </section>
+    </section>
+
+    <section id="col">
+      <h3>Atributos obsoletos de <span class="html-eti">&lt;col&gt;</span></h3>
+
+      <h4>Los atributos <span class="html-atri">align</span>, <span class="html-atri">valign</span> y <span class="html-atri">width</span></h4>
+
+      <p>En HTML 4 / XHTML 1 los atributos <span class="html-atri">align</span>, <span class="html-atri">valign</span> y <span class="html-atri">width</span> se comportaban como en las demás etiquetas (por ejemplo, <span class="html-eti">&lt;table&gt;</span> o <span class="html-eti">&lt;tbody&gt;</span>), ya comentadas en esta misma página.</p>
+    </section>
+  </section>
+
+  <section id="atributos-valores">
+    <h2>Valores obsoletos de atributos</h2>
+
+    <section id="ftp">
+      <h3>Protocolo FTP</h3>
+
+      <p>Firefox eliminó el soporte de FTP en Firefox 90 (publicado en julio de 2021) [<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1574475">ref</a>]. Google Chrome eliminó el soporte de FTP en Chrome 95 (publicado en octubre de 2021) [<a href="https://chromestatus.com/feature/6246151319715840">ref</a>].</p>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-html">&lt;p&gt;Enlace al &lt;a href="ftp://glup.uv.es/pub/cdlibre/"&gt;servidor FTP de cdlibre&lt;/a&gt;.&lt;/p&gt;</code>
+</pre>
+        </div>
+        <div class="resultado-html">
+          <p>Esto es un <a href="ftp://glup.uv.es/pub/cdlibre/">enlace al servidor FTP de cdlibre</a>.</p>
+        </div>
+        <div class="icono-enlace">
+          <a href="ejemplos/obsoletos/enlaces-no-http-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="img-width">
+      <h3>Porcentajes en tamaños de imágenes </h3>
+
+      <p>En HTML 4 / XHTML 1 se podían utilizar porcentajes en los valores de los atributos <span class="html-atri">width</span> y <span class="html-atri">height</span> de las etiquetas <span class="html-eti">&lt;img&gt;</span>. Eso permitía, por ejemplo, generar líneas horizontales de varios colores a partir de una imagen de 1 píxel de ancho, como muestra el siguiente ejemplo:</p>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="codigo">
+          <pre><code class="language-html">&lt;img src="arco-iris.png" alt="Arco iris"&gt;</code></pre>
+        </div>
+        <iframe src="ejemplos/obsoletos/img-porcentaje-1.html" style="height: 5em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/obsoletos/img-porcentaje-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="codigo">
+          <pre><code class="language-html">&lt;img src="arco-iris.png" alt="Arco iris" width="100%" height="12"&gt;</code></pre>
+        </div>
+        <iframe src="ejemplos/obsoletos/img-porcentaje-2.html" style="height: 6em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/obsoletos/img-porcentaje-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="favicon-shortcut">
+      <h2>Favicons <span class="css-prop">rel</span>="<span class="css-valor">shortcut icon</span>"</h2>
+
+      <p>Los favicons se introdujeron por primera vez en Internet Explorer 5. Este navegador requería que el atributo <span class="css-prop">rel</span> tuviera el valor <span class="css-valor">shortcut icon</span>, pero en 2005 el W3C ya aconsejaba el uso del valor <span class="css-valor">icon</span>. Los navegadores siguen aceptando por razones históricas el valor <span class="css-valor">shortcut icon</span>, pero se debe utilizar el valor <span class="css-valor">icon</span>.</p>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-html">&lt;link rel="shortcut icon" href="favicon-cdlibre-16.ico"&gt;</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/favicon/favicon-ico-16-shortcut.html" style="height: 5em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/favicon/favicon-ico-16-shortcut.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-html">&lt;link rel="shortcut icon" href="favicon-cdlibre-32.ico"&gt;</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/favicon/favicon-ico-32-shortcut.html" style="height: 5em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/favicon/favicon-ico-32-shortcut.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-ok">
+          <img src="../varios/iconos/icono-obsoleto.svg" alt="Obsoleto" title="Obsoleto" width="48" height="48">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-html">&lt;link rel="shortcut icon" href="favicon-cdlibre-32-16.ico"&gt;</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/favicon/favicon-ico-32-16-shortcut.html" style="height: 5em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/favicon/favicon-ico-32-16-shortcut.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 14 de noviembre de 2022</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

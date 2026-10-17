@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Accesibilidad. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body onload="leecoloresHsl(); compruebaConversion()">
+  <h1>Accesibilidad</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>Accesibilidad</h2>
+
+      <ul>
+        <li><a href="#contraste">Contraste</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>La recomendación Web Content Accessibility Guidelines (WCAG) establece una serie de consejos para hacer accesibles las páginas web a usuarios con discapacidad visual, auditiva o de movimientos. En versiones recientes se detallan los criterios para conseguir hasta tres niveles de cumplimiento crecientes: A, AA y AAA y los procedimientos de comprobación del nivel conseguido.</p>
+
+  <p>La primera versión de la recomendación WCAG (publicada en mayo de 1999) incluía la recomendación genérica de que el color de texto tuviera suficiente contraste con el color de fondo para permitir su lectura en monitores en blanco y negro o por usuarios con deficiencias visuales. En la versión WCAG 2.0 (publicada en diciembre de 2008) se establecieron criterios numéricos que permiten evaluar el nivel conseguido de forma objetiva. En la versión WCAG 2.1 (publicada en junio de 2018) se añadieron criterios para el contraste entre colores contiguos.</p>
+
+  <p>La última edición publicada actualmente (octubre de 2023) <a href="https://www.w3.org/TR/2023/REC-WCAG22-20231005/">Web Content Accessibility Guidelines (WCAG) 2.2</a>, publicada en octubre de 2023, mantiene los criterios de la edición anterior.</p>
+
+  <p class="incompleto"><img src="../varios/iconos/icono-en-construccion.svg" alt="En construcción" title="En construcción" width="55" height="48">Por el momento, esta lección sólo comenta el criterio de contraste entre el color del fondo y el color del texto.</p>
+
+  <section id="contraste">
+    <h2>Contraste de colores</h2>
+
+    <p>La recomendación <a href="https://www.w3.org/TR/WCAG/">WCAG</a> define el <strong>contraste</strong> entre los colores de fondo y el texto como un número entre 1 y 21,1 que se calcula a partir de ambos colores.</p>
+
+    <p>El nivel de cumplimiento AA se consigue:</p>
+    <ul>
+      <li>en tamaños de letra normal de 18pt (14pt en negrita) o mayores, si el contraste es mayor que 3</li>
+      <li>en tamaños de letra normal inferior a 18pt (14pt en negrita), si el contraste es mayor que 4.5</li>
+      <li>en elementos gráficos necesarios para comprender o interaccionar con la página, si el contraste es mayor que 3</li>
+    </ul>
+
+    <p>El nivel de cumplimiento AAA se consigue:</p>
+    <ul>
+      <li>en tamaños de letra normal de 18pt (o 14pt en negrita) en adelante, si el contraste es mayor que 4.5</li>
+      <li>en tamaños de letra normal inferior a 18pt (o 14pt en negrita), si el contraste es mayor que 7</li>
+    </ul>
+
+    <p>El cuadro siguiente permite elegir colores de fondo y de texto (en formato HSL) moviendo los deslizadores y automáticamente calcula el contraste y el nivel de cumplimiento alcanzado en tamaños de letras grandes o en pequeños:</p>
+
+    <table class="mcl-centrado" style="border: black 2px solid; padding: 10px">
+      <tr>
+        <td>
+          <table class="mcl-centrado" style="border: black 2px solid; padding: 10px">
+            <tr>
+              <th colspan="3">Color del Fondo</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Valor</td>
+            </tr>
+            <tr>
+              <td>Matiz:</td>
+              <td><input type="range" name="points" min="0" max="360" style="width: 250px" id="matiz1"></td>
+              <td class="mcl-centrado"><span id="nMatiz1"></span></td>
+            </tr>
+            <tr>
+              <td>Saturación:</td>
+              <td><input type="range" name="points" min="0" max="100" style="width: 250px" id="saturacion1"></td>
+              <td class="mcl-centrado"><span id="nSaturacion1"></span></td>
+            </tr>
+            <tr>
+              <td>Luminosidad:</td>
+              <td><input type="range" name="points" min="0" max="100" style="width: 250px" id="luminosidad1"></td>
+              <td class="mcl-centrado"><span id="nLuminosidad1"></span></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table class="mcl-centrado" style="border: black 2px solid; padding: 10px">
+            <tr>
+              <th colspan="3">Color del Texto</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Valor</td>
+            </tr>
+            <tr>
+              <td>Matiz:</td>
+              <td><input type="range" name="points" min="0" max="360" style="width: 250px" value="0" id="matiz2"></td>
+              <td class="mcl-centrado"><span id="nMatiz2"></span></td>
+            </tr>
+            <tr>
+              <td>Saturación:</td>
+              <td><input type="range" name="points" min="0" max="100" style="width: 250px" id="saturacion2"></td>
+              <td class="mcl-centrado"><span id="nSaturacion2"></span></td>
+            </tr>
+            <tr>
+              <td>Luminosidad:</td>
+              <td><input type="range" name="points" min="0" max="100" style="width: 250px" value="25" id="luminosidad2"></td>
+              <td class="mcl-centrado"><span id="nLuminosidad2"></span></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="mcl-centrado">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="730" height="210" viewBox="0 0 730 210">
+            <rect x="120" y="10" width="370" height="160" stroke="black" fill="black" id="rectanguloFondo" />
+            <line x1="10" y1="95" x2="750" y2="95" stroke="black" stroke-width="2" />
+            <text x="200" y="210" text-anchor="start" font-size="24">CONTRASTE: <tspan id="nContraste"></tspan></text>
+            <text x="505" y="65" font-size="24" id="rContrasteBig"></text>
+            <text x="505" y="140" font-size="24" id="rContrasteSmall"></text>
+            <text y="45" text-anchor="start" fill="black">
+              <tspan x="20" dy="0" font-size="18pt">&gt;= 18pt</tspan>
+              <tspan x="20" dy="30" font-size="14pt" font-weight="bold">&gt;= 14pt</tspan>
+              <tspan x="20" dy="55" font-size="17pt">&lt; 18pt</tspan>
+              <tspan x="20" dy="25" font-size="13pt" font-weight="bold">&lt; 14pt</tspan>
+            </text>
+            <text y="45" text-anchor="middle" fill="white" id="rectanguloTexto">
+              <tspan x="310" dy="0" font-size="18pt">Lorem ipsum dolor sit amet</tspan>
+              <tspan x="310" dy="30" font-size="14pt" font-weight="bold">Lorem ipsum dolor sit amet</tspan>
+              <tspan x="310" dy="55" font-size="17pt">Lorem ipsum dolor sit amet</tspan>
+              <tspan x="310" dy="25" font-size="13pt" font-weight="bold">Lorem ipsum dolor sit amet</tspan>
+            </text>
+          </svg>
+        </td>
+      </tr>
+    </table>
+    <!-- <pre id="compruebaConversion"></pre> -->
+    <p id="testigo"></p>
+
+    <script>
+      var testigo = document.getElementById("testigo");
+
+      var matiz1 = document.getElementById("matiz1");
+      var saturacion1 = document.getElementById("saturacion1");
+      var luminosidad1 = document.getElementById("luminosidad1");
+      var nMatiz1 = document.getElementById("nMatiz1");
+      var nSaturacion1 = document.getElementById("nSaturacion1");
+      var nLuminosidad1 = document.getElementById("nLuminosidad1");
+
+      var matiz2 = document.getElementById("matiz2");
+      var saturacion2 = document.getElementById("saturacion2");
+      var luminosidad2 = document.getElementById("luminosidad2");
+      var nMatiz2 = document.getElementById("nMatiz2");
+      var nSaturacion2 = document.getElementById("nSaturacion2");
+      var nLuminosidad2 = document.getElementById("nLuminosidad2");
+
+      var rectanguloFondo = document.getElementById("rectanguloFondo");
+      var rectanguloTexto = document.getElementById("rectanguloTexto");
+
+      var nContraste = document.getElementById("nContraste");
+      var rContrasteBig = document.getElementById("rContrasteBig");
+      var rContrasteSmall = document.getElementById("rContrasteSmall");
+
+      function rgb_a_hsl(r, g, b) {
+        if (r < 0) { r = 0; } else if (r > 255) { r = 255; }
+        if (g < 0) { g = 0; } else if (g > 255) { g = 255; }
+        if (b < 0) { b = 0; } else if (b > 255) { b = 255; }
+        r = r / 255;
+        g = g / 255;
+        b = b / 255;
+
+        var max = Math.max(r, g, b);
+        var min = Math.min(r, g, b);
+        var c = max - min;
+        var h; var s; var l;
+
+        if (c == 0) {
+          h = 0;
+        } else if (max == r) {
+          h = ((g - b) / c);
+          if (h < 0) { h += 6; }
+        } else if (max == g) {
+          h = (b - r) / c + 2;
+        } else {
+          h = (r - g) / c + 4;
+        }
+        h = (h * 60) % 360;
+
+        l = (max + min) / 2;
+        if (max == min) { s = 0; }
+        else { s = c / (1 - Math.abs(2 * l - 1)); }
+        return ([h, s, l]);
+      }
+
+      function hsl_a_rgb(h, s, l) {
+        var r = 0;
+        var g = 0;
+        var b = 0;
+        if (h < 0) { h = 0; } else if (h > 360) { h = 360; }
+        if (s < 0) { s = 0; } else if (s > 1) { s = 1; }
+        if (l < 0) { l = 0; } else if (l > 1) { l = 1; }
+        var c = (1 - Math.abs(2 * l - 1)) * s;
+        var h2 = h / 60;
+        var x = c * (1 - Math.abs(h2 % 2 - 1));
+        if (0 <= h2 && h2 <= 1) { r = c; g = x; b = 0; }
+        else if (1 <= h2 && h2 <= 2) { r = x; g = c; b = 0; }
+        else if (2 <= h2 && h2 <= 3) { r = 0; g = c; b = x; }
+        else if (3 <= h2 && h2 <= 4) { r = 0; g = x; b = c; }
+        else if (4 <= h2 && h2 <= 5) { r = x; g = 0; b = c; }
+        else if (5 <= h2 && h2 <= 6) { r = c; g = 0; b = x; }
+        var m = l - c / 2;
+        r += m; g += m; b += m;
+        return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+      }
+
+      function luminanciaRelativa(r, g, b) {
+        r /= 255; g /= 255; b /= 255;
+        if (r <= 0.03928) { r /= 12.92 } else { r = Math.pow((r + 0.055) / 1.055, 2.4) };
+        if (g <= 0.03928) { g /= 12.92 } else { g = Math.pow((g + 0.055) / 1.055, 2.4) };
+        if (b <= 0.03928) { b /= 12.92 } else { b = Math.pow((b + 0.055) / 1.055, 2.4) };
+        return (lumi1 = 0.2126 * r + 0.7152 * g + 0.0722 * b);
+      }
+
+      function compruebaConversion() {
+        // comprueba que tranformando rgb => hsl => rgb se obtienen los valores iniciales
+        var r;
+        var g;
+        var b;
+        var p = document.getElementById("compruebaConversion");
+        if (p) {
+          var salto = 32;
+          p.textContent += "COMPROBACIÓN CONVERSIÓN RGB => HSL => RGB" + "\n";
+          for (r = 0; r < 255; r += salto) {
+            for (g = 0; g < 255; g += salto) {
+              for (b = 0; b < 255; b += salto) {
+                hsl = rgb_a_hsl(r, g, b);
+                rgb = hsl_a_rgb(hsl[0], hsl[1], hsl[2]);
+                // if (r != rgb[0] || g != rgb[1] || b != rgb[2])
+                {
+                  p.textContent += "ERROR" + "\n";
+                  p.textContent += "RGB1 = " + r + " " + g + " " + b + "\n";
+                  p.textContent += "HSL2 = " + hsl[0] + " " + hsl[1] + " " + hsl[2] + "\n";
+                  p.textContent += "RGB4 = " + rgb[0] + " " + rgb[1] + " " + rgb[2] + "\n";
+                  p.textContent += "\n\n";
+                }
+              }
+            }
+          }
+          p.textContent += "FIN";
+        }
+      }
+
+      function leecoloresHsl() {
+        nMatiz1.textContent = matiz1.value;
+        nSaturacion1.textContent = saturacion1.value + "%";
+        nLuminosidad1.textContent = luminosidad1.value + "%";
+        nMatiz2.textContent = matiz2.value;
+        nSaturacion2.textContent = saturacion2.value + "%";
+        nLuminosidad2.textContent = luminosidad2.value + "%";
+        rectanguloFondo.setAttribute("fill", "hsl(" + matiz1.value + ", " + saturacion1.value + "%, " + luminosidad1.value + "%)");
+        rectanguloTexto.setAttribute("fill", "hsl(" + matiz2.value + ", " + saturacion2.value + "%, " + luminosidad2.value + "%)");
+        var [r, g, b] = hsl_a_rgb(matiz1.value, saturacion1.value / 100, luminosidad1.value / 100);
+        // nContraste.textContent = "C1 = " + r + " " + g + " " + b + " ";
+        var lumi1 = luminanciaRelativa(r, g, b);
+        [r, g, b] = hsl_a_rgb(matiz2.value, saturacion2.value / 100, luminosidad2.value / 100);
+        // nContraste.textContent += "C2 = " + r + " " + g + " " + b + " ";
+        var lumi2 = luminanciaRelativa(r, g, b);
+        // nContraste.textContent += "L1 = " + Math.round(lumi1*1000)/1000 + " ";
+        // nContraste.textContent += "L2 = " + Math.round(lumi2*1000)/1000 + " ";
+        var contraste = (Math.max(lumi1, lumi2) + 0.05) / (Math.min(lumi1, lumi2) + 0.05);
+        nContraste.textContent = Math.round(contraste * 10) / 10;
+        if (contraste > 4.5) {
+          rContrasteBig.textContent = "Correcto (nivel AAA)";
+          rContrasteBig.setAttribute("fill", "green");
+        } else if (contraste > 3) {
+          rContrasteBig.textContent = "Correcto (nivel AA)";
+          rContrasteBig.setAttribute("fill", "green");
+        } else {
+          rContrasteBig.textContent = "Insuficiente";
+          rContrasteBig.setAttribute("fill", "red");
+        }
+        if (contraste > 7.1) {
+          rContrasteSmall.textContent = "Correcto (nivel AAA)";
+          rContrasteSmall.setAttribute("fill", "green");
+        } else if (contraste > 4.5) {
+          rContrasteSmall.textContent = "Correcto (nivel AA)";
+          rContrasteSmall.setAttribute("fill", "green");
+        } else {
+          rContrasteSmall.textContent = "Insuficiente";
+          rContrasteSmall.setAttribute("fill", "red");
+        }
+      }
+
+      matiz1.addEventListener("change", function () { leecoloresHsl() }, false);
+      saturacion1.addEventListener("change", function () { leecoloresHsl() }, false);
+      luminosidad1.addEventListener("change", function () { leecoloresHsl() }, false);
+      matiz2.addEventListener("change", function () { leecoloresHsl() }, false);
+      saturacion2.addEventListener("change", function () { leecoloresHsl() }, false);
+      luminosidad2.addEventListener("change", function () { leecoloresHsl() }, false);
+    </script>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 6 de octubre de 2023</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Diferencias entre Chrome y Firefox. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>Diferencias entre Chrome y Firefox</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>Diferencias GC/FF</h2>
+
+      <ul>
+        <li><a href="#uso">Utilización del navegador</a></li>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>En esta página se recopilan las diferencias entre Chrome y Firefox que aparecen en otras lecciones de estos apuntes. Esta página no pretende ser una relación exhaustiva de diferencias, sino simplemente recopilar las diferencias que encontré al redactar estos apuntes.</p>
+
+  <p>En los casos en los que el comportamiento del navegador se puede considerar correcto, se indica con los iconos <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">, <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">.</p>
+
+  <p>En los casos en los que el comportamiento del navegador se puede considerar erróneo, se indica con los iconos <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">, <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32"></p>
+
+  <section id="uso">
+    <h2>Utilización del navegador</h2>
+
+    <section id="css-utf">
+      <h3>Archivos CSS en UTF-8</h3>
+
+      <p>Ni Firefox ni Chrome muestran correctamente los caracteres no ingleses en los archivos CSS guardados en el juego de caracteres UTF-8, si no reciben el juego de caracteres en la cabecera Content-Type. La línea inicial @charset "utf-8" permitida en el borrador de la recomendación <a href="https://www.w3.org/TR/css-syntax-3/#input-byte-stream">CSS Syntax Module Level 3</a> tampoco parece funcionar ni en Firefox ni Chrome.</p>
+
+      <p><a href="ejemplos/diferencias/utf-8.css">Enlace a hoja de estilo con caracteres no ingleses</a></p>
+    </section>
+
+    <section id="uso-zoom">
+      <h3>Zoom</h3>
+
+      <p>Firefox dispone de dos tipos de zoom:</p>
+
+      <ul>
+        <li>uno que sólo cambia el tamaño de texto,</li>
+        <li>otro que aumenta todos los elementos de la página (texto e imágenes)</li>
+      </ul>
+
+      <p>En Firefox los dos tipos de zoom funcionan mediante el menú <span class="soft-menu">Ver &gt; Tamaño</span>, con las combinaciones de teclas <kbd>Ctrl++</kbd> y <kbd>Ctrl+-</kbd> o con la combinación <kbd>Ctrl+rueda del ratón</kbd>. La opción del menú <span class="soft-menu">Ver &gt; Tamaño &gt;Sólo ampliar texto</span> permite elegir el tipo de zoom a aplicar.</p>
+    </section>
+
+    <section id="formulario-f5">
+      <h3>Recarga de formularios con F5</h3>
+
+      <p>Al recargar una página web (con la tecla <kbd class="soft-atajo-teclado">F5</kbd>):</p>
+      <ul>
+        <li>Firefox mantiene el estado de los controles de los formularios</li>
+        <li>Google Chrome reinicia los controles de los formularios</li>
+      </ul>
+
+      <p>Si se recarga la página con el atajo de teclado <kbd class="soft-atajo-teclado">Ctrl+F5</kbd>, Firefox sí que reinicia los controles de formulario.</p>
+
+      <p>Para comprobarlo, abra el ejemplo siguiente haciendo clic en el icono situado en la parte derecha del ejemplo y compruebe el funcionamiento en Firefox o Chrome:</p>
+      <div class="filaflex">
+        <iframe src="ejemplos/diferencias/formulario-recarga.html" style="height: 10em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/diferencias/formulario-recarga.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section id="html">
+    <h2>HTML</h2>
+
+    <section id="unicode">
+      <h3>Unicode</h3>
+
+      <section id="unicode-texto-emoji">
+        <h4>Presentación texto/emoji</h4>
+
+        <p>Algunos caracteres Unicode tienen tanto presentación texto como presentación emoji. Una de las dos es la predeterminada y la otra se selecciona añadiendo los selectores de presentación texto (&amp;#xfe0e;) o emoji (&amp;#xfe0f;)</p>
+
+        <p>En algunos casos, tanto Firefox como Chrome muestran correctamente todos los caracteres. En la primera línea del ejemplo siguiente se muestra un carácter que tiene presentación predeterminada emoji. En la segunda línea se muestran un carácter que tiene presentación predeterminada texto.</p>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;p&gt;
+  &amp;#x231a; &lt;span style="font-size: 300%"&gt;&amp;#x231a;&lt;/span&gt;
+  &amp;#x231a;&amp;#xfe0e; &lt;span style="font-size: 300%"&gt;&amp;#x231a;&#xfe0e;&lt;/span&gt;
+  &amp;#x231a;&amp;#xfe0f; &lt;span style="font-size: 300%"&gt;&amp;#x231a;&#xfe0f;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &amp;#x2639; &lt;span style="font-size: 300%"&gt;&amp;#x2639;&lt;/span&gt;
+  &amp;#x2639;&amp;#xfe0e; &lt;span style="font-size: 300%"&gt;&amp;#x2639;&amp;#xfe0e;&lt;/span&gt;
+  &amp;#x2639;&amp;#xfe0f; &lt;span style="font-size: 300%"&gt;&amp;#x2639;&#xfe0f;&lt;/span&gt;
+&lt;/p&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/unicode/emoji-texto-1.html" style="height: 20em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/unicode/emoji-texto-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>En otros casos, Google Chrome no muestra correctamente la forma de presentación predeterminada (texto o emoji) correcta. En el ejemplo siguiente se muestran un carácter que tienen presentación predeterminada texto, pero Chrome lo muestra como emoji.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;p&gt;
+  &amp;#x261d; &lt;span style="font-size: 300%"&gt;&amp;#x261d;&lt;/span&gt;
+  &amp;#x261d;&amp;#xfe0e; &lt;span style="font-size: 300%"&gt;&amp;#x261d;&amp;#xfe0e;&lt;/span&gt;
+  &amp;#x261d;&amp;#xfe0f; &lt;span style="font-size: 300%"&gt;&amp;#x261d;&amp;#xfe0f;&lt;/span&gt;
+&lt;/p&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/unicode/emoji-texto-2.html" style="height: 12em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/unicode/emoji-texto-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>En otros casos, Firefox muestra una representación en modo texto al añadir el selector de presentación texto (&amp;#xfe0e;), aunque ese emoji no tenga representación en modo texto.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">
+            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;p&gt;
+  &amp;#x1f600; &lt;span style="font-size: 300%"&gt;&amp;#x1f600;&lt;/span&gt;
+  &amp;#x1f600;&amp;#xfe0e; &lt;span style="font-size: 300%"&gt;&amp;#x1f600;&amp;#xfe0e;&lt;/span&gt;
+  &amp;#x1f600;&amp;#xfe0f; &lt;span style="font-size: 300%"&gt;&amp;#x1f600;&amp;#xfe0f;&lt;/span&gt;
+&lt;/p&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/unicode/emoji-texto-3.html" style="height: 12em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/unicode/emoji-texto-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>En otros casos, Google Chrome no muestra la representación en modo texto al añadir el selector de presentación texto (&amp;#xfe0e;), ni aunque ese emoji tenga representación en modo texto.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;p&gt;
+  &amp;#x263a; &lt;span style="font-size: 300%"&gt;&amp;#x263a;&lt;/span&gt;
+  &amp;#x263a;&amp;#xfe0e; &lt;span style="font-size: 300%"&gt;&amp;#x263a;&amp;#xfe0e;&lt;/span&gt;
+  &amp;#x263a;&amp;#xfe0f; &lt;span style="font-size: 300%"&gt;&amp;#x263a;&amp;#xfe0f;&lt;/span&gt;
+&lt;/p&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/unicode/emoji-texto-4.html" style="height: 12em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/unicode/emoji-texto-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="unicode-fitzpatrick">
+        <h4>Modificadores Fitzpatrick en caracteres con presentación texto/emoji</h4>
+
+        <p>Los tonos de piel Fitzpatrick se pueden aplicar a los caracteres Unicode que tienen presentación texto y presentación emoji. En el caso de la presentación texto, el tono de piel se muestra con una trama de puntos más o menos densa..</p>
+
+        <p>El primer ejemplo siguiente muestra un carácter con presentación predeterminada en modo texto y le aplica un modificador Fitzpatrick. El primer ejemplo siguiente muestra un carácter con presentación predeterminada en modo emoji y le aplica un modificador Fitzpatrick..</p>
+
+        <ul>
+          <li>Firefox muestra la presentación en modo emoji cuando se añade un modificador Fitzpatrick sin añadir selectores de presentación, aunque la presentación predeterminada sea el modo texto.</li>
+          <li>Google Chrome, además de no siempre mostrar el modo predeterminado cuando es texto, no muestra el modificador Fitzpatrick si se incluye el selector de presentación emoji.</li>
+        </ul>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff-unknown.svg" alt="Por determinar en Firefox" title="Por determinar en Firefox" width="53" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;p&gt;
+  &amp;#x261d;: &lt;span style="font-size: 300%"&gt;&amp;#x261d;&lt;/span&gt;
+  &amp;#x261d;&amp;#x1f3ff;: &lt;span style="font-size: 300%"&gt;&amp;#x261d;&amp;#x1f3ff;&lt;/span&gt;
+&lt;/p&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/unicode/emoji-texto-fitzpatrick-1.html" style="height: 15em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/unicode/emoji-texto-fitzpatrick-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff-unknown.svg" alt="Por determinar en Firefox" title="Por determinar en Firefox" width="53" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;p&gt;
+  &amp;#x261d;&amp;#xfe0f;: &lt;span style="font-size: 300%"&gt;&amp;#x261d;&amp;#xfe0f;&lt;/span&gt;
+  &amp;#x261d;&amp;#xfe0f;&amp;#x1f3ff;: &lt;span style="font-size: 300%"&gt;&amp;#x261d;&#xfe0f;&amp;#x1f3ff;&lt;/span&gt;
+&lt;/p&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/unicode/emoji-texto-fitzpatrick-2.html" style="height: 15em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/unicode/emoji-texto-fitzpatrick-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="formularios">
+      <h3>Formularios</h3>
+
+      <section id="formularios-input-submit">
+        <h4 class="con-aside">Botón Enviar <span class="html-eti">&lt;input <span class="html-atri">type</span>=<span class="html-atri-valor">"submit"</span>&gt;</span> sin atributo <span class="html-atri">value</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../html/html-formularios.html#control-input-button-submit"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Si un botón <span class="html-eti">&lt;input&gt;</span> no tiene definido el atributo <span class="html-atri">value</span>:</p>
+        <ul>
+          <li>Firefox muestra el texto "Enviar consulta" ("Send request", en inglés)</li>
+          <li>Google Chrome muestra el texto "Enviar" ("Send", en inglés)</li>
+        </ul>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre><code class="language-html">&lt;input type="submit"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/diferencias/formularios-input-submit.html" style="height: 6em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/diferencias/formularios-input-submit.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p class="mcl-captura">
+          <img src="ejemplos/diferencias/formularios-input-submit.png" alt="Captura botón Enviar sin atrbuto value en Firefox y Chrome" width="726" height="139">
+        </p>
+      </section>
+
+      <section id="formularios-accesskey">
+        <h4 class="con-aside">El atributo <span class="html-atri">accesskey</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../html/html-formularios-2.html#atributo-accesskey"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>El atributo <span class="html-atri">accesskey</span> establece la combinación de teclas que coloca el foco en un elemento de un formulario.</p>
+
+        <ul>
+          <li>Firefox utiliza la combinación <kbd>Alt+Shift+tecla</kbd></li>
+          <li>Google Chrome utilizan normalmente la combinación <kbd>Alt+tecla</kbd>, pero cuando esa combinación ya está asociada a alguna acción usa la combinación <kbd>Alt+Shift+tecla</kbd></li>
+        </ul>
+
+        <p>En el ejemplo siguiente Firefox utiliza la combinación <kbd>Alt+Shift+tecla</kbd> para situar el cursor en las cajas de texto, mientras que Google Chrome utiliza la combinación <kbd>Alt+tecla</kbd>:</p>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;input type="text" name="texto1" value="Acceso con a" accesskey="a"&gt;
+&lt;input type="text" name="texto2" value="Acceso con i" accesskey="i"&gt;
+&lt;input type="text" name="texto3" value="Acceso con o" accesskey="o"&gt;
+&lt;input type="text" name="texto4" value="Acceso con u" accesskey="u"&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/accesskey-1.html" style="height: 12em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/accesskey-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>Chrome utiliza la combinación <kbd>Alt+tecla</kbd>, que tiene el inconveniente que entra en conflicto con combinaciones de teclas ya definidas por el navegador o el sistema operativo. Firefox utiliza la combinación <kbd>Alt+Shift+tecla</kbd>, más incómoda de utilizar, pero que no interfiere con las combinaciones ya definidas por el navegador o el sistema operativo.</p>
+
+        <p>En el ejemplo siguiente, Chrome no puede acceder a la caja de texto con la combinación <kbd>Alt+d</kbd>, ya que esta combinación traslada el foco a la barra de dirección, pero puede hacerlo con la combinación <kbd>Alt+Shift+d</kbd>:</p>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre><code class="language-html">&lt;input type="text" name="texto1" value="Acceso con d" accesskey="d"&gt;</code></pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/accesskey-2.html" style="height: 4em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/accesskey-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>En el ejemplo siguiente, Chrome no puede acceder a la caja de texto con la combinación <kbd>Alt+e</kbd>, ya que esta combinación abre el menú de herramientas, pero puede hacerlo con la combinación <kbd>Alt+Shift+e</kbd>:</p>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre><code class="language-html">&lt;input type="text" name="texto2" value="Acceso con e" accesskey="e"&gt;</code></pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/accesskey-3.html" style="height: 4em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/accesskey-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>En el caso de las teclas de acceso que no son las letras del alfabeto (los acentos no pueden ser teclas de acceso):</p>
+        <ul>
+          <li>Firefox utiliza la combinación <kbd>Alt+Shift+tecla</kbd></li>
+          <li>Chrome utiliza la combinación <kbd>Alt+tecla</kbd></li>
+        </ul>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;input type="text" name="texto1" value="Acceso con 1" accesskey="1"&gt;
+&lt;input type="text" name="texto2" value="Acceso con 2" accesskey="2"&gt;
+&lt;input type="text" name="texto3" value="Acceso con 3" accesskey="3"&gt;
+&lt;input type="text" name="texto4" value="Acceso con 4" accesskey="4"&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/accesskey-4.html" style="height: 12em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/accesskey-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;input type="text" name="texto1" value="Acceso con ," accesskey=","&gt;
+&lt;input type="text" name="texto2" value="Acceso con -" accesskey="."&gt;
+&lt;input type="text" name="texto3" value="Acceso con +" accesskey="+"&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/accesskey-5.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/accesskey-5.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <hr class="corta">
+
+        <p>Si hay varios elementos con la misma tecla de acceso, o si hay varios elementos con la misma tecla de acceso en mayúsculas y minúsculas:</p>
+
+        <ul>
+          <li>Google Chrome no avanza de uno a otro</li>
+          <li>Firefox avanza de uno a otro con la combinación <kbd>Alt+Shift+tecla</kbd></li>
+        </ul>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;input type="text" name="texto1" value="Acceso con z" accesskey="z"&gt;
+&lt;input type="text" name="texto2" value="Acceso con z" accesskey="z"&gt;
+&lt;input type="text" name="texto3" value="Acceso con z" accesskey="z"&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/accesskey-6.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/accesskey-6.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;input type="text" name="texto1" value="Acceso con w" accesskey="w"&gt;
+&lt;input type="text" name="texto2" value="Acceso con W" accesskey="W"&gt;
+&lt;input type="text" name="texto3" value="Acceso con W" accesskey="W"&gt;</code>
+</pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/accesskey-7.html" style="height: 9em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/accesskey-7.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="formularios-input-color">
+        <h4 class="con-aside">Control de tipo color: <span class="html-eti">&lt;input <span class="html-atri">type</span>=<span class="html-atri-valor">"color"</span>&gt;</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../html/html-formularios.html#control-input-color"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Google Chrome muestra un control específico para seleccionar el color, mientras que Firefox muestra el control proporcionado por el sistema operativo.</p>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre><code class="language-html">Elija un color: &lt;input type="color" name="colorElegido"&gt;</code></pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/formularios-color-1.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/formularios-color-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p class="mcl-captura">
+          <img src="ejemplos/diferencias/formularios-input-color.png" alt="Captura control color en Firefox y Chrome" width="1032" height="402">
+        </p>
+
+        <hr class="corta">
+
+        <p>Firefox admite todos los formatos de color en la lista de opciones, pero Chrome sólo admite el formato RGB. En cualquier caso, el control envía el color en formato RGB.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">&lt;p&gt;
+  Indique su mes favorito:
+  &lt;input type="color" name="favorito" list="colores"&gt;
+&lt;/p&gt;
+&lt;datalist id="colores"&gt;
+  &lt;option value="hwb(0 0% 0%)"&gt;&lt;/option&gt;
+  &lt;option value="yellow"&gt;&lt;/option&gt;
+  &lt;option value="#00FF00"&gt;&lt;/option&gt;
+  &lt;option value="hsl(240 100% 50%)"&gt;&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/formularios-datalist-color-2.html" style="height: 14em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/formularios-datalist-color-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p class="mcl-captura">
+          <img src="ejemplos/diferencias/formularios-input-color-datalist.png" alt="Captura control color con datalist en Firefox y Chrome" width="1074" height="400">
+        </p>
+
+      </section>
+
+      <section id="formularios-input-time">
+        <h4 class="con-aside">Control de tipo hora: <span class="html-eti">&lt;input <span class="html-atri">type</span>=<span class="html-atri-valor">"time"</span>&gt;</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../html/html-formularios.html#control-input-time"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Google Chrome muestra un control específico para seleccionar la hora, pero Firefox no lo hace.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">
+            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">Hora: &lt;input type="time" name="hora"&gt;</code></pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/formularios-time-1.html" style="height: 6em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/formularios-time-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p><strong>Nota</strong>: Desde Firefox 144 (publicado en octubre de 2025), la preferencia dom.forms.datetime.timepicker permite activar un control específico para seleccionar la hora [<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/144#experimental_web_features">Ref</a>].</p>
+      </section>
+
+      <section id="formularios-input-month">
+        <h4 class="con-aside">Control de tipo mes: <span class="html-eti">&lt;input <span class="html-atri">type</span>=<span class="html-atri-valor">"month"</span>&gt;</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../html/html-formularios-2.html#control-input-month"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Google Chrome muestra un control específico para seleccionar el mes y el año, pero Firefox no lo hace. Además, Chrome envía el dato en el formato AAAA-MM, pero Firefox no lo hace.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">
+            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">Mes: &lt;input type="month" name="mes" size="20"&gt;</code></pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/formularios-month-1.html" style="height: 6em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/formularios-month-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>Bug de Firefox relacionado:</p>
+        <ul>
+          <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1283382">Bug 1283382: Implement UI for &lt;input type="month"&gt;</a></li>
+        </ul>
+      </section>
+
+      <section id="formularios-input-week">
+        <h4 class="con-aside">Control de tipo semana: <span class="html-eti">&lt;input <span class="html-atri">type</span>=<span class="html-atri-valor">"week"</span>&gt;</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../html/html-formularios-2.html#control-input-week"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Google Chrome muestra un control específico para seleccionar la semana y el año, pero Firefox no lo hace. Además, Chrome envía el dato en el formato AAAA-WSS, pero Firefox no lo hace.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">
+            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">Semana: &lt;input type="week" name="semana" size="20"&gt;</code></pre>
+          </div>
+          <iframe src="../html/ejemplos/formularios/formularios-week-1.html" style="height: 6em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/formularios/formularios-week-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>Bugs de Firefox relacionados:</p>
+        <ul>
+          <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1283383">Bug 1283383: Implement UI for &lt;input type="week"&gt;</a></li>
+          <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1306216">Bug 1306216: Implement the layout for for &lt;input type="week"&gt;</a></li>
+        </ul>
+      </section>
+
+      <section id="formularios-input-number-size">
+        <h4 class="con-aside">Atributo <span class="html-atri">size</span> en control de tipo numérico: <span class="html-eti">&lt;input <span class="html-atri">type</span>=<span class="html-atri-valor">"number"</span>&gt;</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../html/html-formularios.html#atributo-size"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Según <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number#controlling_input_size">MDN</a>, el atributo <span class="html-atri">size</span> no se debe utilizar para establecer el tamaño de un control numérico. Google Chrome no hace caso de ese atributo, pero Firefox sí lo hace.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">
+            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+          </div>
+          <div class="codigo">
+            <pre><code class="language-html">Escriba un número: &lt;input type="number" name="numero" size="50"&gt;</code></pre>
+          </div>
+          <iframe src="ejemplos/diferencias/formularios-input-number-size-1.html" style="height: 6em;"></iframe>
+          <div class="icono-enlace">
+            <a href="ejemplos/diferencias/formularios-input-number-size-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+
+      <p class="mcl-captura">
+        <img src="ejemplos/diferencias/formularios-input-number-size.png" alt="Captura control numérico con atrbuto size en Firefox y Chrome" width="923" height="121">
+      </p>
+    </section>
+
+    <section id="favicons">
+      <h3>Favicons</h3>
+
+      <section id="favicons-animados">
+        <h4 class="con-aside">Favicons animados</h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../html/html-favicon.html#animados"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Firefox admite favicons animados, pero Google Chrome no.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <iframe src="../html/ejemplos/favicon/favicon-animado.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../html/ejemplos/favicon/favicon-animado.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+
+      <p><strong>Nota</strong>: El <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=19731">bug 19731</a> de Chrome, que trata este tema, se abrió en agosto de 2009 y se cerró el mismo día indicando que no se pensaba implementar debido a su dificultad y poco interés.</p>
+    </section>
+  </section>
+
+  <section id="css">
+    <h2>CSS</h2>
+
+    <section id="css-alternativas">
+      <h3>Hojas de estilo alternativas</h3>
+
+      <p>Firefox permite elegir hojas de estilo alternativas, pero Chrome no.</p>
+    </section>
+
+    <section id="css-fuente">
+      <h3>Fuente</h3>
+
+      <section id="css-fuente-font-style">
+        <h4 class="con-aside">Propiedad <span class="css-prop">font-style</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../css/css-fuente.html#font-style"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Si el ordenador dispone de fuentes que tengan ambas variantes, Firefox distingue entre los valores <span class="css-valor">italic</span> y <span class="css-valor">oblique</span> de la propiedad <span class="css-prop">font-style</span>, mientras que Google Chrome no lo hace.</p>
+
+        <p>El ejemplo siguiente puede verse correctamente en Firefox una vez instalada la fuente libre <a href="https://www.fontsquirrel.com/fonts/latin-modern-roman">Latin Modern Roman</a> (realmente son 11 fuentes distintas para cubrir las variantes más habituales).</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-css">p.italic {
+  font-family: "Latin Modern Roman 10";
+  font-style: italic;
+}
+
+p.oblique {
+    font-family: "Latin Modern Roman 10";
+    font-style: oblique;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/fuentes/font-style-4.html" style="height: 16em"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/fuentes/font-style-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p>El ejemplo anterior da el siguiente resultado en Firefox 62:</p>
+
+        <p class="mcl-captura">
+          <img src="../css/ejemplos/fuentes/font-style-italic-oblique-ff.png" alt="Ejemplo de fuente oblique e italic" title="Ejemplo de fuente oblique e italic" width="580" height="170">
+        </p>
+      </section>
+
+      <section id="css-fuente-font-size-adjust">
+        <h4 class="con-aside">Propiedad <span class="css-prop">font-size-adjust</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../css/css-fuente-2.html#font-size-adjust"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>La propiedad <span class="css-prop">font-size-adjust</span> funciona parcialmente en Firefox, pero no en Google Chrome.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc.svg" alt="Correcto en Chrome" title="Correcto en Chrome" width="32" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-css">p {
+  font-size: 20px;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/fuentes/font-size-adjust-1.html" style="height: 5em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/fuentes/font-size-adjust-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-css">p {
+  font-size: 20px;
+  font-size-adjust: 1.5;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/fuentes/font-size-adjust-2.html" style="height: 22em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/fuentes/font-size-adjust-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-css">p {
+  font-size: 20px;
+  font-size-adjust: 0.5;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/fuentes/font-size-adjust-3.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/fuentes/font-size-adjust-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="css-texto">
+      <h3>Texto</h3>
+
+      <section id="text-decoration-overline">
+        <h4 class="con-aside">Propiedad <span class="css-prop">text-decoration</span>: <span class="css-valor">overline</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../css/css-texto.html#text-decoration"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Si un párrafo tiene sobrerrayado y el tamaño de las palabras no es siempre el mismo:</p>
+
+        <ul>
+          <li>Chrome dibuja la línea en la parte superior de cada carácter, desplazándola verticalmente en función del tamaño del carácter.</li>
+          <li>Firefox mantiene la línea de sobrerrayado a la misma altura a lo largo de todo el párrafo, pero basándose en el texto de menor tamaño.</li>
+        </ul>
+
+        <p>Probablemente, la recomendación no especifica qué hacer en este caso particular y cada navegador ha adoptado una solución diferente (<span class="incompleto">por confirmar</span>)</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-unknown.svg" alt="Por determinar en Chrome" title="Por determinar en Chrome" width="53" height="32">
+            <img src="../varios/iconos/icono-ff-unknown.svg" alt="Por determinar en Firefox" title="Por determinar en Firefox" width="53" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-html">&lt;p style="text-decoration: overline"&gt;
+  Un
+  &lt;span style="font-size: 200%"&gt;párrafo&lt;/span&gt;
+  &lt;span style="font-size: 300%"&gt;sobrerrayado&lt;/span&gt;.
+&lt;/p&gt;
+
+&lt;p style="text-decoration: overline"&gt;
+  &lt;span style="font-size: 300%"&gt;Otro&lt;/span&gt;
+  &lt;span style="font-size: 200%"&gt;párrafo&lt;/span&gt;
+  sobrerrayado.
+&lt;/p&gt;</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/texto/text-decoration-11.html" style="height: 16em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/texto/text-decoration-11.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="css-lineas">
+      <h3>Líneas horizontales</h3>
+
+      <section id="css-hr-color">
+        <h4 class="con-aside">Propiedad <span class="css-prop">color</span></h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../css/css-hr.html#color"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>En Firefox la propiedad <span class="css-prop">color</span> establece el color del borde de la línea, pero en Chrome no lo hace.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-css">hr {
+  color: red;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/hr/colores-11.html" style="height: 6em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/hr/colores-11.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-css">hr {
+  height: 1px;
+  color: red;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/hr/colores-12.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/hr/colores-12.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+            <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-css">hr {
+  height: 10px;
+  color: red;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/hr/colores-13.html" style="height: 7em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/hr/colores-13.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="posicionamiento">
+      <h3>Posicionamiento</h3>
+
+      <section id="letra-capital">
+        <h2 class="con-aside">Posicionamiento flotante de caracteres: letra capital</h2>
+
+        <aside class="enlace-norma">
+          <p>
+            <a href="../css/css-posicionamiento-flotante.html#letra-capital"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>Firefox no muestra los dos ejemplos siguientes de la misma manera, mientras que Chrome sí lo hace.</p>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
+<code class="language-css">span.capital {
+  float: left;
+  background-color: pink;
+  color: red;
+  font-family: monospace;
+  font-size: 400%;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/pos-flotante/float-capital-1.html" style="height: 10em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/pos-flotante/float-capital-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <div class="filaflex">
+          <div class="codigo">
+            <pre>
+<code class="language-css">p.capital::first-letter {
+  float: left;
+  background-color: pink;
+  color: red;
+  font-family: monospace;
+  font-size: 400%;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/pos-flotante/float-capital-2.html" style="height: 10em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/pos-flotante/float-capital-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+
+        <p><strong>Nota</strong>: En realidad no tengo claro si quien lo hace bien es Firefox o Chrome.</p>
+      </section>
+    </section>
+
+    <section id="css-interface-usuario">
+      <h3>Interfaz de usuario</h3>
+
+      <section id="outline-en-linea">
+        <h4 class="con-aside">Contorno <span class="css-prop">outline</span> de un elemento en-línea</h4>
+        <aside class="enlace-norma">
+          <p>
+            <a href="../css/css-interface.html#outline"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+          </p>
+        </aside>
+
+        <p>El contorno de un elemento en-línea no se muestra de la misma manera en Google Chrome que en Firefox.</p>
+
+        <div class="filaflex">
+          <div class="icono-navegadores">
+            <img src="../varios/iconos/icono-gc-unknown.svg" alt="Por determinar en Chrome" title="Por determinar en Chrome" width="53" height="32">
+            <img src="../varios/iconos/icono-ff-unknown.svg" alt="Por determinar en Firefox" title="Por determinar en Firefox" width="53" height="32">
+          </div>
+          <div class="codigo">
+            <pre>
+<code class="language-css">span.con-outline {
+  outline: black 3px solid;
+}</code>
+</pre>
+          </div>
+          <iframe src="../css/ejemplos/interface/outline-8.html" style="height: 6em;"></iframe>
+          <div class="icono-enlace">
+            <a href="../css/ejemplos/interface/outline-8.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="columns">
+      <h3 class="con-aside">La propiedad compuesta <span class="css-prop">columns</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <a href="../css/css-columnas.html#columns"><img src="../varios/iconos/icono-diferencias.svg" alt="Ir a la lección" title="Ir a la lección" width="32" height="32"></a>
+        </p>
+      </aside>
+
+      <p>Si se escriben dos valores en la propiedad compuesta <span class="css-prop">columns</span>, si el elemento tiene un tamaño predefinido, Firefox hace caso únicamente al número de columnas, pero si el elemento no tiene un tamaño predefinido (tablas, elementos flotantes, etc.), hace caso de los dos valores. Chrome no lo hace.</p>
+
+      <div class="filaflex">
+        <div class="icono-navegadores">
+          <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+          <img src="../varios/iconos/icono-ff.svg" alt="Correcto en Firefox" title="Correcto en Firefox" width="32" height="32">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  columns: 2 8em;
+  float: left;
+  text-align: justify;
+}</code>
+</pre>
+        </div>
+        <iframe src="../css/ejemplos/columnas/columns-3.html" style="height: 19em;"></iframe>
+        <div class="icono-enlace">
+          <a href="../css/ejemplos/columnas/columns-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 16 de diciembre de 2025</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

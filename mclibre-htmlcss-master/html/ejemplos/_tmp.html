@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>pruebas. Formularios. HTML. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <form action="_tmp-2.php" method="get">
+    <p><input type="file" name="archivo" value="*.jpg"></p>
+
+    <p><input type="month" name="color"></p>
+
+    <p><input type="time" name="hora" value="12:15"></p>
+
+    <input type="image" name="GNU" src="../../img/gnu-head-sm.jpg" alt="GNU" value="basura">
+
+    <p>Contraseña: <input type="password" name="password" minlength="8"></p>
+
+    <textarea name="texto" rows="4" cols="40" placeholder="Escribe algo"></textarea>
+
+    <textarea name="texto" rows="4" cols="40" maxlength="10"></textarea>
+
+    <p><input type="submit" value="Enviar"></p>
+    <p><input type="reset" value="Reset"></p>
+
+    <p>Sex:
+      <input name="sexx" list="sexes">
+    <datalist id="sexes">
+        <select name="sexx">
+          <option>Alberto</option>
+          <option>amigo</option>
+          <option>Bárbara</option>
+        </select>
+      </datalist>
+</p>
+
+  </form>
+</body>
+</html>

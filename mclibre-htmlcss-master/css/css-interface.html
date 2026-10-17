@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Interfaz de usuario. CSS. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>CSS: Interfaz de usuario</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>CSS: Interfaz de usuario</h2>
+
+      <ul>
+        <li><a href="#box-sizing">Modelo de caja: <span class="css-prop">box-sizing</span></a></li>
+        <li><a href="#cursor">Icono cursor: <span class="css-prop">cursor</span></a></li>
+        <li><a href="#contornos">Contornos</a>
+          <ul>
+            <li><a href="#outline"><span class="css-prop">outline</span></a></li>
+            <li><a href="#outline-color-width-style"><span class="css-prop">outline-color</span>, <span class="css-prop">outline-width</span>, <span class="css-prop">outline-style</span></a></li>
+            <li><a href="#outline-offset"><span class="css-prop">outline-offset</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <p>En esta lección se comentan las propiedades CSS definidas en la recomendación <a href="https://www.w3.org/TR/2026/REC-css-ui-3-20260407/">CSS Basic User Interface Module Level 3 (CSS3 UI) (2ª ed.)</a>, publicada en abril de 2026.</p>
+
+  <p>Estas propiedades están relacionadas con la interfaz de usuario.</p>
+
+  <section id="box-sizing">
+    <h2 class="con-aside">Cambio del modelo de caja: <span class="css-prop">box-sizing</span></h2>
+
+    <aside class="enlace-norma">
+      <p>
+        <span class="css-prop">box-sizing</span><br>
+        <a href="https://www.w3.org/TR/2026/REC-css-ui-3-20260407/#box-sizing"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+      </p>
+    </aside>
+
+    <p>Esta propiedad se comenta en la lección <a href="css-modelo-caja.html#box-sizing">Modelo de caja</a>.</p>
+  </section>
+
+  <section id="cursor">
+    <h2 class="con-aside">La propiedad <span class="css-prop">cursor</span></h2>
+
+    <aside class="enlace-norma">
+      <p>
+        <span class="css-prop">cursor</span><br>
+        <a href="https://www.w3.org/TR/2026/REC-css-ui-3-20260407/#cursor"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+      </p>
+    </aside>
+
+    <p>La propiedad <span class="css-prop">cursor</span> permite especificar el icono que se muestra al situar el cursor sobre un elemento.</p>
+
+    <p>En la recomendación CSS 2.1, los posibles valores eran <span class="css-valor">auto</span>, <span class="css-valor">crosshair</span>, <span class="css-valor">default</span>, <span class="css-valor">help</span>, <span class="css-valor">move</span>, <span class="css-valor">pointer</span>, <span class="css-valor">progress</span>, <span class="css-valor">n-resize</span>, <span class="css-valor">ne-resize</span>, <span class="css-valor">e-resize</span>, <span class="css-valor">se-resize</span>, <span class="css-valor">s-resize</span>, <span class="css-valor">sw-resize</span>, <span class="css-valor">w-resize</span>, <span class="css-valor">nw-resize</span>, <span class="css-valor">text</span> y <span class="css-valor">wait</span>.</p>
+
+    <p>En la recomendación CSS 3, se han añadido los valores <span class="css-valor">none</span>, <span class="css-valor">context-menu</span>, <span class="css-valor">cell</span>, <span class="css-valor">vertical-text</span>, <span class="css-valor">alias</span>, <span class="css-valor">copy</span>, <span class="css-valor">no-drop</span>, <span class="css-valor">not-allowed</span>, <span class="css-valor">grab</span>, <span class="css-valor">grabbing</span>, <span class="css-valor">ew-resize</span>, <span class="css-valor">ns-resize</span>, <span class="css-valor">nesw-resize</span>, <span class="css-valor">nwse-resize</span>, <span class="css-valor">col-resize</span>, <span class="css-valor">row-resize</span>, <span class="css-valor">all-scroll</span>, <span class="css-valor">zoom-in</span> y <span class="css-valor">zoom-out</span>.</p>
+
+    <p>Los ejemplos siguientes muestran todos los valores posibles:</p>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: auto;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-auto.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-auto.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: crosshair;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-crosshair.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-crosshair.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: default;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-default.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-default.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: help;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-help.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-help.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: move;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-move.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-move.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: pointer;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-pointer.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-pointer.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: progress;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-progress.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-progress.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: n-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-n-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-n-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: ne-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-ne-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-ne-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: e-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-e-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-e-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: se-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-se-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-se-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: s-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-s-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-s-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: sw-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-sw-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-sw-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: w-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-w-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-w-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: nw-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-nw-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-nw-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: text;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-text.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-text.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: wait;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-wait.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-wait.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: none;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-none.html" style="height: 5em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-none.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores">
+        <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+        <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: context-menu;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-context-menu.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-context-menu.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        <a href="../otros/diferencias-listado.html#cursor-context-menu"><img src="../varios/iconos/icono-diferencias.svg" alt="Diferencias entre navegadores" title="Diferencias entre navegadores" width="32" height="32"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: cell;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-cell.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-cell.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: vertical-text;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-vertical-text.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-vertical-text.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: alias;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-alias.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-alias.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: copy;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-copy.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-copy.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: no-drop;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-no-drop.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-no-drop.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: not-allowed;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-not-allowed.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-not-allowed.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: grab;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-grab.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-grab.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: grabbing;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-grabbing.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-grabbing.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: ew-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-ew-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-ew-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: ns-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-ns-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-ns-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: nesw-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-nesw-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-nesw-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: nwse-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-nwse-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-nwse-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: col-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-col-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-col-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: row-resize;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-row-resize.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-row-resize.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: all-scroll;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-all-scroll.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-all-scroll.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: zoom-in;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-zoom-in.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-zoom-in.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="icono-navegadores-vacio">
+        <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+      </div>
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: zoom-out;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-zoom-out.html" style="height: 7em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-zoom-out.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <hr class="corta">
+
+    <p>También pueden utilizarse cursores personalizados, indicando la dirección de la imagen que se quiera emplear. Se puede escribir una lista de cursores separados por comas para que el navegador utilice el primero disponible</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: url("exclamacion.png"), wait;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-url-1.html" style="height: 8em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-url-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: url("exclamacion.cur"), wait;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-url-2.html" style="height: 8em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-url-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-css">p {
+  cursor: url("exclamacion.ico"), wait;
+}</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/interface/cursor-url-3.html" style="height: 8em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/interface/cursor-url-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contornos">
+    <h2>Contornos</h2>
+
+    <p>Un contorno es como un segundo borde, pero que no se tiene en cuenta al calcular el tamaño del elemento y que no tiene por qué ser rectangular.</p>
+
+    <section id="outline">
+      <h3 class="con-aside">La propiedad compuesta <span class="css-prop">outline</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">outline</span><br>
+          <a href="https://www.w3.org/TR/2026/REC-css-ui-3-20260407/#outline"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p>La propiedad compuesta <span class="css-prop">outline</span> permite establecer un contorno a un elemento, indicando como en caso del borde, el color, el grosor y el estilo del contorno.</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  outline: red 3px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-1.html" style="height: 6em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <p>Un elemento puede tener simultáneamente borde y contorno, como muestra el ejemplo siguiente:</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  outline: red 3px solid;
+  border: black 3px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-2.html" style="height: 6em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <hr class="corta">
+
+      <p>El contorno se diferencia del borde en que el contorno no se tiene en cuenta al calcular el tamaño del elemento, mientras que el borde sí, como muestran los ejemplos siguientes:</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p.con-border {
+  border: black 10px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-3.html" style="height: 9em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-3.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p.con-outline {
+  outline: black 10px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-4.html" style="height: 9em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-4.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <p>Esta diferencia es más evidente si el contorno se genera cuando el ratón pasa por encima del elemento. En el caso del borde, al añadirse el borde, los elementos siguientes se desplazan, pero en el caso del contorno, al generarse el contorno, los elementos siguientes no se desplazan.</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p.con-border:hover {
+  border: black 10px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-5.html" style="height: 9em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-5.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p.con-outline:hover {
+  outline: black 10px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-6.html" style="height: 9em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-6.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <hr class="corta">
+
+      <p>El contorno se diferencia también del borde en que el borde es siempre rectangular, mientras que el contorno no tiene por qué serlo.</p>
+
+      <div class="filaflex">
+        <div class="icono-navegadores-vacio">
+          <img src="../varios/iconos/icono-transparente.svg" alt="Hueco" width="44" height="4">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">span.con-border {
+  border: black 3px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-7.html" style="height: 8em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-7.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-navegadores">
+          <img src="../varios/iconos/icono-gc-unknown.svg" alt="Por determinar en Chrome" title="Por determinar en Chrome" width="53" height="32">
+          <img src="../varios/iconos/icono-ff-unknown.svg" alt="Por determinar en Firefox" title="Por determinar en Firefox" width="53" height="32">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">span.con-outline {
+  outline: black 3px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-8.html" style="height: 9em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-8.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+          <a href="../otros/diferencias-listado.html#outline-en-linea"><img src="../varios/iconos/icono-diferencias.svg" alt="Diferencias entre navegadores" title="Diferencias entre navegadores" width="32" height="32"></a>
+        </div>
+      </div>
+
+      <p><strong>Nota</strong>: Firefox y Chrome no muestran el contorno de un elemento en-línea de la misma manera, como se comenta en la <a href="../otros/diferencias-listado.html#outline-en-linea">página de diferencias entre navegadores</a>.</p>
+
+      <hr class="corta">
+
+      <p>La propiedad <span class="css-prop">outline</span> admite como color el valor <span class="css-valor">invert</span>. Con este valor, el contorno toma el color opuesto al color de fondo del elemento.</p>
+
+      <p>Ni Chrome ni Firefox muestran el valor <span class="css-valor">invert</span> (Firefox dejó de hacerlo en la versión la versión FF 3.0). En la <a href="../otros/bugs-mozilla.html#bug-359497">página de bugs de Firefox</a> se explica qué motivos dan los desarrolladores de Firefox para no hacerlo.</p>
+
+      <div class="filaflex">
+        <div class="icono-navegadores">
+          <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+          <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">body {
+  background-color: white;
+}
+
+p {
+  outline: invert 3px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-11.html" style="height: 11em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-11.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-navegadores">
+          <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+          <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">body {
+  background-color: black;
+  color: white;
+}
+
+p {
+  outline: invert 3px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-12.html" style="height: 12em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-12.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="icono-navegadores">
+          <img src="../varios/iconos/icono-gc-X.svg" alt="Incorrecto en Chrome" title="Incorrecto en Chrome" width="44" height="32">
+          <img src="../varios/iconos/icono-ff-X.svg" alt="Incorrecto en Firefox" title="Incorrecto en Firefox" width="44" height="32">
+        </div>
+        <div class="codigo">
+          <pre>
+<code class="language-css">body {
+  background-color: red;
+  color: white;
+}
+
+p {
+  outline: invert 3px solid;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-13.html" style="height: 12em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-13.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="outline-color-width-style">
+      <h3 class="con-aside">Las propiedades <span class="css-prop">outline-color</span>, <span class="css-prop">outline-width</span> y <span class="css-prop">outline-style</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">outline-color</span><br>
+          <a href="https://www.w3.org/TR/2026/REC-css-ui-3-20260407/#outline-color"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline-color"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+
+        <p>
+          <span class="css-prop">outline-width</span><br>
+          <a href="https://www.w3.org/TR/2026/REC-css-ui-3-20260407/#outline-width"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline-width"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+
+        <p>
+          <span class="css-prop">outline-style</span><br>
+          <a href="https://www.w3.org/TR/2026/REC-css-ui-3-20260407/#outline-style"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline-style"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a></p>
+      </aside>
+
+      <p>Las propiedades <span class="css-prop">outline-color</span>, <span class="css-prop">outline-width</span> y <span class="css-prop">outline-style</span> permiten establecer, respectivamente, el color, el grosor y el estilo del contorno de un elemento. A diferencia de las propiedades <span class="css-prop">border-color</span>, <span class="css-prop">border-width</span> y <span class="css-prop">border-style</span>, las propiedades del contorno sólo admiten un valor, es decir, los cuatro lados del contorno son siempre iguales.</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  outline-color: black;
+  outline-style: solid;
+  outline-width: 3px;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-cge-1.html" style="height: 8em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-cge-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <hr class="corta">
+
+      <p>La propiedad <span class="css-prop">outline-color</span> admite el valor <span class="css-valor">invert</span>. Con este valor, el contorno toma el color opuesto al color de fondo del elemento.</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">body {
+  background-color: black;
+  color: white;
+}
+
+p {
+  outline-color: invert;
+  outline-style: solid;
+  outline-width: 3px;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-cge-2.html" style="height: 15em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-cge-2.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <p>Curiosamente, en este caso Firefox y Chrome sí que muestran el contorno, lo que no hacen con la propiedad compuesta <span class="css-prop">outline</span>.</p>
+    </section>
+
+    <section id="outline-offset">
+      <h3 class="con-aside">La propiedad <span class="css-prop">outline-offset</span></h3>
+
+      <aside class="enlace-norma">
+        <p>
+          <span class="css-prop">outline-offset</span><br>
+          <a href="https://www.w3.org/TR/2026/REC-css-ui-3-20260407/#outline-offset"><img src="../varios/iconos/icono-css3.svg" alt="Recomendación CSS3" title="Recomendación CSS3" width="28" height="32"></a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset"><img src="../varios/iconos/icono-mdn.svg" alt="Mozilla Developer Network" title="Mozilla Developer Network" width="37" height="32"></a>
+        </p>
+      </aside>
+
+      <p>La propiedad <span class="css-prop">outline-offset</span> permite modificar el tamaño del contorno de un elemento, ampliándolo o reduciéndolo con respecto a su tamaño inicial. El valor debe ser una distancia. Si el valor es positivo, el contorno aumentará. Si el valor es negativo, el contorno se reducirá.</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">p {
+  margin: 20px;
+}
+
+p.con-outline {
+  outline: black 1px solid;
+}
+
+p.con-outline-offset-positivo {
+  outline: black 1px solid;
+  outline-offset: 10px;
+}
+
+p.con-outline-offset-negativo {
+  outline: black 1px solid;
+  outline-offset: -5px;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/interface/outline-offset-1.html" style="height: 25em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/interface/outline-offset-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 16 de abril de 2026</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Esquema (outline). Elementos obsoletos. HTML. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>Elementos obsoletos. Esquema (<i>outline</i>)</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>Esquema</h2>
+
+      <ul>
+        <li><a href="#outline-html4">Esquema en HTML 4</a></li>
+        <li><a href="#outline-html">Esquema en HTML</a></li>
+        <li><a href="#outline-hn">Secciones y títulos</a></li>
+        <li><a href="#uso-hn">Cómo usar los títulos</a></li>
+        <li><a href="#saber-mas">Para saber más</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="aviso-antiguo">
+    <p><img src="../varios/iconos/icono-warning.svg" alt="¡Atención!" title="¡Atención!" width="55" height="48">Esta lección explica el concepto de esquema (<i>outline</i>) definido en HTML 5, que fue eliminado de la norma HTML en julio de 2022. Esta lección ya no tiene interés práctico.</p>
+  </div>
+
+  <p>El esquema (<i>outline</i>) de una página web es una representación de la página web que muestra la relación de jerarquía entre los diferentes apartados y subapartados.</p>
+
+  <p>El concepto de esquema se formalizó en HTML 5, de manera que el esquema de un documento ya no se deberían deducir únicamente de las etiquetas de título, sino también de las cuatro etiquetas <span class="html-eti">&lt;article&gt;</span>, <span class="html-eti">&lt;section&gt;</span>, <span class="html-eti">&lt;nav&gt;</span> y <span class="html-eti">&lt;aside&gt;</span>.</p>
+
+  <p>Como ningún navegador ni ninguna herramienta de accesibilidad incluyó nunca algoritmos para analizar el esquema (outline) de una página web, finalmente en julio de 2022 el concepto de esquema de la norma HTML <a href="https://github.com/whatwg/html/pull/7829">se simplificó</a>, basándolo de nuevo únicamente en las etiquetas de título.</p>
+
+  <p>Por todo ello, en estos apuntes se recomienda utilizar las <a href="html-secciones.html">etiquetas de secciones</a> introducidas en HTML 5, porque permiten organizar mejor el contenido de las páginas, pero mantener la <a href="html-secciones.html#etiqueta-hn">jerarquía de títulos clásica del HTML 4</a>.</p>
+
+  <p><strong>Notas</strong>:</p>
+
+  <ul>
+    <li>No se debe confundir el esquema (en inglés, outline) con <a href="../css/css-interface.html">la propiedad CSS <span class="css-prop">outline</span></a>.</li>
+    <li>El validador <a href="https://validator.w3.org/nu/?showoutline=yes">Nu Html Checker del W3C</a> analiza el esquema de la página de forma experimental.</li>
+  </ul>
+
+  <section id="outline-html4">
+    <h2 >Esquema (outline) de una página web HTML 4 / XHTML 1</h2>
+
+    <p>En HTML 4 / XHTML 1 no existía el concepto de esquema de una página web. Las únicas etiquetas que nos podían dar una idea de la estructura de una página web eran las etiquetas de título (<span class="html-eti">&lt;h1&gt;</span>, <span class="html-eti">&lt;h2&gt;</span>, etc.). Al utilizar títulos de menor jerarquía, se podía deducir que unas partes eran subapartados de otras. Por eso, una página HTML 4 / XHTML 1 debía tener un único título <span class="html-eti">&lt;h1&gt;</span>, sus apartados tener títulos <span class="html-eti">&lt;h2&gt;</span>, los subapartados de estos apartados tener títulos <span class="html-eti">&lt;h3&gt;</span>, y así sucesivamente.</p>
+
+    <p>El ejemplo siguiente muestra como los elementos <span class="html-eti">&lt;h1&gt;</span>, ..., <span class="html-eti">&lt;h6&gt;</span> definen el comienzo y el final de los apartados, sin necesidad de que haya etiquetas que engloben los apartados. Los títulos están representados con un trazo continuo, mientras que las secciones definidas de forma implícita por los títulos están representadas con un trazo discontinuo.</p>
+
+    <p class="mcl-svg-figura">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="570" height="324" viewBox="0 0 1920 1080" style="background-color: #EEEEEE">
+        <rect x="20" y="20" width="1880" height="1040" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="40" y="40" width="1840" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="60" y="100" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="60" y="140" width="1800" height="420" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="160" width="1760" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="100" y="220" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="100" y="260" width="1720" height="130" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="280" width="1680" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="140" y="340" font-family="sans-serif" font-size="50">h3</text>
+
+        <rect x="100" y="410" width="1720" height="130" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="430" width="1680" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="140" y="490" font-family="sans-serif" font-size="50">h3</text>
+
+        <rect x="60" y="600" width="1800" height="420" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="620" width="1760" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="100" y="680" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="100" y="720" width="1720" height="130" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="740" width="1680" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="140" y="800" font-family="sans-serif" font-size="50">h3</text>
+
+        <rect x="100" y="870" width="1720" height="130" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="890" width="1680" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="140" y="950" font-family="sans-serif" font-size="50">h3</text>
+      </svg>
+    </p>
+
+    <p>Este sistema era suficiente para páginas sueltas, pero no permitía la reutilización de contenidos en otras páginas. Es decir, si se cogían partes de unas páginas (con sus títulos) y se unían en otra página sin modificarlas, obtendríamos un código desaconsejado en HTML 4 / XHTML 1, como muestra el ejemplo siguiente.</p>
+
+    <p>Supongamos que tenemos dos páginas sencillas, con dos apartados cada una:</p>
+
+    <p>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="570" height="324" viewBox="0 0 1920 1080" style="background-color: #EEEEEE">
+        <rect x="20" y="20" width="1880" height="1040" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="40" y="40" width="1840" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="60" y="100" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="60" y="140" width="1800" height="420" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="160" width="1760" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="100" y="220" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="60" y="600" width="1800" height="420" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="620" width="1760" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="100" y="680" font-family="sans-serif" font-size="50">h2</text>
+      </svg>
+
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="570" height="324" viewBox="0 0 1920 1080" style="background-color: #EEEEEE">
+        <rect x="20" y="20" width="1880" height="1040" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="40" y="40" width="1840" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="60" y="100" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="60" y="140" width="1800" height="420" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="160" width="1760" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="100" y="220" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="60" y="600" width="1800" height="420" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="620" width="1760" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="100" y="680" font-family="sans-serif" font-size="50">h2</text>
+      </svg>
+    </p>
+
+    <p>Si combinamos esas dos páginas en una, dando un nuevo título a la página final, obtendríamos el siguiente código, desaconsejado en HTML 4 / XHTML 1 porque no respeta la jerarquía de títulos:</p>
+
+    <p class="mcl-svg-figura">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="570" height="324" viewBox="0 0 1920 1080" style="background-color: #EEEEEE">
+        <rect x="20" y="20" width="1880" height="1040" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="40" y="40" width="1840" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="60" y="100" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="60" y="140" width="1800" height="420" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="160" width="1760" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="100" y="220" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="100" y="260" width="1720" height="130" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="280" width="1680" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="140" y="340" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="100" y="410" width="1720" height="130" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="430" width="1680" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="140" y="490" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="60" y="600" width="1800" height="420" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="620" width="1760" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="100" y="680" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="100" y="720" width="1720" height="130" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="740" width="1680" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="140" y="800" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="100" y="870" width="1720" height="130" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="890" width="1680" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="140" y="950" font-family="sans-serif" font-size="50">h2</text>
+
+        <line x1="200" y1="100" x2="1720" y2="980" stroke-width="10" stroke="red" />
+        <line x1="1720" y1="100" x2="200" y2="980" stroke-width="10" stroke="red" />
+
+        <text x="300" y="600" font-family="sans-serif" font-size="100" stroke="red" fill="red">desaconsejado en HTML 4</text>
+      </svg>
+    </p>
+
+    <p>Para resolver este problema, en HTML 4 / XHTML 1 había que cambiar el nivel de los títulos para obtener una estructura que respetara la jerarquía de títulos:</p>
+
+    <p class="mcl-svg-figura">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="570" height="324" viewBox="0 0 1920 1080" style="background-color: #EEEEEE">
+        <rect x="20" y="20" width="1880" height="1040" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="40" y="40" width="1840" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="60" y="100" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="60" y="140" width="1800" height="420" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="160" width="1760" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="100" y="220" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="100" y="260" width="1720" height="130" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="280" width="1680" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="140" y="340" font-family="sans-serif" font-size="50">h3</text>
+
+        <rect x="100" y="410" width="1720" height="130" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="430" width="1680" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="140" y="490" font-family="sans-serif" font-size="50">h3</text>
+
+        <rect x="60" y="600" width="1800" height="420" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="80" y="620" width="1760" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="100" y="680" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="100" y="720" width="1720" height="130" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="740" width="1680" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="140" y="800" font-family="sans-serif" font-size="50">h3</text>
+
+        <rect x="100" y="870" width="1720" height="130" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="120" y="890" width="1680" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="140" y="950" font-family="sans-serif" font-size="50">h3</text>
+      </svg>
+    </p>
+
+    <p>Este caso es fácil de resolver, pero en situaciones más complejas no resulta fácil idear un algoritmo general para mezclar contenidos respetando la jerarquía.</p>
+  </section>
+
+  <section id="outline-html">
+    <h2 class="con-aside">Esquema (outline) de una página web HTML 5</h2>
+
+    <aside class="enlace-norma">
+      <p>
+        outline<br>
+        <a href="https://html.spec.whatwg.org/review-drafts/2020-01/#outlines">
+          <img src="../varios/iconos/icono-whatwg-obsoleto.svg" alt="HTML Living Standard (versión obsoleta)" title="HTML Living Standard (versión obsoleta)" width="32" height="32">
+        </a>
+      </p>
+    </aside>
+
+    <p>En HTML 5 las etiquetas de título (<span class="html-eti">&lt;h1&gt;</span>, <span class="html-eti">&lt;h2&gt;</span>, etc.) siguieron definiendo implícitamente secciones de la página, pero además:</p>
+
+    <ul>
+      <li>las etiquetas <span class="html-eti">&lt;body&gt;</span>, <span class="html-eti">&lt;blockquote&gt;</span>, <span class="html-eti">&lt;fieldset&gt;</span>, <span class="html-eti">&lt;figure&gt;</span> y <span class="html-eti">&lt;td&gt;</span> tenían su propio esquema.</li>
+      <li>las etiquetas <span class="html-eti">&lt;article&gt;</span>, <span class="html-eti">&lt;section&gt;</span>, <span class="html-eti">&lt;nav&gt;</span> y <span class="html-eti">&lt;aside&gt;</span> también definían explícitamente secciones y "reiniciaban" los títulos <span class="html-eti">&lt;h1&gt;</span>, ..., <span class="html-eti">&lt;h6&gt;</span> contenidos por ellas.</li>
+    </ul>
+
+    <p>El segundo punto implicaba que si en HTML 5 se cogían dos páginas completas y se combinaban en una tercera incluyendo el contenido de cada página en una etiqueta <span class="html-eti">&lt;article&gt;</span>, no era necesario modificar los títulos, como muestra el ejemplo siguiente:</p>
+
+    <p class="mcl-svg-figura">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="570" viewBox="0 0 1920 1240" style="background-color: #EEEEEE">
+        <rect x="20" y="20" width="1880" height="1200" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="40" y="40" width="1840" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="60" y="100" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="60" y="140" width="1800" height="520" fill="white" stroke="black" stroke-width="3" />
+        <text x="80" y="200" font-family="sans-serif" font-size="50">article</text>
+
+        <rect x="100" y="220" width="1740" height="420" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+        <rect x="120" y="240" width="1700" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="140" y="300" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="120" y="340" width="1700" height="130" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="140" y="360" width="1660" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="160" y="420" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="120" y="490" width="1700" height="130" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="140" y="510" width="1660" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="160" y="570" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="60" y="680" width="1800" height="520" fill="white" stroke="black" stroke-width="3" />
+        <text x="80" y="740" font-family="sans-serif" font-size="50">article</text>
+
+        <rect x="100" y="760" width="1740" height="420" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+        <rect x="120" y="780" width="1700" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="140" y="840" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="120" y="880" width="1700" height="130" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="140" y="900" width="1660" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="160" y="960" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="120" y="1030" width="1700" height="130" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="140" y="1050" width="1660" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="160" y="1110" font-family="sans-serif" font-size="50">h2</text>
+      </svg>
+    </p>
+
+    <p>Este código era correcto es HTML 5, ya que la etiqueta <span class="html-eti">&lt;article&gt;</span> definía una nueva sección en el esquema de la página y los títulos contenidos en ella se contaban en la jerarquía general a partir del nivel definido por el elemento <span class="html-eti">&lt;article&gt;</span>. Por tanto, los <span class="html-eti">&lt;h1&gt;</span> que estaban dentro de los <span class="html-eti">&lt;article&gt;</span> tenían menos nivel que el <span class="html-eti">&lt;h1&gt;</span> de <span class="html-eti">&lt;body&gt;</span></p>
+  </section>
+
+  <section id="outline-hn">
+    <h2 class="con-aside">Secciones y títulos <span class="html-eti">&lt;h1&gt;</span>, ..., <span class="html-eti">&lt;h6&gt;</span></h2>
+
+    <aside class="enlace-norma">
+      <p>
+        sections and headings<br>
+        <a href="https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings">
+          <img src="../varios/iconos/icono-whatwg.svg" alt="HTML Living Standard" title="HTML Living Standard" width="32" height="32">
+        </a>
+      </p>
+    </aside>
+
+    <p>Como cada sección reiniciaba la jerarquía de títulos independientemente del nivel de los títulos, en el esquema correspondiente al ejemplo siguiente el elemento <span class="html-eti">&lt;h1&gt;</span> del primer <span class="html-eti">&lt;article&gt;</span> tenía el mismo nivel que el elemento <span class="html-eti">&lt;h2&gt;</span> del segundo <span class="html-eti">&lt;article&gt;</span>.</p>
+
+    <p class="mcl-svg-figura">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="570" viewBox="0 0 1920 1240" style="background-color: #EEEEEE">
+        <rect x="20" y="20" width="1880" height="1200" fill="white" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="40" y="40" width="1840" height="80" fill="white" stroke="black" stroke-width="3" />
+        <text x="60" y="100" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="60" y="140" width="1800" height="520" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="80" y="200" font-family="sans-serif" font-size="50">article</text>
+
+        <rect x="100" y="220" width="1740" height="420" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+        <rect x="120" y="240" width="1700" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="140" y="300" font-family="sans-serif" font-size="50">h1</text>
+
+        <rect x="120" y="340" width="1700" height="130" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="140" y="360" width="1660" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="160" y="420" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="120" y="490" width="1700" height="130" fill="lightblue" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="140" y="510" width="1660" height="80" fill="lightblue" stroke="black" stroke-width="3" />
+        <text x="160" y="570" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="60" y="680" width="1800" height="520" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="80" y="740" font-family="sans-serif" font-size="50">article</text>
+
+        <rect x="100" y="760" width="1740" height="420" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+        <rect x="120" y="780" width="1700" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="140" y="840" font-family="sans-serif" font-size="50">h2</text>
+
+        <rect x="120" y="880" width="1700" height="130" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="140" y="900" width="1660" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="160" y="960" font-family="sans-serif" font-size="50">h3</text>
+
+        <rect x="120" y="1030" width="1700" height="130" fill="lightyellow" stroke="black" stroke-width="4" stroke-dasharray="10 10" />
+
+        <rect x="140" y="1050" width="1660" height="80" fill="lightyellow" stroke="black" stroke-width="3" />
+        <text x="160" y="1110" font-family="sans-serif" font-size="50">h3</text>
+      </svg>
+    </p>
+
+    <p>La verdad es que los navegadores nunca implementaron el algoritmo para calcular el esquema de una página. Prácticamente, el único aspecto en el que se aplicaba de alguna manera el concepto de esquema era en el caso de los títulos <span class="html-eti">&lt;h1&gt;</span>. Si un <span class="html-eti">&lt;h1&gt;</span> se encontraba dentro de <span class="html-eti">&lt;article&gt;</span>, <span class="html-eti">&lt;section&gt;</span>, <span class="html-eti">&lt;aside&gt;</span> o <span class="html-eti">&lt;nav&gt;</span> la hoja de estilo por defecto los mostraba como un elemento <span class="html-eti">&lt;h2&gt;</span> situado fuera de ellos. Si un <span class="html-eti">&lt;h1&gt;</span> se encontraba dentro de <span class="html-eti">&lt;article&gt;</span>, <span class="html-eti">&lt;section&gt;</span>, <span class="html-eti">&lt;aside&gt;</span> o <span class="html-eti">&lt;nav&gt;</span> dentro de otro <span class="html-eti">&lt;article&gt;</span>, <span class="html-eti">&lt;section&gt;</span>, <span class="html-eti">&lt;aside&gt;</span> o <span class="html-eti">&lt;nav&gt;</span> la hoja de estilo por defecto los mostraba como un elemento <span class="html-eti">&lt;h3&gt;</span> situado fuera de ellos. Y así sucesivamente, a medida que se anidan secciones. Pero se trataba de una excepción, porque el resto de títulos <span class="html-eti">&lt;h2&gt;</span>, ..., <span class="html-eti">&lt;h6&gt;</span> se veían igual, estuvieran dónde estuvieran, como se ve en el ejemplo siguiente:</p>
+
+    <div class="filaflex">
+      <div class="codigo">
+        <pre>
+<code class="language-html">&lt;h1&gt;Título h1 en body&lt;/h1&gt;
+
+&lt;h2&gt;Título h2 en body&lt;/h2&gt;
+
+&lt;hr&gt;
+
+&lt;article&gt;
+  &lt;h1&gt;Título h1 en article&lt;/h1&gt;
+
+  &lt;h2&gt;Título h2 en article&lt;/h2&gt;
+&lt;/article&gt;
+
+&lt;hr&gt;
+
+&lt;section&gt;
+  &lt;h1&gt;Título h1 en section&lt;/h1&gt;
+
+  &lt;h2&gt;Título h2 en section&lt;/h2&gt;
+&lt;/section&gt;
+
+&lt;hr&gt;
+
+&lt;article&gt;
+  &lt;section&gt;
+    &lt;h1&gt;Título h1 en section dentro de article&lt;/h1&gt;
+
+    &lt;h2&gt;Título h2 en section dentro de article&lt;/h2&gt;
+
+    &lt;h3&gt;Título h3 en section dentro de article&lt;/h3&gt;
+  &lt;/section&gt;
+&lt;/article&gt;</code>
+</pre>
+      </div>
+      <iframe src="ejemplos/esquema/esquema-1.html" style="height: 39em;"></iframe>
+      <div class="icono-enlace">
+        <a href="ejemplos/esquema/esquema-1.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+      </div>
+    </div>
+
+    <p>En abril de 2025 <a href="https://developer.mozilla.org/en-US/blog/h1-element-styles/">Firefox anunció</a> que iba a eliminar este comportamiento paulatinamente, con la intención de completar el cambio en Firefox 140, que se publicará en junio de 2025. Chrome 136 (publicado en abril de 2025) avisa en su herramienta de desarrollador Lighthouse que se están utilizando elementos desaconsejados cuando se escriben <span class="html-eti">&lt;h1&gt;</span> dentro de <span class="html-eti">&lt;article&gt;</span>, <span class="html-eti">&lt;section&gt;</span>, <span class="html-eti">&lt;aside&gt;</span> o <span class="html-eti">&lt;nav&gt;</span>. Actualmente (mayo de 2025), hay una <a href="https://github.com/whatwg/html/issues/7867">petición</a> para eliminar de la norma HTML la referencia a este comportamiento.</p>
+  </section>
+
+  <section id="uso-hn">
+    <h2>Cómo usar los títulos <span class="html-eti">&lt;h1&gt;</span>, ..., <span class="html-eti">&lt;h6&gt;</span></h2>
+
+    <p>Así como en HTML 4 / XHTML 1 el esquema de una página web se deducía inmediatamente de los títulos <span class="html-eti">&lt;h1&gt;</span>, ..., <span class="html-eti">&lt;h6&gt;</span>, en HTML era teóricamente necesario tener en cuenta las secciones para interpretar correctamente el nivel de los títulos. A cambio, se simplificaba enormemente la reutilización de contenidos, ya que no se necesitaba cambiar ningún título al combinar elementos de distintas páginas.</p>
+
+    <p>Teóricamente, al disponer de dos mecanismos para definir el esquema de una página web (implícitamente con los títulos y explícitamente con las secciones), tendíamos la opción de elegir cuál de ellos utilizamos:</p>
+
+    <ul>
+      <li>no utilizar etiquetas de secciones y seguir definiendo las secciones mediante títulos</li>
+      <li>utilizar únicamente la etiqueta <span class="html-eti">&lt;h1&gt;</span> en las secciones definidas implícitamente por los títulos</li>
+    </ul>
+
+    <p>Como ningún navegador ni ninguna herramienta de accesibilidad analizó el esquema de la página ni lo utilizó en su análisis, la realidad era que la presencia de secciones no alteraba el significado jerárquico de los títulos. Por ello, en estos apuntes se recomendó siempre utilizar las <a href="html-secciones.html">etiquetas de secciones</a> introducidas en HTML 5, porque permiten organizar mejor el contenido de las páginas, pero mantener la <a href="html-secciones.html#etiqueta-hn">jerarquía de títulos clásica del HTML 4</a>.</p>
+
+    <p><strong>Nota</strong>: Si un sitio web va a recombinar mucho el contenido de las páginas, no le quedará más remedio que modificar por software la jerarquía de los títulos.</p>
+  </section>
+
+  <section id="saber-mas">
+    <h2>Para saber más</h2>
+    <ul>
+      <li><a href="https://www.tpgi.com/html5-document-outline/">The HTML5 Document Outline is a dangerous fiction</a> (octubre 2013)</li>
+      <li><a href="https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824">The Truth About Multiple H1 Tags in the HTML5 Era</a> (diciembre 2013)</li>
+      <li><a href="http://html5doctor.com/computer-says-no-to-html5-document-outline/">Computer says NO to HTML5 document outline</a> (junio 2016)</li>
+      <li><a href="https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/">A decade + a year of heading backwards</a> (marzo 2021)</li>
+      <li><a href="https://gsnedders.html5.org/outliner/">HTML 5 Outliner</a></li>
+      <li><s><a href="https://github.com/whatwg/html/issues/83">HTML issue 83: Suggest adding a warning about outline algorithm</a> (septiembre 2015, cerrada, rechazada)</s></li>
+      <li><s><a href="https://github.com/w3c/html/issues/774">W3C HTML issue 774: Add &lt;h&gt; element</a> (enero 2017, obsoleta, repositorio archivado)</s></li>
+      <li><s><a href="https://github.com/whatwg/html/pull/3499">HTML pull 3499: Add heading-focused outlines and :heading</a> (febrero 2018, rechazada)</s></li>
+      <li><s><a href="https://github.com/whatwg/html/pull/6462">HTML pull 6462: Obsolete &lt;hgroup&gt;</a> (marzo 2021, rechazada)</s></li>
+      <li><s><a href="https://github.com/mdn/content/pull/4977">MDN pull 4977: Replace deprecation with warning in hgroup</a> (mayo 2021, rechazada)</s></li>
+      <li><s><a href="https://github.com/whatwg/html/pull/7829">HTML issue 7829: Replace current outline algorithm with one based on heading levels</a> (abril 2022)</s></li>
+      <li><a href="https://github.com/whatwg/html/pull/7867">HTML issue 7867: Remove UA style for h1-h6 in section (et. al.) and hgroup</a> (abril 2022)</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 2 de mayo de 2025</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

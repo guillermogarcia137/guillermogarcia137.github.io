@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Diseño de listas. CSS. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>CSS: Diseño de listas</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>CSS: Diseño de listas</h2>
+
+      <ul>
+        <li><a href="#menu-horizontal">Menús horizontales</a>
+          <ul>
+            <li><a href="#menus-float">con <span class="css-prop">float</span></a></li>
+            <li><a href="#menus-display">con <span class="css-prop">display</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="menu-horizontal">
+    <h2>Menús horizontales</h2>
+
+    <section id="menus-float">
+      <h3>Menús horizontales con <span class="css-prop">float</span></h3>
+
+      <p>Se pueden crear menús horizontales a partir de listas utilizando la propiedad <span class="css-prop">float</span>, como muestra el ejemplo siguiente (basado en una explicación de <a href="http://www.sovavsiti.cz/css/horizontal_menu.html">Marek Prokop</a>):</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">ul {
+}
+
+li {
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/listas/menus-11.html" style="height: 8em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/listas/menus-11.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">ul {
+}
+
+li {
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/listas/menus-12.html" style="height: 8em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/listas/menus-12.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">ul {
+  list-style-type: none;
+}
+
+li {
+  background-color: #F6E3CA;
+  float: left;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/listas/menus-13.html" style="height: 12em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/listas/menus-13.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <p>Una vez conseguido un menú horizontal, se pueden aplicar diferentes estilos:</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">ul {
+  list-style-type: none;
+}
+
+li {
+  background-color: #F6E3CA;
+  float: left;
+  text-align: center;
+  width: 5em;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/listas/menus-14.html" style="height: 15em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/listas/menus-14.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">ul {
+  list-style-type: none;
+}
+
+li {
+  background-color: #F6E3CA;<br>  float: left;
+  margin-right: 10px;
+  padding: 0 4px;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/listas/menus-15.html" style="height: 15em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/listas/menus-15.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">ul {
+  list-style-type: none;
+}
+
+li {
+  background-color: #F6E3CA;<br>  border: #D7C8B6 2px solid;<br>  float: left;
+  margin-right: 10px;
+  padding: 0 4px;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/listas/menus-16.html" style="height: 16em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/listas/menus-16.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+
+      <p>También se puede utilizar la pseudo-clase <span class="css-pseudo">:hover</span> para mejorar el resultado. Si la pseudo-clase <span class="css-pseudo">:hover</span> se aplica al enlace, la propiedad <span class="css-prop">padding</span> se debería aplicar al enlace para que el cambio de color se aplique a toda la opción del menú.</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">ul {
+  list-style-type: none;
+}
+
+li {
+  float: left;
+  background-color: #F6E3CA;<br>  margin-right: 10px;
+  border: #D7C8B6 2px solid;
+}
+
+a {
+  color: black;
+  padding: 0 4px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: white;
+  color: #D7C8B6;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/listas/menus-17.html" style="height: 30em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/listas/menus-17.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="menus-display">
+      <h3>Menús horizontales con <span class="css-prop">display</span></h3>
+
+      <p>Otra forma de conseguir un menú horizontal es utilizar la propiedad <span class="css-prop">display</span>: <span class="css-valor">inline</span> en los elementos de la lista <span class="html-eti">&lt;li&gt;</span> en vez de la propiedad <span class="css-prop">float</span>. De esta manera se puede incluso centrar la lista, mediante la propiedad <span class="css-prop">text-align</span>: <span class="css-valor">center</span> en la lista (<span class="html-eti">&lt;ul&gt;</span> o <span class="html-eti">&lt;ol&gt;</span>). Otra ventaja es que no hace falta utilizar la propiedad <span class="css-prop">clear</span>.</p>
+
+      <div class="filaflex">
+        <div class="codigo">
+          <pre>
+<code class="language-css">ul {
+  list-style-type: none;
+  text-align: center
+}
+
+li {
+  background-color: #F6E3CA;<br>  border: #D7C8B6 2px solid;
+  display: inline;
+  margin-right: 10px;
+}
+
+a {
+  color: black;
+  padding: 0 4px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: white;
+  color: #D7C8B6;
+}</code>
+</pre>
+        </div>
+        <iframe src="ejemplos/listas/menus-21.html" style="height: 32em;"></iframe>
+        <div class="icono-enlace">
+          <a href="ejemplos/listas/menus-21.html"><img src="../varios/iconos/icono-enlace.svg" alt="Enlace externo" title="Enlace externo" width="31" height="36"></a>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 24 de septiembre de 2017</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>

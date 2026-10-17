@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Validación de páginas web y hojas de estilo. HTML. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../varios/htmlcss.css" title="mclibre">
+  <link rel="icon" href="../varios/favicon.svg">
+  <link rel="stylesheet" href="../varios/prism.css">
+  <script src="../varios/prism.js"></script>
+</head>
+
+<body>
+  <h1>Validación de páginas web y hojas de estilo</h1>
+
+  <nav>
+    <p>
+      <a href="../index.html"><img src="../varios/iconos/icono-html.svg" alt="Home" title="Ir a página de inicio" width="42" height="48"></a>
+      <a href="#"><img src="../varios/iconos/icono-arrow-circle-up.svg" alt="Principio de la página" title="Principio de la página" width="36" height="36"></a>
+    </p>
+
+    <div class="toc">
+      <h2>Validación</h2>
+
+      <ul>
+        <li><a href="#validacion">Validación HTML</a></li>
+        <li><a href="#validadores-internet">Validadores Internet</a>
+          <ul>
+            <li><a href="#w3c-validator">W3C Validator</a></li>
+          </ul>
+        </li>
+        <li><a href="#navegador">Navegador</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="validacion">
+    <h2>Validación de páginas web</h2>
+
+    <p>Una de las principales diferencias entre los ordenadores y los seres humanos es que los humanos estamos preparados para afrontar situaciones con información incompleta o errónea. Los ordenadores, sin embargo, necesitan exactitud y precisión para poder seguir adelante. Así, en el caso de los lenguajes los humanos podemos entendernos aunque no hablemos con corrección y sabemos reconocer la ironía, el cinismo, los juegos de palabras, las paradojas o las contradicciones. Sin embargo, los lenguajes de programación de ordenadores exigen siempre que los programas se ajusten exactamente a las reglas del lenguaje, sin ambigüedades.</p>
+
+    <p>El HTML no es un lenguaje de programación, pero tiene su propio vocabulario (las marcas, atributos y valores de atributos que podemos utilizar) y su propia sintaxis (las reglas de utilización de sus elementos). Las páginas web son documentos creados por humanos e interpretados por los ordenadores (por los navegadores), por lo que podemos entender el HTML como un lenguaje con el que los humanos nos comunicamos con los ordenadores, aunque sólo sea para decirles cómo tienen que mostrar el contenido de las páginas web a otros humanos.</p>
+
+    <p>Quizás uno de los motivos del éxito de la web (es decir, del HTML) fue que los navegadores siempre han sido capaces de procesar documentos con errores y de conseguir en muchos casos mostrarlos como deseaba su autor. Por supuesto, esa capacidad se debe al trabajo y esfuerzo de los programadores que crean los navegadores, que han incluido en los navegadores numerosas reglas para reconocer los errores más comunes e intentar corregirlos sobre la marcha.</p>
+
+    <p>En el año 2000, el W3C intentó con el XHTML obligar a que las páginas web dejaran de tener errores de sintaxis. Ese intento fue un fracaso, y en el HTML 5 se ha tomado el camino contrario, detallando cómo actuar ante violaciones de la propia sintaxis y consiguiendo un comportamiento similar en todos los navegadores. Por cierto, aunque en el HTML 5 se mantiene una variante con sintaxis estricta, el XHTML 5, su uso real es residual.</p>
+
+    <p>De todas formas, en un curso de creación de páginas web es lógico insistir en la necesidad de escribir páginas sin errores de sintaxis. Es verdad que podemos cometer errores y es bueno que los navegadores aún así consigan mostrar las páginas correctamente, pero si nos acostumbramos a escribir páginas plagadas de errores, en el momento en que los navegadores ya no puedan entender nuestras páginas será más difícil encontrar el origen del error porque habrá demasiados. Merece la pena acostumbrarse desde el principio a no cometer errores y crear páginas más fáciles de entender, modificar y reutilizar en el futuro.</p>
+
+    <p>Para ayudarnos a detectar errores debemos utilizar validadores. En esta lección se comenta la instalación y uso de validadores, tanto en el editor como en el navegador.</p>
+  </section>
+
+  <section id="validadores-internet">
+    <h2>Validadores disponibles en Internet</h2>
+    <section id="w3c-validator">
+      <h3>W3C Markup Validation Service</h3>
+
+      <p>El W3C ofrece desde hace muchos años varios validadores que permiten validar todo tipo de documentos (HTML, XHTML, CSS, SVG, MathML, XML, etc.). Los distintos validadores son:</p>
+      <ul>
+        <li><a href="https://validator.w3.org/#validate_by_uri+with_options">Validación de lenguajes de marcas</a> (HTML, XHTML, SVG, MathML, SMIL)</li>
+        <li><a href="https://jigsaw.w3.org/css-validator/">Validación de hojas de estilo CSS</a></li>
+        <li><a href="https://validator.w3.org/checklink">Comprobador de enlaces</a></li>
+        <li><a href="https://validator.w3.org/unicorn/">Validación total</a> (HTML, CSS, internacionalización, RSS)</li>
+      </ul>
+
+      <p>La validación se puede hacer de tres maneras:</p>
+
+      <ul>
+        <li>dando la dirección web del recurso (si ya está disponible en Internet),</li>
+        <li>subiendo el archivo mediante un formulario de subida de archivos</li>
+        <li>copiando el código fuente en un formulario.</li>
+      </ul>
+
+      <p>Para la validación de HTML 5, el validador del W3C utiliza el validador de <a href="https://validator.nu/">validator.nu</a>. Este validador fue iniciado en 2005 por <a href="https://hsivonen.fi/author/">Henri Sivonen</a>, que desde 2007 trabaja en la fundación Mozilla.</p>
+    </section>
+  </section>
+
+  <section id="navegador">
+    <h2>Validación en el navegador</h2>
+
+    <p>En Firefox o Chrome se pueden validar las páginas web y hojas de estilo accediendo a las páginas web de los validadores disponibles en Internet.</p>
+
+    <p>Como esta validación es un poco farragosa, en Firefox podremos recurrir a extensiones como Web Developer, cuya instalación y uso se comenta en la lección <a href="https://www.mclibre.org/consultar/informatica/lecciones/ff-extensiones.html#ff-web-developer">Complementos de Firefox</a>.</p>
+  </section>
+
+  <footer>
+    <p class="ultmod">Última modificación de esta página: 24 de octubre de 2018</p>
+
+    <p class="licencia">
+      <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es"><img src="../varios/iconos/icono-cc-by-sa.svg" alt="Licencia Creative Commons" title="Licencia Creative Commons BY-SA" width="120" height="42"></a><br>
+      Esta página forma parte del curso <strong><a href="https://www.mclibre.org/consultar/htmlcss/">Páginas web HTML y hojas de estilo CSS</a></strong> por <a href="https://www.mclibre.org/" rel="author">Bartolomé Sintes Marco</a><br>
+      que se distribuye bajo una <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">Licencia Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.
+    </p>
+  </footer>
+</body>
+</html>
