@@ -13,7 +13,7 @@ body{
 }
 .titulo{
     position:absolute;
-    top: 5%;
+    top: 5%  ;
     left:50%;
     text-align: center;
     transform: translateX(-50%) scale(2);
@@ -64,7 +64,7 @@ a {
 
 /* Aplica el tamaño a la imagen dentro del botón */
 .IconoGitHub img {
-    width: 20%;   /* Cambia este número si lo quieres más grande o más pequeño */
+    width: 15%;   /* Cambia este número si lo quieres más grande o más pequeño */
     /*height: 40px;*/
     display:block;
     float: left;
