@@ -69,24 +69,3 @@ a {
     display:block;
     float: left;
 }  
-.formulario{
-    border: 2px solid #4da6ff;
-    background-color: #0b1f3a;
-    padding: 15px;
-    border-radius: 10px;
-    width: fit-content;
-    text-align:center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.5);
-    position:absolute;
-    
-}
-.formulario p{
-    color: #4da6ff;
-    
-}
-#FormTitulo{
-    color:#4da6ff ;
-    
-}

@@ -1,0 +1,78 @@
+body{
+    background-color:#173E76;
+    font-family: 'StarWars', sans-serif;
+    color:white ;
+    background-image: url(../../img/fondo2.avif);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 110%;
+
+}
+.formulario1{
+    border: 2px solid #4da6ff;
+    background-color: #0b1f3a;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    text-align:left;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    position:absolute;
+    display: grid;
+    grid-template-columns: 80px 250px;
+    align-items: center;
+    margin-bottom: 5px;
+    
+}
+.formulario2{
+    border: 2px solid #4da6ff;
+    background-color: #0b1f3a;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    text-align:left;
+    top: 45%;
+    left: 47%;
+    transform: translate(-50%, -50%) scale(1.5);
+    position:absolute;
+    
+    
+}
+.formulario3{
+    border: 2px solid #4da6ff;
+    background-color: #0b1f3a;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    text-align:left;
+    top: 67.5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    position:absolute;
+    
+    display: grid;
+    grid-template-columns: 180px 250px;
+    align-items: center;
+    margin-bottom: 5px;
+    
+}  
+
+.formulario input{
+    
+    width:100%;
+    
+    
+}
+.formulario label{
+    color: #4da6ff;
+    
+    
+}
+#FormTitulo{
+    color:#4da6ff ;
+    
+}
