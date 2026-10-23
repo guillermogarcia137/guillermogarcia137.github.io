@@ -106,10 +106,10 @@ a {
 
 /* ---------- Icono de GitHub ---------- */
 .IconoGitHub {
-    position: fixed;
+    position: absolute;
     top: 2%;
     left: 2%;
-    z-index: 1000; /* por encima de otros elementos */
+  /*      z-index: 1000; /* por encima de otros elementos */
 }
 
 .IconoGitHub img {
