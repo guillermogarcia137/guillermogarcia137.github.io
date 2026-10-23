@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web GGP</title>
+    <link rel="stylesheet" href="./stylePRUEBA2.css">
+</head>
+<body>
+    <div class="IconoGitHub">
+        <a href="https://github.com/guillermogarcia137" target="_blank">
+            <img src="./../img/icogithub.png" alt="IconoGitHub" title="Github">
+        </a>
+    </div>
+
+    <div class="titulo">
+        <h1>Cosas GUAPAS GUAPAS</h1>
+    </div>
+
+    <div class="enlaces">
+        <input type="search" id="buscar" placeholder="Buscar una prueba..." aria-label="Buscar una prueba">
+
+        <div class="lista">
+            <article class="repo">
+                <h2><a href="./prueba1.html">Efecto cristal</a><span class="badge">Demo</span></h2>
+                <p class="desc">Tarjeta de cristal sobre un fondo con degradado animado.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./prueba2.html">Pasa el raton</a><span class="badge">Demo</span></h2>
+                <p class="desc">Tarjeta 3D que gira al pasar el ratón por encima.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./prueba3.html">Neon</a><span class="badge">Demo</span></h2>
+                <p class="desc">Botón con brillo neón y un loader giratorio.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./prueba4.html">Modo claro, oscuro</a><span class="badge">Demo</span></h2>
+                <p class="desc">Interruptor de tema con un checkbox, sin JavaScript.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./prueba5.html">Hamburguesa segun tamaño</a><span class="badge">Demo</span></h2>
+                <p class="desc">Menú que se convierte en hamburguesa en pantallas pequeñas.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./prueba6.html">Preguntas frecuentes</a><span class="badge">Demo</span></h2>
+                <p class="desc">Acordeón de preguntas con las etiquetas details y summary.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./prueba7.html">Precios</a><span class="badge">Demo</span></h2>
+                <p class="desc">Tarjetas de precios que se reorganizan con CSS Grid.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./prueba8.html">Crear cuenta</a><span class="badge">Demo</span></h2>
+                <p class="desc">Formulario con validación visual en verde y rojo.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./prueba9.html">Pestañas</a><span class="badge">Demo</span></h2>
+                <p class="desc">Pestañas para organizar contenido, sin JavaScript.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./landing-hondo.html">Si, 300 lineas</a><span class="badge">Proyecto</span></h2>
+                <p class="desc">Landing page completa de una escuela de apnea.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./bloques-de-codigo.html">Bloques de codigo</a><span class="badge">Demo</span></h2>
+                <p class="desc">Cómo mostrar código en la web con botón de copiar.</p>
+                <p class="meta"><span class="punto js"></span>HTML, CSS y JavaScript</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./1-link-en-bio.html">Link en bio</a><span class="badge">Demo</span></h2>
+                <p class="desc">Página de enlaces para redes sociales con fondo de degradados.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./2-galeria-enfoque.html">Galeria</a><span class="badge">Demo</span></h2>
+                <p class="desc">Galería donde, al pasar por una pieza, las demás se apagan.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./3-linea-del-tiempo.html">Linea de tiempo</a><span class="badge">Demo</span></h2>
+                <p class="desc">Historia o trayectoria en zigzag, adaptada a móvil.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./4-modal-newsletter.html">News Letter</a><span class="badge">Demo</span></h2>
+                <p class="desc">Ventana emergente de suscripción sin JavaScript.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+
+            <article class="repo">
+                <h2><a href="./5-articulo-lectura.html">Articulo</a><span class="badge">Demo</span></h2>
+                <p class="desc">Plantilla de lectura con barra de progreso y tema oscuro automático.</p>
+                <p class="meta"><span class="punto"></span>HTML y CSS</p>
+            </article>
+        </div>
+
+        <p class="vacio" hidden>No hay ninguna prueba con ese nombre.</p>
+    </div>
+
+    <script>
+        // Buscador: oculta las filas que no coinciden con lo que escribes
+        var buscar = document.getElementById('buscar');
+        var repos = document.querySelectorAll('.repo');
+        var vacio = document.querySelector('.vacio');
+
+        buscar.addEventListener('input', function () {
+            var q = buscar.value.trim().toLowerCase();
+            var visibles = 0;
+            repos.forEach(function (r) {
+                var coincide = r.textContent.toLowerCase().includes(q);
+                r.hidden = !coincide;
+                if (coincide) visibles++;
+            });
+            vacio.hidden = visibles > 0;
+        });
+    </script>
+</body>
+</html>

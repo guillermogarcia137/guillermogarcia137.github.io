@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Precios</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 3rem 1rem;
+  }
+  .planes {
+    max-width: 960px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .plan {
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: transform .25s, border-color .25s;
+  }
+  .plan:hover { transform: translateY(-6px); border-color: #38bdf8; }
+  .plan.destacado { border-color: #38bdf8; }
+  .precio { font-size: 2.5rem; font-weight: bold; margin: 1rem 0; }
+  .precio small { font-size: 1rem; color: #94a3b8; }
+  ul { list-style: none; padding: 0; margin: 1.5rem 0; line-height: 2; }
+  li::before { content: "✓ "; color: #38bdf8; }
+  button {
+    width: 100%;
+    padding: .8rem;
+    border: 0;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="planes">
+    <div class="plan">
+      <h2>Básico</h2>
+      <div class="precio">0€<small>/mes</small></div>
+      <ul><li>1 proyecto</li><li>Soporte por email</li></ul>
+      <button>Empezar</button>
+    </div>
+    <div class="plan destacado">
+      <h2>Pro</h2>
+      <div class="precio">12€<small>/mes</small></div>
+      <ul><li>10 proyectos</li><li>Soporte prioritario</li><li>Estadísticas</li></ul>
+      <button>Elegir Pro</button>
+    </div>
+    <div class="plan">
+      <h2>Empresa</h2>
+      <div class="precio">39€<small>/mes</small></div>
+      <ul><li>Proyectos ilimitados</li><li>Soporte 24/7</li><li>API</li></ul>
+      <button>Contactar</button>
+    </div>
+  </div>
+</body>
+</html>

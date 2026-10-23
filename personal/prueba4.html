@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Modo oscuro</title>
+<style>
+  :root {
+    --fondo: #f5f5f5;
+    --texto: #222;
+  }
+  body:has(#modo:checked) {
+    --fondo: #14141c;
+    --texto: #f1f1f1;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: system-ui, sans-serif;
+    transition: background .4s, color .4s;
+  }
+  #modo { display: none; }
+  .interruptor {
+    display: block;
+    width: 70px;
+    height: 36px;
+    margin: 1rem auto;
+    background: #bbb;
+    border-radius: 36px;
+    cursor: pointer;
+    position: relative;
+    transition: background .3s;
+  }
+  .interruptor::after {
+    content: "☀️";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    background: white;
+    border-radius: 50%;
+    transition: transform .3s;
+  }
+  #modo:checked + .interruptor { background: #6c5ce7; }
+  #modo:checked + .interruptor::after {
+    content: "🌙";
+    transform: translateX(34px);
+  }
+  .caja { text-align: center; }
+</style>
+</head>
+<body>
+  <div class="caja">
+    <h1>Modo claro / oscuro</h1>
+    <input type="checkbox" id="modo">
+    <label class="interruptor" for="modo"></label>
+    <p>Todo hecho con un checkbox y CSS.</p>
+  </div>
+</body>
+</html>

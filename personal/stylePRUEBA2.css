@@ -1,0 +1,123 @@
+body {
+    background-color: #173E76;
+    font-family: 'StarWars', sans-serif;
+    color: white;
+    background-image: url(../img/fondo2.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* el fondo se queda quieto al hacer scroll */
+    min-height: 100vh;
+    margin: 0;
+    font-size: 16px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ---------- Título ---------- */
+.titulo {
+    text-align: center;
+    padding: 3rem 1rem 1rem;
+    color: #4da6ff;
+    font-weight: bold;
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+/* ---------- Lista de enlaces (estilo GitHub) ---------- */
+.enlaces {
+    max-width: 860px;
+    margin: 1.5rem auto 4rem;
+    padding: 1.5rem 1.8rem;
+    background-color: rgba(11, 31, 58, .94);
+    border-radius: 10px;
+}
+
+#buscar {
+    width: 100%;
+    padding: .65rem .9rem;
+    border: 1px solid #2c4a75;
+    border-radius: 6px;
+    background-color: #071426;
+    color: white;
+    font: inherit;
+}
+
+#buscar::placeholder { color: #7f9bc4; }
+#buscar:focus { outline: none; border-color: #4da6ff; box-shadow: 0 0 0 3px rgba(77, 166, 255, .25); }
+
+.lista { margin-top: 1.2rem; }
+
+.repo {
+    padding: 1.3rem 0;
+    border-top: 1px solid #25406b;
+}
+
+.repo h2 {
+    margin: 0 0 .4rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.repo h2 a { color: #4da6ff; }
+.repo h2 a:hover { text-decoration: underline; color: #7cc0ff; }
+
+.badge {
+    margin-left: .6rem;
+    padding: .1rem .6rem;
+    border: 1px solid #3a5a8c;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: normal;
+    color: #9db8dc;
+    vertical-align: middle;
+}
+
+.desc {
+    margin: 0 0 .8rem;
+    color: #b7c9e2;
+    font-size: .95rem;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    margin: 0;
+    font-size: .8rem;
+    color: #9db8dc;
+}
+
+.punto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e34c26; /* naranja HTML */
+}
+.punto.js { background-color: #f1e05a; } /* amarillo JavaScript */
+
+.vacio { padding: 1.5rem 0; text-align: center; color: #9db8dc; }
+
+/* ---------- Icono de GitHub ---------- */
+.IconoGitHub {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    z-index: 1000; /* por encima de otros elementos */
+}
+
+.IconoGitHub img {
+    width: 48px;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .titulo { padding-top: 5rem; }
+    .enlaces { margin-inline: .8rem; padding: 1rem 1.1rem; }
+}

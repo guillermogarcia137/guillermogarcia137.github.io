@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Glassmorphism</title>
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: system-ui, sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: fondo 12s ease infinite;
+  }
+  @keyframes fondo {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .tarjeta {
+    width: 320px;
+    padding: 2rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: transform .3s;
+  }
+  .tarjeta:hover { transform: translateY(-8px) scale(1.03); }
+  h2 { margin-bottom: .5rem; }
+</style>
+</head>
+<body>
+  <div class="tarjeta">
+    <h2>Efecto cristal ✨</h2>
+    <p>El fondo se mueve y la tarjeta desenfoca lo que hay detrás.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trayectoria</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #f4f1ec; color: #2b2622; font-family: Georgia, "Times New Roman", serif; padding: 4rem 1rem; line-height: 1.6; }
+  h1 { text-align: center; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 3.5rem; font-weight: normal; }
+  .linea { position: relative; max-width: 860px; margin: auto; }
+  .linea::before {
+    content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(#c9b79c, #2b2622); transform: translateX(-50%);
+  }
+  .hito { position: relative; width: 50%; padding: 0 2.8rem 3rem 0; text-align: right; }
+  .hito:nth-child(even) { margin-left: 50%; padding: 0 0 3rem 2.8rem; text-align: left; }
+  .hito::after {
+    content: ""; position: absolute; top: .45rem; right: -9px; width: 18px; height: 18px; border-radius: 50%;
+    background: #f4f1ec; border: 4px solid #2b2622; transition: transform .3s, background .3s;
+  }
+  .hito:nth-child(even)::after { right: auto; left: -9px; }
+  .hito:hover::after { transform: scale(1.4); background: #d9822b; }
+  .año { font: bold 1.9rem Georgia, serif; color: #d9822b; }
+  h2 { font-size: 1.2rem; margin: .1rem 0 .3rem; }
+  p { color: #5b534b; font-family: system-ui, sans-serif; font-size: .95rem; }
+  @media (max-width: 640px) {
+    .linea::before { left: 9px; }
+    .hito, .hito:nth-child(even) { width: 100%; margin-left: 0; padding: 0 0 2.5rem 2.6rem; text-align: left; }
+    .hito::after, .hito:nth-child(even)::after { left: 0; right: auto; }
+  }
+</style>
+</head>
+<body>
+  <h1>Nuestra historia</h1>
+  <div class="linea">
+    <div class="hito"><div class="año">2016</div><h2>Un garaje y dos portátiles</h2><p>Empezamos con dos personas y un primer cliente que confió en nosotras.</p></div>
+    <div class="hito"><div class="año">2018</div><h2>Primer equipo</h2><p>Pasamos de dos a ocho personas y abrimos oficina en el centro.</p></div>
+    <div class="hito"><div class="año">2021</div><h2>Lanzamiento del producto</h2><p>Después de tres años de pruebas, salimos al público con 1.000 usuarios en la primera semana.</p></div>
+    <div class="hito"><div class="año">2024</div><h2>Expansión a Europa</h2><p>Abrimos mercado en Portugal, Francia e Italia.</p></div>
+    <div class="hito"><div class="año">2026</div><h2>Hoy</h2><p>Un equipo de cuarenta personas y la misma costumbre de tomar café juntas.</p></div>
+  </div>
+</body>
+</html>

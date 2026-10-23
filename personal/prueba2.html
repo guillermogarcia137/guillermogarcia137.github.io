@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flip card</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #111;
+    font-family: system-ui, sans-serif;
+  }
+  .flip {
+    width: 260px;
+    height: 340px;
+    perspective: 1000px;
+  }
+  .interior {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+  }
+  .flip:hover .interior { transform: rotateY(180deg); }
+  .cara {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    color: white;
+    backface-visibility: hidden;
+  }
+  .frente { background: linear-gradient(135deg, #667eea, #764ba2); }
+  .dorso  { background: linear-gradient(135deg, #f093fb, #f5576c); transform: rotateY(180deg); }
+</style>
+</head>
+<body>
+  <div class="flip">
+    <div class="interior">
+      <div class="cara frente">Pasa el ratón 👆</div>
+      <div class="cara dorso">¡Sorpresa! 🎉</div>
+    </div>
+  </div>
+</body>
+</html>

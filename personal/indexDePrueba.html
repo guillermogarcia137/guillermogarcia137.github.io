@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web GGP</title>
+    <link rel="stylesheet" href="./stylePersonal.css">
+    <style>
+        /* Esto puedes moverlo a tu style.css */
+        .enlaces { max-width: 760px; margin: 2rem auto; padding: 0 1rem; }
+
+        .enlaces details {
+            margin-bottom: .7rem;
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .enlaces summary {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            padding: .9rem 1.1rem;
+            cursor: pointer;
+            list-style: none;
+        }
+        .enlaces summary::-webkit-details-marker { display: none; }
+
+        /* Flecha que gira al abrir */
+        .enlaces summary::after {
+            content: "▾";
+            margin-left: auto;
+            transition: transform .25s;
+        }
+        .enlaces details[open] summary::after { transform: rotate(180deg); }
+        .enlaces summary:hover { background: rgba(255, 255, 255, .07); }
+
+        /* El título es el enlace a la página */
+        .enlaces summary a { color: inherit; font-weight: 600; }
+
+        /* Bloque de código */
+        .codigo { position: relative; background: #0b1220; }
+        .codigo pre { margin: 0; padding: 1.1rem; overflow-x: auto; max-height: 340px; color: #e2e8f0; }
+        .codigo code { font-family: Consolas, "Courier New", monospace; font-size: .9rem; }
+        .copiar {
+            position: absolute; top: .6rem; right: .6rem;
+            padding: .3rem .7rem; border: 1px solid #475569; border-radius: 8px;
+            background: #1e293b; color: #e2e8f0; cursor: pointer; font: inherit; font-size: .8rem;
+        }
+        .copiar:hover { background: #334155; }
+    </style>
+</head>
+<body>
+    <div class="IconoGitHub">
+        <a href="https://github.com/guillermogarcia137" target="_blank">
+            <img src="./../img/icogithub.png" alt="IconoGitHub" title="Github">
+        </a>
+    </div>
+    <div class="titulo">
+        <p>Hola mundo</p>
+    </div>
+    <div class="enlaces">
+
+        <details>
+            <summary><a href="./prueba1.html">Efecto cristal</a></summary>
+            <div class="codigo">
+                <button class="copiar" type="button">Copiar</button>
+<pre><code>&lt;div class="tarjeta"&gt;
+  &lt;h2&gt;Efecto cristal&lt;/h2&gt;
+  &lt;p&gt;Pega aquí el código completo de prueba1.html&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </details>
+
+        <details>
+            <summary><a href="./prueba2.html">Pasa el ratón</a></summary>
+            <div class="codigo">
+                <button class="copiar" type="button">Copiar</button>
+<pre><code>Pega aquí el código de prueba2.html</code></pre>
+            </div>
+        </details>
+
+        <details>
+            <summary><a href="./prueba3.html">Neón</a></summary>
+            <div class="codigo">
+                <button class="copiar" type="button">Copiar</button>
+<pre><code>Pega aquí el código de prueba3.html</code></pre>
+            </div>
+        </details>
+
+        <details>
+            <summary><a href="./landing-hondo.html">Sí, 300 líneas</a></summary>
+            <div class="codigo">
+                <button class="copiar" type="button">Copiar</button>
+<pre><code>Pega aquí el código de landing-hondo.html</code></pre>
+            </div>
+        </details>
+
+    </div>
+
+    <script>
+        // Botón de copiar de cada bloque
+        document.querySelectorAll('.copiar').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var texto = btn.parentElement.querySelector('code').innerText;
+                navigator.clipboard.writeText(texto).then(function () {
+                    btn.textContent = 'Copiado';
+                    setTimeout(function () { btn.textContent = 'Copiar'; }, 1500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

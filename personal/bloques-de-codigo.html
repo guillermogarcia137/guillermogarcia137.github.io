@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mostrar código en la web</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: system-ui, sans-serif; background: #f1f5f9; color: #1e293b; padding: 3rem 1rem; line-height: 1.6; }
+  main { max-width: 720px; margin: auto; }
+  h1 { margin-bottom: .5rem; }
+  p { margin-bottom: 1.2rem; }
+
+  /* Código dentro de una frase */
+  :not(pre) > code {
+    background: #e2e8f0; padding: .15em .4em; border-radius: 6px;
+    font-family: Consolas, "Courier New", monospace; font-size: .9em;
+  }
+
+  /* Bloque de código */
+  .bloque { position: relative; margin-bottom: 2rem; border-radius: 14px; overflow: hidden; background: #0f172a; box-shadow: 0 10px 30px rgba(15,23,42,.18); }
+  .bloque header { display: flex; justify-content: space-between; align-items: center; padding: .6rem 1rem; background: #1e293b; color: #94a3b8; font-size: .85rem; }
+  .copiar {
+    padding: .35rem .8rem; border: 1px solid #475569; border-radius: 8px; background: transparent;
+    color: #e2e8f0; font: inherit; cursor: pointer; transition: background .2s, border-color .2s;
+  }
+  .copiar:hover { background: #334155; }
+  .copiar.ok { border-color: #4ade80; color: #4ade80; }
+  pre { margin: 0; padding: 1.2rem; overflow-x: auto; color: #e2e8f0; tab-size: 2; }
+  pre code { font-family: Consolas, "Courier New", monospace; font-size: .92rem; line-height: 1.6; user-select: all; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Cómo mostrar código en tu web</h1>
+  <p>Para código dentro de una frase usa <code>&lt;code&gt;</code>. Para bloques de varias líneas combina <code>&lt;pre&gt;</code> y <code>&lt;code&gt;</code>.</p>
+
+  <div class="bloque">
+    <header><span>HTML</span><button class="copiar" type="button">Copiar</button></header>
+    <pre><code>&lt;button class="boton"&gt;
+  Pulsa aquí
+&lt;/button&gt;</code></pre>
+  </div>
+
+  <div class="bloque">
+    <header><span>CSS</span><button class="copiar" type="button">Copiar</button></header>
+    <pre><code>.boton {
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 999px;
+  background: #4f46e5;
+  color: white;
+}</code></pre>
+  </div>
+</main>
+
+<script>
+  document.querySelectorAll('.copiar').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var texto = btn.closest('.bloque').querySelector('code').innerText;
+
+      function listo() {
+        btn.textContent = 'Copiado';
+        btn.classList.add('ok');
+        setTimeout(function () { btn.textContent = 'Copiar'; btn.classList.remove('ok'); }, 1800);
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(texto).then(listo);
+      } else {
+        // Plan B para archivos abiertos en local
+        var t = document.createElement('textarea');
+        t.value = texto;
+        document.body.appendChild(t);
+        t.select();
+        document.execCommand('copy');
+        t.remove();
+        listo();
+      }
+    });
+  });
+</script>
+</body>
+</html>

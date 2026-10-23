@@ -1,0 +1,71 @@
+body{
+    background-color:#173E76;
+    font-family: 'StarWars', sans-serif;
+    color:white ;
+    background-image: url(./img/fondo2.avif);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 60%;
+
+}
+.titulo{
+    position:absolute;
+    top: 2%  ;
+    left:50%;
+    text-align: center;
+    transform: translateX(-50%) scale(2);
+    color: #4da6ff;
+    font-weight: bold;    
+}
+a { 
+    color: white;
+    text-decoration: none;
+}
+.enlaces {
+    background-color: #0b1f3a;
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    text-align:center;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    position:absolute;
+    font-weight: bold;      
+
+}
+
+.enlaces a {
+    display: block;
+    color: #4da6ff;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.enlaces a:hover {
+    background-color: #1769aa;
+    color: white;
+    transform: translateX(5px);
+}
+
+
+.IconoGitHub {
+    position:fixed;
+    top: 2%;
+    left:2%;
+    z-index: 1000; /* Asegura que se mantenga por encima de otros elementos */
+}
+
+/* Aplica el tamaño a la imagen dentro del botón */
+.IconoGitHub img {
+    width: 15%;   /* Cambia este número si lo quieres más grande o más pequeño */
+    /*height: 40px;*/
+    display:block;
+    float: left;
+}  

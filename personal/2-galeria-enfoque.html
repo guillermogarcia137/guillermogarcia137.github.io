@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galería con enfoque</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #0e0e12; color: #fff; font-family: Georgia, serif; padding: 3rem 1rem; }
+  h1 { text-align: center; font-weight: normal; font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: .4rem; }
+  .sub { text-align: center; color: #8a8a99; margin-bottom: 2.5rem; font-family: system-ui, sans-serif; }
+  .galeria {
+    max-width: 1000px; margin: auto; display: grid; gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); grid-auto-rows: 200px; grid-auto-flow: dense;
+  }
+  .item {
+    position: relative; border-radius: 18px; overflow: hidden; cursor: pointer;
+    transition: opacity .35s, filter .35s, transform .35s;
+  }
+  .item:nth-child(3n+1) { grid-row: span 2; }
+  .item:nth-child(5n) { grid-column: span 2; }
+  .item span {
+    position: absolute; inset: auto 0 0 0; padding: 2.2rem 1rem 1rem;
+    background: linear-gradient(transparent, rgba(0,0,0,.75));
+    transform: translateY(100%); transition: transform .35s;
+  }
+  .item:hover span, .item:focus-visible span { transform: none; }
+  .item:hover { transform: scale(1.03); z-index: 1; }
+  .galeria:has(.item:hover) .item:not(:hover) { opacity: .35; filter: grayscale(1) blur(1px); }
+  .item:focus-visible { outline: 3px solid #fff; }
+  .c1 { background: linear-gradient(160deg, #ff512f, #dd2476); }
+  .c2 { background: linear-gradient(160deg, #1fa2ff, #12d8fa); }
+  .c3 { background: linear-gradient(160deg, #f7971e, #ffd200); }
+  .c4 { background: linear-gradient(160deg, #11998e, #38ef7d); }
+  .c5 { background: linear-gradient(160deg, #8e2de2, #4a00e0); }
+  .c6 { background: linear-gradient(160deg, #373b44, #4286f4); }
+  .c7 { background: linear-gradient(160deg, #ee9ca7, #ffdde1); }
+  .c8 { background: linear-gradient(160deg, #0f2027, #2c5364); }
+</style>
+</head>
+<body>
+  <h1>Proyectos recientes</h1>
+  <p class="sub">Pasa el ratón por encima de uno y el resto se apaga.</p>
+  <div class="galeria">
+    <div class="item c1" tabindex="0"><span>Identidad para cafetería</span></div>
+    <div class="item c2" tabindex="0"><span>App de meteorología</span></div>
+    <div class="item c3" tabindex="0"><span>Cartel de festival</span></div>
+    <div class="item c4" tabindex="0"><span>Packaging de té</span></div>
+    <div class="item c5" tabindex="0"><span>Web de un estudio</span></div>
+    <div class="item c6" tabindex="0"><span>Panel de analítica</span></div>
+    <div class="item c7" tabindex="0"><span>Revista de moda</span></div>
+    <div class="item c8" tabindex="0"><span>Documental sobre el mar</span></div>
+  </div>
+</body>
+</html>
