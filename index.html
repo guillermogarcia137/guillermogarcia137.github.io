@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Web de Guillermo García: proyectos, apuntes de HTML y CSS, herramientas de Java y pruebas de diseño web.">
   <meta name="theme-color" content="#173e76">
-  <title>Guillermo García · Inicio</title>
+  <title>GGP · Inicio</title>
   <!-- Recuperamos el fondo y los colores originales; index2 conserva style.css. -->
   <link rel="stylesheet" href="./inicio.css?v=proyectos-4">
   <!-- defer espera a que el HTML esté disponible antes de conectar los eventos del menú. -->
   <script src="./inicio.js" defer></script>
+  <link rel="stylesheet" href="./portada-dashboard.css?v=1">
+  <script src="./portada-dashboard.js?v=1" defer></script>
   <link rel="icon" type="image/png" href="./img/icons8-rebel-480.png">
 </head>
-<body class="portada">
+<body class="portada dashboard">
   <a class="salto" href="#contenido">Saltar al contenido</a>
   <div class="contenedor">
     <header class="cabecera">
+      <a class="marca" href="./"><img src="./img/icons8-rebel-480.png" alt=""><span>GGP <small>Espacio personal</small></span></a>
       <!-- Iconos con la misma caja de 32 px; los enlaces conservan un área de pulsación de 44 px. -->
       <div class="iconos">
         <a href="https://github.com/guillermogarcia137" aria-label="Mi perfil de GitHub"><img src="./img/github-logo_icon-icons.com_73546.png" alt="" width="32" height="32"></a>
@@ -35,15 +38,36 @@
     </header>
     <main id="contenido" tabindex="-1">
       <div class="presentacion">
-        <span class="etiqueta">Web GGP</span>
-        <h1>Hola mundo</h1>
-        <p>Proyectos, apuntes y pruebas de Guillermo García.</p>
+        <div><span class="etiqueta">GGP / ESPACIO PERSONAL</span>
+        <h1 id="saludo">Hola mundo</h1>
+        <p>Guillermo García · Proyectos, herramientas y recursos de DAM.</p></div>
+        <div class="fecha-panel"><time id="hora" aria-label="Hora local"></time><span id="fecha"></span></div>
+      </div>
+      <div class="controles" aria-label="Explorar la portada">
+        <label for="buscar-portada">Explorar</label>
+        <input type="search" id="buscar-portada" placeholder="Buscar proyectos, apuntes… (/)" autocomplete="off">
+        <div class="filtros" role="group" aria-label="Filtrar por categoría">
+          <button type="button" class="filtro" data-filtro="todo" aria-pressed="true">Todo</button>
+          <button type="button" class="filtro" data-filtro="proyectos" aria-pressed="false">Proyectos</button>
+          <button type="button" class="filtro" data-filtro="apuntes" aria-pressed="false">DAM</button>
+          <button type="button" class="filtro" data-filtro="pruebas" aria-pressed="false">Laboratorio</button>
+          <button type="button" class="filtro" data-filtro="enlaces" aria-pressed="false">Enlaces</button>
+        </div>
+        <button type="button" id="limpiar-portada" class="filtro">Limpiar</button>
+        <p id="resultado" role="status">Todos los accesos</p>
       </div>
       <!-- Los proyectos se abren directamente desde la portada. PanelVerse y
            ConvertVerse aparecen primero por ser los que estamos trabajando. -->
-      <section id="proyectos" aria-labelledby="titulo-proyectos">
+      <section data-categoria="proyectos" id="proyectos" aria-labelledby="titulo-proyectos">
         <h2 id="titulo-proyectos">Proyectos</h2>
         <ul class="tarjetas proyectos-destacados">
+          <li class="tarjeta proyecto-destacado proyecto-ggpai">
+            <span class="estado-proyecto">Nuevo · En planificación</span>
+            <h3>ggpai</h3>
+            <p>Mi asistente personal: tres modelos, una memoria compartida y una interfaz propia.</p>
+            <div class="modelos" aria-label="Modelos previstos"><span>Gemini · Principal</span><span>GPT</span><span>Claude</span></div>
+            <div class="acciones"><a class="boton abrir-proyecto" href="https://app.notion.com/p/42595e370a7981c58dc7dc94a5ad3af6?pvs=204">Documentación</a><span class="estado-proyecto">Chat aún no disponible</span></div>
+          </li>
           <li class="tarjeta proyecto-destacado proyecto-actual">
             <span class="estado-proyecto">En desarrollo</span>
             <h3><a href="https://guillermogarcia137.github.io/panelverse/">PanelVerse</a></h3>
@@ -71,8 +95,8 @@
         </ul>
         <p class="enlace-catalogo"><a href="./proyectos/">Ver también los repositorios y proyectos de clase</a></p>
       </section>
-      <section id="apuntes" aria-labelledby="titulo-apuntes">
-        <h2 id="titulo-apuntes">Apuntes y ejercicios</h2>
+      <section data-categoria="apuntes" id="apuntes" aria-labelledby="titulo-apuntes">
+        <h2 id="titulo-apuntes">DAM · Apuntes y ejercicios</h2>
         <ul class="tarjetas">
           <li class="tarjeta"><h3><a href="./Lenguajedemarcas/indexLenguajeDeMarcas.html">Lenguaje de marcas</a></h3><p>Enlaces, tablas, formularios y ejercicios de CSS.</p></li>
           <li class="tarjeta"><h3><a href="./mclibre-htmlcss-master/index.html">Apuntes de HTML y CSS</a></h3><p>Manual de mclibre con explicaciones, ejemplos y ejercicios.</p></li>
@@ -80,8 +104,8 @@
           <li class="tarjeta"><h3><a href="./web-ggp-extra/java.html">Java</a></h3><p>Ejemplos de código y recursos para practicar Java.</p></li>
         </ul>
       </section>
-      <section id="pruebas" aria-labelledby="titulo-pruebas">
-        <h2 id="titulo-pruebas">Pruebas de diseño web</h2>
+      <section data-categoria="pruebas" id="pruebas" aria-labelledby="titulo-pruebas">
+        <h2 id="titulo-pruebas">Laboratorio · Pruebas web</h2>
         <ul class="tarjetas">
           <li class="tarjeta"><h3><a href="./personal/indexDePrueba.html">Pruebas 1</a></h3><p>Primera demo de la web personal.</p></li>
           <li class="tarjeta"><h3><a href="./personal/indexPRUEBA1.html">Pruebas 2</a></h3><p>Segunda demo de navegación y estilos.</p></li>
@@ -100,18 +124,19 @@
           <li><a href="./personal/Java/java.html">Primera demo de Java</a></li>
         </ul></details>
       </section>
-      <section id="enlaces" aria-labelledby="titulo-enlaces">
+      <section data-categoria="enlaces" id="enlaces" aria-labelledby="titulo-enlaces">
         <h2 id="titulo-enlaces">Mis enlaces</h2>
         <div class="acciones"><a href="https://github.com/guillermogarcia137">GitHub</a><a href="https://app.notion.com/p/DAM-3d895e370a79805db475d55b8df41eeb?source=copy_link">Notion · DAM</a><a href="https://www.whakoom.com/guillegp06">Whakoom</a><!-- Cambia también este href al añadir tu perfil. --><a href="https://www.pinterest.com/">Pinterest</a></div>
         <p><a href="./web-ggp-extra/interes.html">Webs de interés</a> · <a href="https://github.com/guillermogarcia137?tab=overview">Contribuciones de GitHub</a></p>
       </section>
-      <section aria-labelledby="titulo-busqueda">
+      <section data-categoria="enlaces" aria-labelledby="titulo-busqueda">
         <h2 id="titulo-busqueda">Buscar en Internet</h2>
         <!-- La etiqueta permanece visible; el placeholder es solo una ayuda. -->
         <form action="https://www.google.com/search" method="get"><label for="consulta">Búsqueda en Google</label><div class="busqueda"><input id="consulta" type="search" name="q" placeholder="Escribe tu búsqueda" required><button type="submit">Buscar en Google</button></div></form>
       </section>
+    <div id="sin-resultados" class="sin-resultados" hidden>No hay resultados. Prueba otro término o cambia de categoría.</div>
     </main>
-    <footer><span>Guillermo García · Web GGP</span><a href="./index2.html">Ver el índice anterior</a><a href="#contenido">Volver arriba</a></footer>
+    <footer><span>Guillermo García · Web GGP</span><a href="./index-anterior-2026-11-27.html">Portada anterior</a><a href="./index2.html">Índice clásico</a><a href="#contenido">Volver arriba</a></footer>
   </div>
 </body>
 </html>
