@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web de Guillermo García: proyectos, apuntes de HTML y CSS, herramientas de Java y pruebas de diseño web.">
+  <meta name="theme-color" content="#173e76">
+  <title>Guillermo García · Inicio</title>
+  <!-- Recuperamos el fondo y los colores originales; index2 conserva style.css. -->
+  <link rel="stylesheet" href="./inicio.css?v=proyectos-4">
+  <!-- defer espera a que el HTML esté disponible antes de conectar los eventos del menú. -->
+  <script src="./inicio.js" defer></script>
+  <link rel="icon" type="image/png" href="./img/icons8-rebel-480.png">
+</head>
+<body class="portada">
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <div class="contenedor">
+    <header class="cabecera">
+      <!-- Iconos con la misma caja de 32 px; los enlaces conservan un área de pulsación de 44 px. -->
+      <div class="iconos">
+        <a href="https://github.com/guillermogarcia137" aria-label="Mi perfil de GitHub"><img src="./img/github-logo_icon-icons.com_73546.png" alt="" width="32" height="32"></a>
+        <a href="https://app.notion.com/p/DAM-3d895e370a79805db475d55b8df41eeb?source=copy_link" aria-label="Mis apuntes de DAM en Notion"><img src="./img/notion_logo_icon_145025.png" alt="" width="32" height="32"></a>
+        <a href="https://www.whakoom.com/guillegp06" aria-label="Mi perfil de Whakoom"><img src="./img/whakoom-removebg-preview.png" alt="" width="32" height="32"></a>
+        <!-- PINTEREST: cambia este href por la dirección de tu perfil cuando quieras. -->
+        <a href="https://www.pinterest.com/" aria-label="Pinterest"><img src="./img/pinterest.svg" alt="" width="32" height="32"></a>
+      </div>
+      <!-- details crea un desplegable nativo que también funciona sin JavaScript.
+           summary se abre con clic, Enter o Espacio, y anuncia su estado al lector de pantalla. -->
+      <details class="menu-navegacion" id="menu-navegacion">
+        <summary><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Menú</span></summary>
+        <nav aria-label="Navegación principal">
+          <a href="#proyectos">Proyectos</a><a href="#apuntes">Apuntes</a><a href="#pruebas">Pruebas</a><a href="#enlaces">Mis enlaces</a>
+        </nav>
+      </details>
+    </header>
+    <main id="contenido" tabindex="-1">
+      <div class="presentacion">
+        <span class="etiqueta">Web GGP</span>
+        <h1>Hola mundo</h1>
+        <p>Proyectos, apuntes y pruebas de Guillermo García.</p>
+      </div>
+      <!-- Los proyectos se abren directamente desde la portada. PanelVerse y
+           ConvertVerse aparecen primero por ser los que estamos trabajando. -->
+      <section id="proyectos" aria-labelledby="titulo-proyectos">
+        <h2 id="titulo-proyectos">Proyectos</h2>
+        <ul class="tarjetas proyectos-destacados">
+          <li class="tarjeta proyecto-destacado proyecto-actual">
+            <span class="estado-proyecto">En desarrollo</span>
+            <h3><a href="https://guillermogarcia137.github.io/panelverse/">PanelVerse</a></h3>
+            <p>Biblioteca y lector de cómics CBR/CBZ, con progreso de lectura y sincronización entre dispositivos.</p>
+            <div class="acciones"><a class="boton abrir-proyecto" href="https://guillermogarcia137.github.io/panelverse/">Abrir PanelVerse</a><a href="https://github.com/guillermogarcia137/panelverse" aria-label="Código de PanelVerse">Código</a></div>
+          </li>
+          <li class="tarjeta proyecto-destacado proyecto-actual">
+            <span class="estado-proyecto">En desarrollo</span>
+            <h3><a href="https://guillermogarcia137.github.io/convertverse/">ConvertVerse</a></h3>
+            <p>Conversor de documentos, imágenes, audio y vídeo. Incluye conversión de PNG a ICO.</p>
+            <div class="acciones"><a class="boton abrir-proyecto" href="https://guillermogarcia137.github.io/convertverse/">Abrir ConvertVerse</a><a href="https://github.com/guillermogarcia137/convertverse" aria-label="Código de ConvertVerse">Código</a></div>
+          </li>
+          <li class="tarjeta proyecto-destacado">
+            <span class="estado-proyecto">Utilidad</span>
+            <h3><a href="https://guillermogarcia137.github.io/ruleta/">Ruleta</a></h3>
+            <p>Introduce tus opciones y gira la ruleta para elegir una al azar.</p>
+            <div class="acciones"><a class="boton abrir-proyecto" href="https://guillermogarcia137.github.io/ruleta/">Abrir Ruleta</a><a href="https://github.com/guillermogarcia137/ruleta" aria-label="Código de Ruleta">Código</a></div>
+          </li>
+          <li class="tarjeta proyecto-destacado">
+            <span class="estado-proyecto">Audio</span>
+            <h3><a href="./proyectos/Focusrite/interfaz.html">Focusrite</a></h3>
+            <p>Comprueba dispositivos, entradas y niveles de tu interfaz de audio.</p>
+            <div class="acciones"><a class="boton abrir-proyecto" href="./proyectos/Focusrite/interfaz.html">Abrir Focusrite</a></div>
+          </li>
+        </ul>
+        <p class="enlace-catalogo"><a href="./proyectos/">Ver también los repositorios y proyectos de clase</a></p>
+      </section>
+      <section id="apuntes" aria-labelledby="titulo-apuntes">
+        <h2 id="titulo-apuntes">Apuntes y ejercicios</h2>
+        <ul class="tarjetas">
+          <li class="tarjeta"><h3><a href="./Lenguajedemarcas/indexLenguajeDeMarcas.html">Lenguaje de marcas</a></h3><p>Enlaces, tablas, formularios y ejercicios de CSS.</p></li>
+          <li class="tarjeta"><h3><a href="./mclibre-htmlcss-master/index.html">Apuntes de HTML y CSS</a></h3><p>Manual de mclibre con explicaciones, ejemplos y ejercicios.</p></li>
+          <li class="tarjeta"><h3><a href="./Lenguajedemarcas/LM_UT3_tabla_resumen_css.pdf">Resumen de CSS (PDF)</a></h3><p>Tabla de consulta de propiedades y estilos.</p></li>
+          <li class="tarjeta"><h3><a href="./web-ggp-extra/java.html">Java</a></h3><p>Ejemplos de código y recursos para practicar Java.</p></li>
+        </ul>
+      </section>
+      <section id="pruebas" aria-labelledby="titulo-pruebas">
+        <h2 id="titulo-pruebas">Pruebas de diseño web</h2>
+        <ul class="tarjetas">
+          <li class="tarjeta"><h3><a href="./personal/indexDePrueba.html">Pruebas 1</a></h3><p>Primera demo de la web personal.</p></li>
+          <li class="tarjeta"><h3><a href="./personal/indexPRUEBA1.html">Pruebas 2</a></h3><p>Segunda demo de navegación y estilos.</p></li>
+          <li class="tarjeta"><h3><a href="./personal/indexPersonal.html">Todas las pruebas</a></h3><p>Efectos, menús, formularios, galerías y otros ejemplos.</p></li>
+        </ul>
+        <!-- details ofrece un desplegable accesible con teclado sin JavaScript. -->
+        <details><summary>Acceso directo a los ejemplos</summary><ul class="lista-pruebas">
+          <li><a href="./personal/prueba1.html">Efecto cristal</a></li><li><a href="./personal/prueba2.html">Efecto al pasar el ratón</a></li>
+          <li><a href="./personal/prueba3.html">Neón</a></li><li><a href="./personal/prueba4.html">Modo claro y oscuro</a></li>
+          <li><a href="./personal/prueba5.html">Menú adaptable</a></li><li><a href="./personal/prueba6.html">Preguntas frecuentes</a></li>
+          <li><a href="./personal/prueba7.html">Precios</a></li><li><a href="./personal/prueba8.html">Formulario de registro</a></li>
+          <li><a href="./personal/prueba9.html">Pestañas</a></li><li><a href="./personal/landing-hondo.html">Página de presentación</a></li>
+          <li><a href="./personal/bloques-de-codigo.html">Bloques de código</a></li><li><a href="./personal/1-link-en-bio.html">Enlaces de perfil</a></li>
+          <li><a href="./personal/2-galeria-enfoque.html">Galería</a></li><li><a href="./personal/3-linea-del-tiempo.html">Línea del tiempo</a></li>
+          <li><a href="./personal/4-modal-newsletter.html">Boletín</a></li><li><a href="./personal/5-articulo-lectura.html">Artículo</a></li>
+          <li><a href="./personal/Java/java.html">Primera demo de Java</a></li>
+        </ul></details>
+      </section>
+      <section id="enlaces" aria-labelledby="titulo-enlaces">
+        <h2 id="titulo-enlaces">Mis enlaces</h2>
+        <div class="acciones"><a href="https://github.com/guillermogarcia137">GitHub</a><a href="https://app.notion.com/p/DAM-3d895e370a79805db475d55b8df41eeb?source=copy_link">Notion · DAM</a><a href="https://www.whakoom.com/guillegp06">Whakoom</a><!-- Cambia también este href al añadir tu perfil. --><a href="https://www.pinterest.com/">Pinterest</a></div>
+        <p><a href="./web-ggp-extra/interes.html">Webs de interés</a> · <a href="https://github.com/guillermogarcia137?tab=overview">Contribuciones de GitHub</a></p>
+      </section>
+      <section aria-labelledby="titulo-busqueda">
+        <h2 id="titulo-busqueda">Buscar en Internet</h2>
+        <!-- La etiqueta permanece visible; el placeholder es solo una ayuda. -->
+        <form action="https://www.google.com/search" method="get"><label for="consulta">Búsqueda en Google</label><div class="busqueda"><input id="consulta" type="search" name="q" placeholder="Escribe tu búsqueda" required><button type="submit">Buscar en Google</button></div></form>
+      </section>
+    </main>
+    <footer><span>Guillermo García · Web GGP</span><a href="./index2.html">Ver el índice anterior</a><a href="#contenido">Volver arriba</a></footer>
+  </div>
+</body>
+</html>
